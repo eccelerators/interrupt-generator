@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Interrupt Generator Interface (InterruptGeneratorIfc) &#8212; eccelerators-sphinx-sample-configuration  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=f63d8bfa" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=e491ac2d" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>eccelerators-sphinx-sample-configuration  documentation</span></a></h1>
+        <h2 class="heading"><span>Interrupt Generator Interface (InterruptGeneratorIfc)</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        <a class="uplink" href="index.html">Contents</a>
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="interrupt-generator-interface-interruptgeneratorifc">
+<h1>Interrupt Generator Interface (InterruptGeneratorIfc)<a class="headerlink" href="#interrupt-generator-interface-interruptgeneratorifc" title="Link to this heading">¶</a></h1>
+<p>Interface containing a basic Interrupt Generator block as predictable source and execurion check for interrupt simulation.</p>
+<table class="docutils align-default" id="id16">
+<caption><span class="caption-text">Blocks of Interrupt Generator Interface</span><a class="headerlink" href="#id16" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="3"><p>Blocks of Interrupt Generator Interface</p></td>
+</tr>
+<tr class="row-even"><td><p>Block Address</p></td>
+<td><p>ID</p></td>
+<td><p>Block Name</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000</span></code></div>
+</div>
+</td>
+<td id="a2822b0ad702"><p>InterruptGeneratorBlk</p></td>
+<td><p><a class="reference internal" href="#a4152ca7d3fe">Interrupt Generator Block</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default" id="id17">
+<caption><span class="caption-text">Resets of Interrupt Generator Interface</span><a class="headerlink" href="#id17" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="2"><p>Resets of Registers of Interrupt Generator Interface</p></td>
+</tr>
+<tr class="row-even"><td><p>ID</p></td>
+<td><p>Reset Name</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="interrupt-generator-block-interruptgeneratorblk">
+<h2>Interrupt Generator Block (InterruptGeneratorBlk)<a class="headerlink" href="#interrupt-generator-block-interruptgeneratorblk" title="Link to this heading">¶</a></h2>
+<p>This block defines a basic Interrupt Generator block as predictable source and execution check for
+interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p>
+<p>Constraints:</p>
+<ol class="arabic simple">
+<li><p>Generate interrupts at a configurable rate for level triggered interrupt destinations.</p></li>
+<li><p>Check if interrupts are executed in time.</p></li>
+<li><p>Provide a failure output.</p></li>
+</ol>
+<p>Interrupt Generator details:</p>
+<figure class="align-default" id="id18">
+<a class="reference internal image-reference" href="_images/InterruptGeneratorUserLogic.png"><img alt="_images/InterruptGeneratorUserLogic.png" src="_images/InterruptGeneratorUserLogic.png" style="width: 644.5px; height: 460.5px;" /></a>
+<figcaption>
+<p><span class="caption-text">Interrupt Generator details</span><a class="headerlink" href="#id18" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-default" id="id19">
+<caption><span class="caption-text">Registers or Delegates of Interrupt Generator Block</span><a class="headerlink" href="#id19" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="3"><p>Registers or Delegates of Interrupt Generator Block</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">..</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0053</span></code></div>
+</div>
+</td>
+<td id="a4152ca7d3fe"><p><a class="reference internal" href="#a2822b0ad702">Interrupt Generator Block</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Address</p></td>
+<td><p>ID</p></td>
+<td><p>Name</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000</span></code></div>
+</div>
+</td>
+<td id="a8b2ca6ff3bf"><p>ControlReg</p></td>
+<td><p><a class="reference internal" href="#aeb35d070801">Control Register</a></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000</span></code></div>
+</div>
+</td>
+<td id="a220d1e07b4c"><p>StatusReg</p></td>
+<td><p><a class="reference internal" href="#a2be60be6817">Status Register</a></p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000</span></code></div>
+</div>
+</td>
+<td id="aa0dfca7eaf6"><p>ChargedCountReg</p></td>
+<td><p><a class="reference internal" href="#a0db3b6116e5">Charged Count Register</a></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0004</span></code></div>
+</div>
+</td>
+<td id="a132cf324d37"><p>ChargedCountReg</p></td>
+<td><p><a class="reference internal" href="#a0db3b6116e5">Charged Count Register</a></p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0008</span></code></div>
+</div>
+</td>
+<td id="ad59fd7e370e"><p>ChargedCountReg</p></td>
+<td><p><a class="reference internal" href="#a0db3b6116e5">Charged Count Register</a></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x000c</span></code></div>
+</div>
+</td>
+<td id="a7bf43ea2187"><p>ChargedCountReg</p></td>
+<td><p><a class="reference internal" href="#a0db3b6116e5">Charged Count Register</a></p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0010</span></code></div>
+</div>
+</td>
+<td id="a236d228d2b6"><p>ActualCountReg</p></td>
+<td><p><a class="reference internal" href="#a2cb1678bc40">Actual Count Register</a></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0014</span></code></div>
+</div>
+</td>
+<td id="a195551d267e"><p>ActualCountReg</p></td>
+<td><p><a class="reference internal" href="#a2cb1678bc40">Actual Count Register</a></p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0018</span></code></div>
+</div>
+</td>
+<td id="a608640262d1"><p>ActualCountReg</p></td>
+<td><p><a class="reference internal" href="#a2cb1678bc40">Actual Count Register</a></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x001c</span></code></div>
+</div>
+</td>
+<td id="a37643fa7ac3"><p>ActualCountReg</p></td>
+<td><p><a class="reference internal" href="#a2cb1678bc40">Actual Count Register</a></p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0020</span></code></div>
+</div>
+</td>
+<td id="ad89f88e0dac"><p>FailureCountReg</p></td>
+<td><p><a class="reference internal" href="#aba236b9d33d">Failure Count Register</a></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0024</span></code></div>
+</div>
+</td>
+<td id="a74d21831782"><p>FailureCountReg</p></td>
+<td><p><a class="reference internal" href="#aba236b9d33d">Failure Count Register</a></p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0028</span></code></div>
+</div>
+</td>
+<td id="ae1f98972b82"><p>FailureCountReg</p></td>
+<td><p><a class="reference internal" href="#aba236b9d33d">Failure Count Register</a></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x002c</span></code></div>
+</div>
+</td>
+<td id="a9de8ec5a7f4"><p>FailureCountReg</p></td>
+<td><p><a class="reference internal" href="#aba236b9d33d">Failure Count Register</a></p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0030</span></code></div>
+</div>
+</td>
+<td id="a0ea8a602d73"><p>IntervalReg</p></td>
+<td><p><a class="reference internal" href="#a2a37762ecc0">Interval Register</a></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0034</span></code></div>
+</div>
+</td>
+<td id="ad10f4ae8b6f"><p>IntervalReg</p></td>
+<td><p><a class="reference internal" href="#a2a37762ecc0">Interval Register</a></p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0038</span></code></div>
+</div>
+</td>
+<td id="a82d3204a098"><p>IntervalReg</p></td>
+<td><p><a class="reference internal" href="#a2a37762ecc0">Interval Register</a></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x003c</span></code></div>
+</div>
+</td>
+<td id="a1906c38fac1"><p>IntervalReg</p></td>
+<td><p><a class="reference internal" href="#a2a37762ecc0">Interval Register</a></p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0040</span></code></div>
+</div>
+</td>
+<td id="a214508aba0d"><p>ReferenceCountReg</p></td>
+<td><p><a class="reference internal" href="#a9a7df46e1de">Reference Count Register</a></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0044</span></code></div>
+</div>
+</td>
+<td id="a37dcfb6b8bc"><p>ReferenceCountReg</p></td>
+<td><p><a class="reference internal" href="#a9a7df46e1de">Reference Count Register</a></p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0048</span></code></div>
+</div>
+</td>
+<td id="adcaae45b694"><p>ReferenceCountReg</p></td>
+<td><p><a class="reference internal" href="#a9a7df46e1de">Reference Count Register</a></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x004c</span></code></div>
+</div>
+</td>
+<td id="ab72de44ab07"><p>ReferenceCountReg</p></td>
+<td><p><a class="reference internal" href="#a9a7df46e1de">Reference Count Register</a></p></td>
+</tr>
+</tbody>
+</table>
+<section id="control-register-controlreg">
+<h3>Control Register (ControlReg)<a class="headerlink" href="#control-register-controlreg" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id20">
+<caption><span class="caption-text">Bits of Control Register</span><a class="headerlink" href="#id20" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Control Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000</span></code></div>
+</div>
+</td>
+<td id="aeb35d070801"><p><a class="reference internal" href="#a8b2ca6ff3bf">Control Register (ControlReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">3</div>
+</div>
+</td>
+<td><p>ChannelOperation</p>
+</td>
+<td id="abfc6970dfd8"><p>RW</p></td>
+<td><table class="docutils align-default" id="id21">
+<caption><span class="caption-text">Values of ChannelOperation</span><a class="headerlink" href="#id21" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p>Value</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x1</span></code></div>
+</div>
+</td>
+<td id="ac6827efbd33"><p>Enabled</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is pending.</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0</span></code></div>
+</div>
+</td>
+<td id="aaa97209909f"><p>Disabled</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is not pending.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default" id="id22">
+<caption><span class="caption-text">Resets of ChannelOperation</span><a class="headerlink" href="#id22" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0</span></code></div>
+</div>
+</td>
+<td id="a4922b901091"><p>BusReset</p></td>
+<td><p>RW</p></td>
+<td><p>Default Bus Reset</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">2</div>
+</div>
+</td>
+<td><p>ChannelOperation</p>
+</td>
+<td id="ab2dc42a1d83"><p>RW</p></td>
+<td><table class="docutils align-default" id="id23">
+<caption><span class="caption-text">Values of ChannelOperation</span><a class="headerlink" href="#id23" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p>Value</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x1</span></code></div>
+</div>
+</td>
+<td id="a8f36117ba60"><p>Enabled</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is pending.</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0</span></code></div>
+</div>
+</td>
+<td id="ac3fbdb7f564"><p>Disabled</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is not pending.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default" id="id24">
+<caption><span class="caption-text">Resets of ChannelOperation</span><a class="headerlink" href="#id24" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0</span></code></div>
+</div>
+</td>
+<td id="a876a365fdae"><p>BusReset</p></td>
+<td><p>RW</p></td>
+<td><p>Default Bus Reset</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">1</div>
+</div>
+</td>
+<td><p>ChannelOperation</p>
+</td>
+<td id="acb8d44b0a39"><p>RW</p></td>
+<td><table class="docutils align-default" id="id25">
+<caption><span class="caption-text">Values of ChannelOperation</span><a class="headerlink" href="#id25" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p>Value</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x1</span></code></div>
+</div>
+</td>
+<td id="ad8eafd03cc8"><p>Enabled</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is pending.</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0</span></code></div>
+</div>
+</td>
+<td id="a27a346233f3"><p>Disabled</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is not pending.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default" id="id26">
+<caption><span class="caption-text">Resets of ChannelOperation</span><a class="headerlink" href="#id26" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0</span></code></div>
+</div>
+</td>
+<td id="a89c0f695a75"><p>BusReset</p></td>
+<td><p>RW</p></td>
+<td><p>Default Bus Reset</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">0</div>
+</div>
+</td>
+<td><p>ChannelOperation</p>
+</td>
+<td id="abd72e638831"><p>RW</p></td>
+<td><table class="docutils align-default" id="id27">
+<caption><span class="caption-text">Values of ChannelOperation</span><a class="headerlink" href="#id27" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p>Value</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x1</span></code></div>
+</div>
+</td>
+<td id="a04e0ab0d0c8"><p>Enabled</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is pending.</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0</span></code></div>
+</div>
+</td>
+<td id="aec562afaf70"><p>Disabled</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is not pending.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default" id="id28">
+<caption><span class="caption-text">Resets of ChannelOperation</span><a class="headerlink" href="#id28" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0</span></code></div>
+</div>
+</td>
+<td id="a51c6970946a"><p>BusReset</p></td>
+<td><p>RW</p></td>
+<td><p>Default Bus Reset</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="status-register-statusreg">
+<h3>Status Register (StatusReg)<a class="headerlink" href="#status-register-statusreg" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id29">
+<caption><span class="caption-text">Bits of Status Register</span><a class="headerlink" href="#id29" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Status Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000</span></code></div>
+</div>
+</td>
+<td id="a2be60be6817"><p><a class="reference internal" href="#a220d1e07b4c">Status Register (StatusReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">7</div>
+<div class="line">..</div>
+<div class="line">6</div>
+</div>
+</td>
+<td><p>ChannelStatus</p>
+</td>
+<td id="a1660b69e837"><p>R</p></td>
+<td><table class="docutils align-default" id="id30">
+<caption><span class="caption-text">Values of ChannelStatus</span><a class="headerlink" href="#id30" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p>Value</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0b00</span></code></div>
+</div>
+</td>
+<td id="add6508cf8ca"><p>Idle</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is pending.</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0b01</span></code></div>
+</div>
+</td>
+<td id="a6fbdf021143"><p>Operating</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is not pending.</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0b1*</span></code></div>
+</div>
+</td>
+<td id="a22dbffe225e"><p>Ended</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is not pending.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">5</div>
+<div class="line">..</div>
+<div class="line">4</div>
+</div>
+</td>
+<td><p>ChannelStatus</p>
+</td>
+<td id="acafa119b1b5"><p>R</p></td>
+<td><table class="docutils align-default" id="id31">
+<caption><span class="caption-text">Values of ChannelStatus</span><a class="headerlink" href="#id31" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p>Value</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0b00</span></code></div>
+</div>
+</td>
+<td id="a141263e359a"><p>Idle</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is pending.</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0b01</span></code></div>
+</div>
+</td>
+<td id="ad5c20d62656"><p>Operating</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is not pending.</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0b1*</span></code></div>
+</div>
+</td>
+<td id="a0a75b24ca30"><p>Ended</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is not pending.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">3</div>
+<div class="line">..</div>
+<div class="line">2</div>
+</div>
+</td>
+<td><p>ChannelStatus</p>
+</td>
+<td id="a58fa998ba14"><p>R</p></td>
+<td><table class="docutils align-default" id="id32">
+<caption><span class="caption-text">Values of ChannelStatus</span><a class="headerlink" href="#id32" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p>Value</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0b00</span></code></div>
+</div>
+</td>
+<td id="ace5b59d6d2c"><p>Idle</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is pending.</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0b01</span></code></div>
+</div>
+</td>
+<td id="a4ead7bcea6f"><p>Operating</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is not pending.</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0b1*</span></code></div>
+</div>
+</td>
+<td id="afd452e43ce5"><p>Ended</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is not pending.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line">1</div>
+<div class="line">..</div>
+<div class="line">0</div>
+</div>
+</td>
+<td><p>ChannelStatus</p>
+</td>
+<td id="a265d5d34450"><p>R</p></td>
+<td><table class="docutils align-default" id="id33">
+<caption><span class="caption-text">Values of ChannelStatus</span><a class="headerlink" href="#id33" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p>Value</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0b00</span></code></div>
+</div>
+</td>
+<td id="a34946e2b998"><p>Idle</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is pending.</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0b01</span></code></div>
+</div>
+</td>
+<td id="ad278b8bbf89"><p>Operating</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is not pending.</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0b1*</span></code></div>
+</div>
+</td>
+<td id="a0dea4672bf0"><p>Ended</p></td>
+<td><p>R</p></td>
+<td><p>An Interrupt is not pending.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="charged-count-register-chargedcountreg">
+<h3>Charged Count Register (ChargedCountReg)<a class="headerlink" href="#charged-count-register-chargedcountreg" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id34">
+<caption><span class="caption-text">Bits of Charged Count Register</span><a class="headerlink" href="#id34" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Charged Count Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000</span></code></div>
+</div>
+</td>
+<td id="a0db3b6116e5"><p><a class="reference internal" href="#aa0dfca7eaf6">Charged Count Register (ChargedCountReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Count</p>
+</td>
+<td id="a374df898eed"><p>RW</p></td>
+<td><p>Number of interrupts to be generated and expected to be handled by SW.</p>
+<table class="docutils align-default" id="id35">
+<caption><span class="caption-text">Resets of Count</span><a class="headerlink" href="#id35" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000.0000</span></code></div>
+</div>
+</td>
+<td id="ab5b19eb534d"><p>BusReset</p></td>
+<td><p>RW</p></td>
+<td><p>Default Bus Reset</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id1">
+<h3>Charged Count Register (ChargedCountReg)<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id36">
+<caption><span class="caption-text">Bits of Charged Count Register</span><a class="headerlink" href="#id36" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Charged Count Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0004</span></code></div>
+</div>
+</td>
+<td id="abc68b2c2fb4"><p><a class="reference internal" href="#aa0dfca7eaf6">Charged Count Register (ChargedCountReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Count</p>
+</td>
+<td id="a8bb696eb6df"><p>RW</p></td>
+<td><p>Number of interrupts to be generated and expected to be handled by SW.</p>
+<table class="docutils align-default" id="id37">
+<caption><span class="caption-text">Resets of Count</span><a class="headerlink" href="#id37" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000.0000</span></code></div>
+</div>
+</td>
+<td id="a2004d63cfb7"><p>BusReset</p></td>
+<td><p>RW</p></td>
+<td><p>Default Bus Reset</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id2">
+<h3>Charged Count Register (ChargedCountReg)<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id38">
+<caption><span class="caption-text">Bits of Charged Count Register</span><a class="headerlink" href="#id38" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Charged Count Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0008</span></code></div>
+</div>
+</td>
+<td id="a948ab506dde"><p><a class="reference internal" href="#aa0dfca7eaf6">Charged Count Register (ChargedCountReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Count</p>
+</td>
+<td id="ab8f354f9472"><p>RW</p></td>
+<td><p>Number of interrupts to be generated and expected to be handled by SW.</p>
+<table class="docutils align-default" id="id39">
+<caption><span class="caption-text">Resets of Count</span><a class="headerlink" href="#id39" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000.0000</span></code></div>
+</div>
+</td>
+<td id="a2f408681c72"><p>BusReset</p></td>
+<td><p>RW</p></td>
+<td><p>Default Bus Reset</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id3">
+<h3>Charged Count Register (ChargedCountReg)<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id40">
+<caption><span class="caption-text">Bits of Charged Count Register</span><a class="headerlink" href="#id40" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Charged Count Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x000c</span></code></div>
+</div>
+</td>
+<td id="a3e9cdd4ec35"><p><a class="reference internal" href="#aa0dfca7eaf6">Charged Count Register (ChargedCountReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Count</p>
+</td>
+<td id="a8cfa65c1014"><p>RW</p></td>
+<td><p>Number of interrupts to be generated and expected to be handled by SW.</p>
+<table class="docutils align-default" id="id41">
+<caption><span class="caption-text">Resets of Count</span><a class="headerlink" href="#id41" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000.0000</span></code></div>
+</div>
+</td>
+<td id="a2fdfe1a9a56"><p>BusReset</p></td>
+<td><p>RW</p></td>
+<td><p>Default Bus Reset</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="actual-count-register-actualcountreg">
+<h3>Actual Count Register (ActualCountReg)<a class="headerlink" href="#actual-count-register-actualcountreg" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id42">
+<caption><span class="caption-text">Bits of Actual Count Register</span><a class="headerlink" href="#id42" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Actual Count Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0010</span></code></div>
+</div>
+</td>
+<td id="a2cb1678bc40"><p><a class="reference internal" href="#a236d228d2b6">Actual Count Register (ActualCountReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Count</p>
+</td>
+<td id="a9dad31862d9"><p>R</p></td>
+<td><p>Actual count of interrupts already generated.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id4">
+<h3>Actual Count Register (ActualCountReg)<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id43">
+<caption><span class="caption-text">Bits of Actual Count Register</span><a class="headerlink" href="#id43" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Actual Count Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0014</span></code></div>
+</div>
+</td>
+<td id="a10654a50f89"><p><a class="reference internal" href="#a236d228d2b6">Actual Count Register (ActualCountReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Count</p>
+</td>
+<td id="a2b888e669e0"><p>R</p></td>
+<td><p>Actual count of interrupts already generated.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id5">
+<h3>Actual Count Register (ActualCountReg)<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id44">
+<caption><span class="caption-text">Bits of Actual Count Register</span><a class="headerlink" href="#id44" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Actual Count Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0018</span></code></div>
+</div>
+</td>
+<td id="a2fb71bf02a8"><p><a class="reference internal" href="#a236d228d2b6">Actual Count Register (ActualCountReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Count</p>
+</td>
+<td id="ae7470c3ca3c"><p>R</p></td>
+<td><p>Actual count of interrupts already generated.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id6">
+<h3>Actual Count Register (ActualCountReg)<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id45">
+<caption><span class="caption-text">Bits of Actual Count Register</span><a class="headerlink" href="#id45" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Actual Count Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x001c</span></code></div>
+</div>
+</td>
+<td id="acb3054124ed"><p><a class="reference internal" href="#a236d228d2b6">Actual Count Register (ActualCountReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Count</p>
+</td>
+<td id="aace4be7f642"><p>R</p></td>
+<td><p>Actual count of interrupts already generated.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="failure-count-register-failurecountreg">
+<h3>Failure Count Register (FailureCountReg)<a class="headerlink" href="#failure-count-register-failurecountreg" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id46">
+<caption><span class="caption-text">Bits of Failure Count Register</span><a class="headerlink" href="#id46" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Failure Count Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0020</span></code></div>
+</div>
+</td>
+<td id="aba236b9d33d"><p><a class="reference internal" href="#ad89f88e0dac">Failure Count Register (FailureCountReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Count</p>
+</td>
+<td id="ae4de7b9148f"><p>R</p></td>
+<td><p>Failure count of missed interrupts.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id7">
+<h3>Failure Count Register (FailureCountReg)<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id47">
+<caption><span class="caption-text">Bits of Failure Count Register</span><a class="headerlink" href="#id47" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Failure Count Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0024</span></code></div>
+</div>
+</td>
+<td id="a9446ad6c9b3"><p><a class="reference internal" href="#ad89f88e0dac">Failure Count Register (FailureCountReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Count</p>
+</td>
+<td id="a0959a79a9a4"><p>R</p></td>
+<td><p>Failure count of missed interrupts.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id8">
+<h3>Failure Count Register (FailureCountReg)<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id48">
+<caption><span class="caption-text">Bits of Failure Count Register</span><a class="headerlink" href="#id48" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Failure Count Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0028</span></code></div>
+</div>
+</td>
+<td id="a502a2bc5d6c"><p><a class="reference internal" href="#ad89f88e0dac">Failure Count Register (FailureCountReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Count</p>
+</td>
+<td id="a65fe16b80cb"><p>R</p></td>
+<td><p>Failure count of missed interrupts.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id9">
+<h3>Failure Count Register (FailureCountReg)<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id49">
+<caption><span class="caption-text">Bits of Failure Count Register</span><a class="headerlink" href="#id49" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Failure Count Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x002c</span></code></div>
+</div>
+</td>
+<td id="a7bba5b7e4b9"><p><a class="reference internal" href="#ad89f88e0dac">Failure Count Register (FailureCountReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Count</p>
+</td>
+<td id="a40bf6542f5f"><p>R</p></td>
+<td><p>Failure count of missed interrupts.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="interval-register-intervalreg">
+<h3>Interval Register (IntervalReg)<a class="headerlink" href="#interval-register-intervalreg" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id50">
+<caption><span class="caption-text">Bits of Interval Register</span><a class="headerlink" href="#id50" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Interval Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0030</span></code></div>
+</div>
+</td>
+<td id="a2a37762ecc0"><p><a class="reference internal" href="#a0ea8a602d73">Interval Register (IntervalReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Interval</p>
+</td>
+<td id="a20e5368705d"><p>RW</p></td>
+<td><p>Interval of generated interrupt in nanaoseconds.</p>
+<table class="docutils align-default" id="id51">
+<caption><span class="caption-text">Resets of Interval</span><a class="headerlink" href="#id51" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000.0000</span></code></div>
+</div>
+</td>
+<td id="a5ad52eac1fa"><p>BusReset</p></td>
+<td><p>RW</p></td>
+<td><p>Default Bus Reset</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id10">
+<h3>Interval Register (IntervalReg)<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id52">
+<caption><span class="caption-text">Bits of Interval Register</span><a class="headerlink" href="#id52" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Interval Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0034</span></code></div>
+</div>
+</td>
+<td id="a89684d8915f"><p><a class="reference internal" href="#a0ea8a602d73">Interval Register (IntervalReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Interval</p>
+</td>
+<td id="a8ca678477b7"><p>RW</p></td>
+<td><p>Interval of generated interrupt in nanaoseconds.</p>
+<table class="docutils align-default" id="id53">
+<caption><span class="caption-text">Resets of Interval</span><a class="headerlink" href="#id53" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000.0000</span></code></div>
+</div>
+</td>
+<td id="a04c5c7579e5"><p>BusReset</p></td>
+<td><p>RW</p></td>
+<td><p>Default Bus Reset</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id11">
+<h3>Interval Register (IntervalReg)<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id54">
+<caption><span class="caption-text">Bits of Interval Register</span><a class="headerlink" href="#id54" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Interval Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0038</span></code></div>
+</div>
+</td>
+<td id="ac72e4c655c6"><p><a class="reference internal" href="#a0ea8a602d73">Interval Register (IntervalReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Interval</p>
+</td>
+<td id="a4d80d77ed0e"><p>RW</p></td>
+<td><p>Interval of generated interrupt in nanaoseconds.</p>
+<table class="docutils align-default" id="id55">
+<caption><span class="caption-text">Resets of Interval</span><a class="headerlink" href="#id55" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000.0000</span></code></div>
+</div>
+</td>
+<td id="a75204c88bd3"><p>BusReset</p></td>
+<td><p>RW</p></td>
+<td><p>Default Bus Reset</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id12">
+<h3>Interval Register (IntervalReg)<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id56">
+<caption><span class="caption-text">Bits of Interval Register</span><a class="headerlink" href="#id56" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Interval Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x003c</span></code></div>
+</div>
+</td>
+<td id="a776e7a831e1"><p><a class="reference internal" href="#a0ea8a602d73">Interval Register (IntervalReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Interval</p>
+</td>
+<td id="ad16ee11aea8"><p>RW</p></td>
+<td><p>Interval of generated interrupt in nanaoseconds.</p>
+<table class="docutils align-default" id="id57">
+<caption><span class="caption-text">Resets of Interval</span><a class="headerlink" href="#id57" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000.0000</span></code></div>
+</div>
+</td>
+<td id="a4a4bd46de7f"><p>BusReset</p></td>
+<td><p>RW</p></td>
+<td><p>Default Bus Reset</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="reference-count-register-referencecountreg">
+<h3>Reference Count Register (ReferenceCountReg)<a class="headerlink" href="#reference-count-register-referencecountreg" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id58">
+<caption><span class="caption-text">Bits of Reference Count Register</span><a class="headerlink" href="#id58" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Reference Count Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0040</span></code></div>
+</div>
+</td>
+<td id="a9a7df46e1de"><p><a class="reference internal" href="#a214508aba0d">Reference Count Register (ReferenceCountReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Count</p>
+</td>
+<td id="a0e24d83f255"><p>RW</p></td>
+<td><p>Reference count written by SW to acknowledge a processed interrupt.</p>
+<table class="docutils align-default" id="id59">
+<caption><span class="caption-text">Resets of Count</span><a class="headerlink" href="#id59" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000.0000</span></code></div>
+</div>
+</td>
+<td id="ac26c27f8534"><p>BusReset</p></td>
+<td><p>RW</p></td>
+<td><p>Default Bus Reset</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id13">
+<h3>Reference Count Register (ReferenceCountReg)<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id60">
+<caption><span class="caption-text">Bits of Reference Count Register</span><a class="headerlink" href="#id60" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Reference Count Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0044</span></code></div>
+</div>
+</td>
+<td id="a6540a8cf639"><p><a class="reference internal" href="#a214508aba0d">Reference Count Register (ReferenceCountReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Count</p>
+</td>
+<td id="a71365707610"><p>RW</p></td>
+<td><p>Reference count written by SW to acknowledge a processed interrupt.</p>
+<table class="docutils align-default" id="id61">
+<caption><span class="caption-text">Resets of Count</span><a class="headerlink" href="#id61" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000.0000</span></code></div>
+</div>
+</td>
+<td id="af5bdf047bd0"><p>BusReset</p></td>
+<td><p>RW</p></td>
+<td><p>Default Bus Reset</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id14">
+<h3>Reference Count Register (ReferenceCountReg)<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id62">
+<caption><span class="caption-text">Bits of Reference Count Register</span><a class="headerlink" href="#id62" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Reference Count Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0048</span></code></div>
+</div>
+</td>
+<td id="a9b5c49549ef"><p><a class="reference internal" href="#a214508aba0d">Reference Count Register (ReferenceCountReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Count</p>
+</td>
+<td id="a12625b1db21"><p>RW</p></td>
+<td><p>Reference count written by SW to acknowledge a processed interrupt.</p>
+<table class="docutils align-default" id="id63">
+<caption><span class="caption-text">Resets of Count</span><a class="headerlink" href="#id63" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000.0000</span></code></div>
+</div>
+</td>
+<td id="a7c419d92be5"><p>BusReset</p></td>
+<td><p>RW</p></td>
+<td><p>Default Bus Reset</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id15">
+<h3>Reference Count Register (ReferenceCountReg)<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default" id="id64">
+<caption><span class="caption-text">Bits of Reference Count Register</span><a class="headerlink" href="#id64" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Bits of Reference Count Register</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x004c</span></code></div>
+</div>
+</td>
+<td id="a414e8dad704"><p><a class="reference internal" href="#a214508aba0d">Reference Count Register (ReferenceCountReg)</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bits</p></td>
+<td><p>ID</p></td>
+<td><p>Type</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line">31</div>
+<div class="line">..</div>
+<div class="line">00</div>
+</div>
+</td>
+<td><p>Count</p>
+</td>
+<td id="ab192c9f87fc"><p>RW</p></td>
+<td><p>Reference count written by SW to acknowledge a processed interrupt.</p>
+<table class="docutils align-default" id="id65">
+<caption><span class="caption-text">Resets of Count</span><a class="headerlink" href="#id65" title="Link to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">0x0000.0000</span></code></div>
+</div>
+</td>
+<td id="adf7305c625e"><p>BusReset</p></td>
+<td><p>RW</p></td>
+<td><p>Default Bus Reset</p></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        <a class="uplink" href="index.html">Contents</a>
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2023, Eccelerators GmbH.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,2852 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<section xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mathml="http://www.w3.org/1998/Math/MathML" xmlns="http://docbook.org/ns/docbook" xml:id="Eccelerators.Library.IP.InterruptGeneratorIfc-composite" version="5.0">
+  <title>Interrupt Generator Interface (InterruptGeneratorIfc)</title>
+  <para>Interface containing a basic Interrupt Generator block as predictable source and execurion check for interrupt simulation.</para>
+  <table>
+    <title>Blocks of Interrupt Generator Interface</title>
+    <tgroup cols="3">
+      <colspec colnum="1" colwidth="59" colname="col1"/>
+      <colspec colnum="2" colwidth="73" colname="col2"/>
+      <colspec colnum="3" colwidth="567" colname="col3"/>
+      <tbody>
+        <row>
+          <entry namest="col1" nameend="col3">
+            <para>Blocks of Interrupt Generator Interface</para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para>Block Address</para>
+          </entry>
+          <entry>
+            <para>ID</para>
+          </entry>
+          <entry>
+            <para>Block Name</para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para>
+              <code>0x0000</code>
+            </para>
+          </entry>
+          <entry xml:id="a2822b0ad702">
+            <para>InterruptGeneratorBlk</para>
+          </entry>
+          <entry>
+            <para>
+              <link linkend="a4152ca7d3fe">Interrupt Generator Block</link>
+            </para>
+          </entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </table>
+  <para/>
+  <table>
+    <title>Resets of Interrupt Generator Interface</title>
+    <tgroup cols="2">
+      <colspec colnum="1" colwidth="59" colname="col1"/>
+      <colspec colnum="2" colwidth="640" colname="col2"/>
+      <tbody>
+        <row>
+          <entry namest="col1" nameend="col2">
+            <para>Resets of Registers of Interrupt Generator Interface</para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para>ID</para>
+          </entry>
+          <entry>
+            <para>Reset Name</para>
+          </entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </table>
+  <para/>
+  <section xml:id="interrupt-generator-block-interruptgeneratorblk">
+    <title>Interrupt Generator Block (InterruptGeneratorBlk)</title>
+    <para>This block defines a basic Interrupt Generator block as predictable source and execution check for
+interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</para>
+    <para>Constraints:</para>
+    <orderedlist>
+      <listitem>
+        <para>Generate interrupts at a configurable rate for level triggered interrupt destinations.</para>
+      </listitem>
+      <listitem>
+        <para>Check if interrupts are executed in time.</para>
+      </listitem>
+      <listitem>
+        <para>Provide a failure output.</para>
+      </listitem>
+    </orderedlist>
+    <para>Interrupt Generator details:</para>
+    <figure>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="resources/InterruptGeneratorUserLogic.png" scale="50"/>
+        </imageobject>
+      </mediaobject>
+      <title>Interrupt Generator details</title>
+    </figure>
+    <table>
+      <title>Registers or Delegates of Interrupt Generator Block</title>
+      <tgroup cols="3">
+        <colspec colnum="1" colwidth="59" colname="col1"/>
+        <colspec colnum="2" colwidth="59" colname="col2"/>
+        <colspec colnum="3" colwidth="581" colname="col3"/>
+        <tbody>
+          <row>
+            <entry namest="col1" nameend="col3">
+              <para>Registers or Delegates of Interrupt Generator Block</para>
+            </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <para>
+                <code>0x0000</code>
+              </para>
+              <para>
+                <code>..</code>
+              </para>
+              <para>
+                <code>0x0053</code>
+              </para>
+            </entry>
+            <entry xml:id="a4152ca7d3fe">
+              <para>
+                <link linkend="a2822b0ad702">Interrupt Generator Block</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>Address</para>
+            </entry>
+            <entry>
+              <para>ID</para>
+            </entry>
+            <entry>
+              <para>Name</para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0000</code>
+              </para>
+            </entry>
+            <entry xml:id="a8b2ca6ff3bf">
+              <para>ControlReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="aeb35d070801">Control Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0000</code>
+              </para>
+            </entry>
+            <entry xml:id="a220d1e07b4c">
+              <para>StatusReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a2be60be6817">Status Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0000</code>
+              </para>
+            </entry>
+            <entry xml:id="aa0dfca7eaf6">
+              <para>ChargedCountReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a0db3b6116e5">Charged Count Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0004</code>
+              </para>
+            </entry>
+            <entry xml:id="a132cf324d37">
+              <para>ChargedCountReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a0db3b6116e5">Charged Count Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0008</code>
+              </para>
+            </entry>
+            <entry xml:id="ad59fd7e370e">
+              <para>ChargedCountReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a0db3b6116e5">Charged Count Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x000c</code>
+              </para>
+            </entry>
+            <entry xml:id="a7bf43ea2187">
+              <para>ChargedCountReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a0db3b6116e5">Charged Count Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0010</code>
+              </para>
+            </entry>
+            <entry xml:id="a236d228d2b6">
+              <para>ActualCountReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a2cb1678bc40">Actual Count Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0014</code>
+              </para>
+            </entry>
+            <entry xml:id="a195551d267e">
+              <para>ActualCountReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a2cb1678bc40">Actual Count Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0018</code>
+              </para>
+            </entry>
+            <entry xml:id="a608640262d1">
+              <para>ActualCountReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a2cb1678bc40">Actual Count Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x001c</code>
+              </para>
+            </entry>
+            <entry xml:id="a37643fa7ac3">
+              <para>ActualCountReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a2cb1678bc40">Actual Count Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0020</code>
+              </para>
+            </entry>
+            <entry xml:id="ad89f88e0dac">
+              <para>FailureCountReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="aba236b9d33d">Failure Count Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0024</code>
+              </para>
+            </entry>
+            <entry xml:id="a74d21831782">
+              <para>FailureCountReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="aba236b9d33d">Failure Count Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0028</code>
+              </para>
+            </entry>
+            <entry xml:id="ae1f98972b82">
+              <para>FailureCountReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="aba236b9d33d">Failure Count Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x002c</code>
+              </para>
+            </entry>
+            <entry xml:id="a9de8ec5a7f4">
+              <para>FailureCountReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="aba236b9d33d">Failure Count Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0030</code>
+              </para>
+            </entry>
+            <entry xml:id="a0ea8a602d73">
+              <para>IntervalReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a2a37762ecc0">Interval Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0034</code>
+              </para>
+            </entry>
+            <entry xml:id="ad10f4ae8b6f">
+              <para>IntervalReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a2a37762ecc0">Interval Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0038</code>
+              </para>
+            </entry>
+            <entry xml:id="a82d3204a098">
+              <para>IntervalReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a2a37762ecc0">Interval Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x003c</code>
+              </para>
+            </entry>
+            <entry xml:id="a1906c38fac1">
+              <para>IntervalReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a2a37762ecc0">Interval Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0040</code>
+              </para>
+            </entry>
+            <entry xml:id="a214508aba0d">
+              <para>ReferenceCountReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a9a7df46e1de">Reference Count Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0044</code>
+              </para>
+            </entry>
+            <entry xml:id="a37dcfb6b8bc">
+              <para>ReferenceCountReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a9a7df46e1de">Reference Count Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x0048</code>
+              </para>
+            </entry>
+            <entry xml:id="adcaae45b694">
+              <para>ReferenceCountReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a9a7df46e1de">Reference Count Register</link>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>
+                <code>0x004c</code>
+              </para>
+            </entry>
+            <entry xml:id="ab72de44ab07">
+              <para>ReferenceCountReg</para>
+            </entry>
+            <entry>
+              <para>
+                <link linkend="a9a7df46e1de">Reference Count Register</link>
+              </para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <section xml:id="control-register-controlreg">
+      <title>Control Register (ControlReg)</title>
+      <table>
+        <title>Bits of Control Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Control Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0000</code>
+                </para>
+              </entry>
+              <entry xml:id="aeb35d070801">
+                <para>
+                  <link linkend="a8b2ca6ff3bf">Control Register (ControlReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>3</para>
+              </entry>
+              <entry>
+                <para>ChannelOperation</para>
+              </entry>
+              <entry xml:id="abfc6970dfd8">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <table>
+                  <title>Values of ChannelOperation</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="35" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="448" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>Value</para>
+                        </entry>
+                        <entry>
+                          <para>ID</para>
+                        </entry>
+                        <entry>
+                          <para>Type</para>
+                        </entry>
+                        <entry>
+                          <para>Description</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x1</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="ac6827efbd33">
+                          <para>Enabled</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="aaa97209909f">
+                          <para>Disabled</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+                <para/>
+                <table>
+                  <title>Resets of ChannelOperation</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a4922b901091">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>2</para>
+              </entry>
+              <entry>
+                <para>ChannelOperation</para>
+              </entry>
+              <entry xml:id="ab2dc42a1d83">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <table>
+                  <title>Values of ChannelOperation</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="35" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="448" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>Value</para>
+                        </entry>
+                        <entry>
+                          <para>ID</para>
+                        </entry>
+                        <entry>
+                          <para>Type</para>
+                        </entry>
+                        <entry>
+                          <para>Description</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x1</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a8f36117ba60">
+                          <para>Enabled</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="ac3fbdb7f564">
+                          <para>Disabled</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+                <para/>
+                <table>
+                  <title>Resets of ChannelOperation</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a876a365fdae">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>1</para>
+              </entry>
+              <entry>
+                <para>ChannelOperation</para>
+              </entry>
+              <entry xml:id="acb8d44b0a39">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <table>
+                  <title>Values of ChannelOperation</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="35" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="448" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>Value</para>
+                        </entry>
+                        <entry>
+                          <para>ID</para>
+                        </entry>
+                        <entry>
+                          <para>Type</para>
+                        </entry>
+                        <entry>
+                          <para>Description</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x1</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="ad8eafd03cc8">
+                          <para>Enabled</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a27a346233f3">
+                          <para>Disabled</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+                <para/>
+                <table>
+                  <title>Resets of ChannelOperation</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a89c0f695a75">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>0</para>
+              </entry>
+              <entry>
+                <para>ChannelOperation</para>
+              </entry>
+              <entry xml:id="abd72e638831">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <table>
+                  <title>Values of ChannelOperation</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="35" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="448" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>Value</para>
+                        </entry>
+                        <entry>
+                          <para>ID</para>
+                        </entry>
+                        <entry>
+                          <para>Type</para>
+                        </entry>
+                        <entry>
+                          <para>Description</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x1</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a04e0ab0d0c8">
+                          <para>Enabled</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="aec562afaf70">
+                          <para>Disabled</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+                <para/>
+                <table>
+                  <title>Resets of ChannelOperation</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a51c6970946a">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="status-register-statusreg">
+      <title>Status Register (StatusReg)</title>
+      <table>
+        <title>Bits of Status Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Status Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0000</code>
+                </para>
+              </entry>
+              <entry xml:id="a2be60be6817">
+                <para>
+                  <link linkend="a220d1e07b4c">Status Register (StatusReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>7</para>
+                <para>..</para>
+                <para>6</para>
+              </entry>
+              <entry>
+                <para>ChannelStatus</para>
+              </entry>
+              <entry xml:id="a1660b69e837">
+                <para>R</para>
+              </entry>
+              <entry>
+                <table>
+                  <title>Values of ChannelStatus</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="35" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="448" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>Value</para>
+                        </entry>
+                        <entry>
+                          <para>ID</para>
+                        </entry>
+                        <entry>
+                          <para>Type</para>
+                        </entry>
+                        <entry>
+                          <para>Description</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b00</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="add6508cf8ca">
+                          <para>Idle</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b01</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a6fbdf021143">
+                          <para>Operating</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b1*</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a22dbffe225e">
+                          <para>Ended</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+                <para/>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>5</para>
+                <para>..</para>
+                <para>4</para>
+              </entry>
+              <entry>
+                <para>ChannelStatus</para>
+              </entry>
+              <entry xml:id="acafa119b1b5">
+                <para>R</para>
+              </entry>
+              <entry>
+                <table>
+                  <title>Values of ChannelStatus</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="35" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="448" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>Value</para>
+                        </entry>
+                        <entry>
+                          <para>ID</para>
+                        </entry>
+                        <entry>
+                          <para>Type</para>
+                        </entry>
+                        <entry>
+                          <para>Description</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b00</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a141263e359a">
+                          <para>Idle</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b01</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="ad5c20d62656">
+                          <para>Operating</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b1*</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a0a75b24ca30">
+                          <para>Ended</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+                <para/>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>3</para>
+                <para>..</para>
+                <para>2</para>
+              </entry>
+              <entry>
+                <para>ChannelStatus</para>
+              </entry>
+              <entry xml:id="a58fa998ba14">
+                <para>R</para>
+              </entry>
+              <entry>
+                <table>
+                  <title>Values of ChannelStatus</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="35" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="448" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>Value</para>
+                        </entry>
+                        <entry>
+                          <para>ID</para>
+                        </entry>
+                        <entry>
+                          <para>Type</para>
+                        </entry>
+                        <entry>
+                          <para>Description</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b00</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="ace5b59d6d2c">
+                          <para>Idle</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b01</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a4ead7bcea6f">
+                          <para>Operating</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b1*</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="afd452e43ce5">
+                          <para>Ended</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+                <para/>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>1</para>
+                <para>..</para>
+                <para>0</para>
+              </entry>
+              <entry>
+                <para>ChannelStatus</para>
+              </entry>
+              <entry xml:id="a265d5d34450">
+                <para>R</para>
+              </entry>
+              <entry>
+                <table>
+                  <title>Values of ChannelStatus</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="35" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="448" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>Value</para>
+                        </entry>
+                        <entry>
+                          <para>ID</para>
+                        </entry>
+                        <entry>
+                          <para>Type</para>
+                        </entry>
+                        <entry>
+                          <para>Description</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b00</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a34946e2b998">
+                          <para>Idle</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b01</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="ad278b8bbf89">
+                          <para>Operating</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b1*</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a0dea4672bf0">
+                          <para>Ended</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+                <para/>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="charged-count-register-chargedcountreg">
+      <title>Charged Count Register (ChargedCountReg)</title>
+      <table>
+        <title>Bits of Charged Count Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Charged Count Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0000</code>
+                </para>
+              </entry>
+              <entry xml:id="a0db3b6116e5">
+                <para>
+                  <link linkend="aa0dfca7eaf6">Charged Count Register (ChargedCountReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Count</para>
+              </entry>
+              <entry xml:id="a374df898eed">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <para>Number of interrupts to be generated and expected to be handled by SW.</para>
+                <table>
+                  <title>Resets of Count</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0000.0000</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="ab5b19eb534d">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="id1">
+      <title>Charged Count Register (ChargedCountReg)</title>
+      <table>
+        <title>Bits of Charged Count Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Charged Count Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0004</code>
+                </para>
+              </entry>
+              <entry xml:id="abc68b2c2fb4">
+                <para>
+                  <link linkend="aa0dfca7eaf6">Charged Count Register (ChargedCountReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Count</para>
+              </entry>
+              <entry xml:id="a8bb696eb6df">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <para>Number of interrupts to be generated and expected to be handled by SW.</para>
+                <table>
+                  <title>Resets of Count</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0000.0000</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a2004d63cfb7">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="id2">
+      <title>Charged Count Register (ChargedCountReg)</title>
+      <table>
+        <title>Bits of Charged Count Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Charged Count Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0008</code>
+                </para>
+              </entry>
+              <entry xml:id="a948ab506dde">
+                <para>
+                  <link linkend="aa0dfca7eaf6">Charged Count Register (ChargedCountReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Count</para>
+              </entry>
+              <entry xml:id="ab8f354f9472">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <para>Number of interrupts to be generated and expected to be handled by SW.</para>
+                <table>
+                  <title>Resets of Count</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0000.0000</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a2f408681c72">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="id3">
+      <title>Charged Count Register (ChargedCountReg)</title>
+      <table>
+        <title>Bits of Charged Count Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Charged Count Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x000c</code>
+                </para>
+              </entry>
+              <entry xml:id="a3e9cdd4ec35">
+                <para>
+                  <link linkend="aa0dfca7eaf6">Charged Count Register (ChargedCountReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Count</para>
+              </entry>
+              <entry xml:id="a8cfa65c1014">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <para>Number of interrupts to be generated and expected to be handled by SW.</para>
+                <table>
+                  <title>Resets of Count</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0000.0000</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a2fdfe1a9a56">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="actual-count-register-actualcountreg">
+      <title>Actual Count Register (ActualCountReg)</title>
+      <table>
+        <title>Bits of Actual Count Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Actual Count Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0010</code>
+                </para>
+              </entry>
+              <entry xml:id="a2cb1678bc40">
+                <para>
+                  <link linkend="a236d228d2b6">Actual Count Register (ActualCountReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Count</para>
+              </entry>
+              <entry xml:id="a9dad31862d9">
+                <para>R</para>
+              </entry>
+              <entry>
+                <para>Actual count of interrupts already generated.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="id4">
+      <title>Actual Count Register (ActualCountReg)</title>
+      <table>
+        <title>Bits of Actual Count Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Actual Count Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0014</code>
+                </para>
+              </entry>
+              <entry xml:id="a10654a50f89">
+                <para>
+                  <link linkend="a236d228d2b6">Actual Count Register (ActualCountReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Count</para>
+              </entry>
+              <entry xml:id="a2b888e669e0">
+                <para>R</para>
+              </entry>
+              <entry>
+                <para>Actual count of interrupts already generated.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="id5">
+      <title>Actual Count Register (ActualCountReg)</title>
+      <table>
+        <title>Bits of Actual Count Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Actual Count Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0018</code>
+                </para>
+              </entry>
+              <entry xml:id="a2fb71bf02a8">
+                <para>
+                  <link linkend="a236d228d2b6">Actual Count Register (ActualCountReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Count</para>
+              </entry>
+              <entry xml:id="ae7470c3ca3c">
+                <para>R</para>
+              </entry>
+              <entry>
+                <para>Actual count of interrupts already generated.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="id6">
+      <title>Actual Count Register (ActualCountReg)</title>
+      <table>
+        <title>Bits of Actual Count Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Actual Count Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x001c</code>
+                </para>
+              </entry>
+              <entry xml:id="acb3054124ed">
+                <para>
+                  <link linkend="a236d228d2b6">Actual Count Register (ActualCountReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Count</para>
+              </entry>
+              <entry xml:id="aace4be7f642">
+                <para>R</para>
+              </entry>
+              <entry>
+                <para>Actual count of interrupts already generated.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="failure-count-register-failurecountreg">
+      <title>Failure Count Register (FailureCountReg)</title>
+      <table>
+        <title>Bits of Failure Count Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Failure Count Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0020</code>
+                </para>
+              </entry>
+              <entry xml:id="aba236b9d33d">
+                <para>
+                  <link linkend="ad89f88e0dac">Failure Count Register (FailureCountReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Count</para>
+              </entry>
+              <entry xml:id="ae4de7b9148f">
+                <para>R</para>
+              </entry>
+              <entry>
+                <para>Failure count of missed interrupts.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="id7">
+      <title>Failure Count Register (FailureCountReg)</title>
+      <table>
+        <title>Bits of Failure Count Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Failure Count Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0024</code>
+                </para>
+              </entry>
+              <entry xml:id="a9446ad6c9b3">
+                <para>
+                  <link linkend="ad89f88e0dac">Failure Count Register (FailureCountReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Count</para>
+              </entry>
+              <entry xml:id="a0959a79a9a4">
+                <para>R</para>
+              </entry>
+              <entry>
+                <para>Failure count of missed interrupts.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="id8">
+      <title>Failure Count Register (FailureCountReg)</title>
+      <table>
+        <title>Bits of Failure Count Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Failure Count Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0028</code>
+                </para>
+              </entry>
+              <entry xml:id="a502a2bc5d6c">
+                <para>
+                  <link linkend="ad89f88e0dac">Failure Count Register (FailureCountReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Count</para>
+              </entry>
+              <entry xml:id="a65fe16b80cb">
+                <para>R</para>
+              </entry>
+              <entry>
+                <para>Failure count of missed interrupts.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="id9">
+      <title>Failure Count Register (FailureCountReg)</title>
+      <table>
+        <title>Bits of Failure Count Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Failure Count Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x002c</code>
+                </para>
+              </entry>
+              <entry xml:id="a7bba5b7e4b9">
+                <para>
+                  <link linkend="ad89f88e0dac">Failure Count Register (FailureCountReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Count</para>
+              </entry>
+              <entry xml:id="a40bf6542f5f">
+                <para>R</para>
+              </entry>
+              <entry>
+                <para>Failure count of missed interrupts.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="interval-register-intervalreg">
+      <title>Interval Register (IntervalReg)</title>
+      <table>
+        <title>Bits of Interval Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Interval Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0030</code>
+                </para>
+              </entry>
+              <entry xml:id="a2a37762ecc0">
+                <para>
+                  <link linkend="a0ea8a602d73">Interval Register (IntervalReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Interval</para>
+              </entry>
+              <entry xml:id="a20e5368705d">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <para>Interval of generated interrupt in nanaoseconds.</para>
+                <table>
+                  <title>Resets of Interval</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0000.0000</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a5ad52eac1fa">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="id10">
+      <title>Interval Register (IntervalReg)</title>
+      <table>
+        <title>Bits of Interval Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Interval Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0034</code>
+                </para>
+              </entry>
+              <entry xml:id="a89684d8915f">
+                <para>
+                  <link linkend="a0ea8a602d73">Interval Register (IntervalReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Interval</para>
+              </entry>
+              <entry xml:id="a8ca678477b7">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <para>Interval of generated interrupt in nanaoseconds.</para>
+                <table>
+                  <title>Resets of Interval</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0000.0000</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a04c5c7579e5">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="id11">
+      <title>Interval Register (IntervalReg)</title>
+      <table>
+        <title>Bits of Interval Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Interval Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0038</code>
+                </para>
+              </entry>
+              <entry xml:id="ac72e4c655c6">
+                <para>
+                  <link linkend="a0ea8a602d73">Interval Register (IntervalReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Interval</para>
+              </entry>
+              <entry xml:id="a4d80d77ed0e">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <para>Interval of generated interrupt in nanaoseconds.</para>
+                <table>
+                  <title>Resets of Interval</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0000.0000</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a75204c88bd3">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="id12">
+      <title>Interval Register (IntervalReg)</title>
+      <table>
+        <title>Bits of Interval Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Interval Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x003c</code>
+                </para>
+              </entry>
+              <entry xml:id="a776e7a831e1">
+                <para>
+                  <link linkend="a0ea8a602d73">Interval Register (IntervalReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Interval</para>
+              </entry>
+              <entry xml:id="ad16ee11aea8">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <para>Interval of generated interrupt in nanaoseconds.</para>
+                <table>
+                  <title>Resets of Interval</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0000.0000</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a4a4bd46de7f">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="reference-count-register-referencecountreg">
+      <title>Reference Count Register (ReferenceCountReg)</title>
+      <table>
+        <title>Bits of Reference Count Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Reference Count Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0040</code>
+                </para>
+              </entry>
+              <entry xml:id="a9a7df46e1de">
+                <para>
+                  <link linkend="a214508aba0d">Reference Count Register (ReferenceCountReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Count</para>
+              </entry>
+              <entry xml:id="a0e24d83f255">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <para>Reference count written by SW to acknowledge a processed interrupt.</para>
+                <table>
+                  <title>Resets of Count</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0000.0000</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="ac26c27f8534">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="id13">
+      <title>Reference Count Register (ReferenceCountReg)</title>
+      <table>
+        <title>Bits of Reference Count Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Reference Count Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0044</code>
+                </para>
+              </entry>
+              <entry xml:id="a6540a8cf639">
+                <para>
+                  <link linkend="a214508aba0d">Reference Count Register (ReferenceCountReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Count</para>
+              </entry>
+              <entry xml:id="a71365707610">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <para>Reference count written by SW to acknowledge a processed interrupt.</para>
+                <table>
+                  <title>Resets of Count</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0000.0000</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="af5bdf047bd0">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="id14">
+      <title>Reference Count Register (ReferenceCountReg)</title>
+      <table>
+        <title>Bits of Reference Count Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Reference Count Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x0048</code>
+                </para>
+              </entry>
+              <entry xml:id="a9b5c49549ef">
+                <para>
+                  <link linkend="a214508aba0d">Reference Count Register (ReferenceCountReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Count</para>
+              </entry>
+              <entry xml:id="a12625b1db21">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <para>Reference count written by SW to acknowledge a processed interrupt.</para>
+                <table>
+                  <title>Resets of Count</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0000.0000</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a7c419d92be5">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section xml:id="id15">
+      <title>Reference Count Register (ReferenceCountReg)</title>
+      <table>
+        <title>Bits of Reference Count Register</title>
+        <tgroup cols="4">
+          <colspec colnum="1" colwidth="21" colname="col1"/>
+          <colspec colnum="2" colwidth="59" colname="col2"/>
+          <colspec colnum="3" colwidth="28" colname="col3"/>
+          <colspec colnum="4" colwidth="591" colname="col4"/>
+          <tbody>
+            <row>
+              <entry namest="col1" nameend="col4">
+                <para>Bits of Reference Count Register</para>
+              </entry>
+            </row>
+            <row>
+              <entry namest="col1" nameend="col3">
+                <para>
+                  <code>0x004c</code>
+                </para>
+              </entry>
+              <entry xml:id="a414e8dad704">
+                <para>
+                  <link linkend="a214508aba0d">Reference Count Register (ReferenceCountReg)</link>
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>Bits</para>
+              </entry>
+              <entry>
+                <para>ID</para>
+              </entry>
+              <entry>
+                <para>Type</para>
+              </entry>
+              <entry>
+                <para>Description</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>31</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>Count</para>
+              </entry>
+              <entry xml:id="ab192c9f87fc">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <para>Reference count written by SW to acknowledge a processed interrupt.</para>
+                <table>
+                  <title>Resets of Count</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0000.0000</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="adf7305c625e">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </section>
+</section>

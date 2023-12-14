@@ -54,9 +54,8 @@ end entity;
 
 architecture RTL of InterruptGenerator is
     
-    variable n : positive := InterruptOut'lenght;
-    signal IntervalCount : array_of_std_logic_vector(n-1 downto 0)(Interval'left downto 0);
-    signal IntervalEnable : std_logic_vector(n-1 downto 0);
+    signal IntervalCount : array_of_std_logic_vector(InterruptOut'lenght-1 downto 0)(Interval'left downto 0);
+    signal IntervalEnable : std_logic_vector(InterruptOut'lenght-1 downto 0);
 
 begin
    
@@ -69,7 +68,7 @@ begin
             IntervalEnable <= (others => '0');
             FailureOut <= '0';
         elsif rising_edge(Clk) then
-            for i in 0 to n-1 loop
+            for i in 0 to InterruptOut'lenght-1 loop
             
                 IntervalEnable <= (others => '0'); -- default assignment
                  

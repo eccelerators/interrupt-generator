@@ -1,0 +1,246 @@
+//******************************************************************************
+//
+//                  /------o
+//            eccelerators
+//         o------/
+//
+// This file is an Eccelerators GmbH sample project.
+//
+// MIT License:
+// Copyright (c) 2023 Eccelerators GmbH
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+//******************************************************************************
+namespace Eccelerators.Library.IP
+{
+
+	block InterruptGeneratorBlk
+	{
+		Name = "Interrupt Generator Block";
+		Description = "
+			
+			This block defines a basic Interrupt Generator block as predictable source and execution check for 
+			interrupt simulation. It provides 4 channels to generate 4 interrupt sources.
+
+			Constraints:
+            
+            1. Generate interrupts at a configurable rate for level triggered interrupt destinations.
+			2. Check if interrupts are executed in time.
+			3. Provide a failure output. 
+			
+            Interrupt Generator details:
+			 
+			.. figure:: resources/InterruptGeneratorUserLogic.png
+			   :scale: 50
+			   
+			   Interrupt Generator details
+			   												 			 
+			";
+			   			   												 			 
+		Registers = [
+			ControlReg,
+			StatusReg,
+			ExpectedCountReg,
+			ExpectedCountReg,
+			ExpectedCountReg,
+			ExpectedCountReg,
+			ActualCountReg,
+			ActualCountReg,
+			ActualCountReg,
+			ActualCountReg,
+			IntervalReg,
+			IntervalReg,
+			IntervalReg,
+			IntervalReg,
+			ReferenceReg,
+			ReferenceReg,
+			ReferenceReg,
+			ReferenceReg
+		];
+		
+		register ControlReg
+		{
+			Name = "Control Register";
+			Width = 4;
+			Bits = [
+				ChannelOperation,
+				ChannelOperation,
+				ChannelOperation,
+				ChannelOperation
+			];
+			enum ChannelOperation
+			{
+				Width = 1;
+				Values = [
+					Enabled,
+					Disabled
+				];
+				value Enabled
+				{
+					Value = 0x1;
+					Behaviour = ValueBehaviour.Read;
+					Description = "An Interrupt is pending.";
+				}
+			
+				value Disabled
+				{
+					Value = 0x0;
+					Behaviour = ValueBehaviour.Read;
+					Description = "An Interrupt is not pending.";
+				}
+			}
+		}
+		
+		register StatusReg
+		{
+			Name = "Status Register";
+			Width = 4;
+			Bits = [
+				ChannelStatus,
+				ChannelStatus,
+				ChannelStatus,
+				ChannelStatus
+			];
+			enum ChannelStatus
+			{
+				Width = 2;
+				Values = [
+					Idle,
+					Operating,
+					Ended
+				];
+				value Idle
+				{
+					Value = 0b00;
+					Behaviour = ValueBehaviour.Read;
+					Description = "An Interrupt is pending.";
+				}
+			
+				value Operating
+				{
+					Value = 0b01;
+					Behaviour = ValueBehaviour.Read;
+					Description = "An Interrupt is not pending.";
+				}
+				
+				value Ended
+				{
+					Value = 0b1*;
+					Behaviour = ValueBehaviour.Read;
+					Description = "An Interrupt is not pending.";
+				}			
+			}
+			enum ChannelResult
+			{
+				Width = 1;
+				Values = [
+					Failure,
+					Success
+				];
+				value Failure
+				{
+					Value = 0x1;
+					Behaviour = ValueBehaviour.Read;
+					Description = "An Interrupt is pending.";
+				}
+			
+				value Success
+				{
+					Value = 0x0;
+					Behaviour = ValueBehaviour.Read;
+					Description = "An Interrupt is not pending.";
+				}
+						
+			}
+		}
+
+		register ExpectedCountReg
+		{
+			Name = "Expected Count Register";
+			Width = 32;
+			Bits = [
+				Count
+			];
+			data Count
+			{
+				Width = 32;
+				Description = "Number of interrupts to be generated and expected to be handled by SW.";		
+			}
+		}
+		
+		register ActualCountReg
+		{
+			Name = "Actual Count Register";
+			Width = 32;
+			Bits = [
+				Count
+			];
+			data Count
+			{
+				Width = 32;
+				Description = "Actual count of interrupts already generated.";		
+			}
+		}
+		
+		register ActualFailureCountReg
+		{
+			Name = "Actual Failure Count Register";
+			Width = 32;
+			Bits = [
+				Count
+			];
+			data Count
+			{
+				Width = 32;
+				Description = "Actual failure count of missed interrupts.";		
+			}
+		}
+		
+		
+		register IntervalReg
+		{
+			Name = "Interval Register";
+			Width = 32;
+			Bits = [
+				Interval
+			];
+			data Interval
+			{
+				Width = 32;
+				Description = "Interval of generated interrupt in nanaoseconds.";		
+			}
+		}
+		
+		register ReferenceReg
+		{
+			Name = "Reference Register";
+			Width = 32;
+			Bits = [
+				ReferenceData
+			];
+			data ReferenceData
+			{
+				Width = 32;
+				Description = "Reference data read and written by SW only.";		
+			}
+		}
+	
+	}
+
+}

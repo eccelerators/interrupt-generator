@@ -56,22 +56,26 @@ namespace Eccelerators.Library.IP
 		Registers = [
 			ControlReg,
 			StatusReg,
-			ExpectedCountReg,
-			ExpectedCountReg,
-			ExpectedCountReg,
-			ExpectedCountReg,
+			ChargedCountReg,
+			ChargedCountReg,
+			ChargedCountReg,
+			ChargedCountReg,
 			ActualCountReg,
 			ActualCountReg,
 			ActualCountReg,
 			ActualCountReg,
+			FailureCountReg,
+			FailureCountReg,
+			FailureCountReg,
+			FailureCountReg,
 			IntervalReg,
 			IntervalReg,
 			IntervalReg,
 			IntervalReg,
-			ReferenceReg,
-			ReferenceReg,
-			ReferenceReg,
-			ReferenceReg
+			ReferenceCountReg,
+			ReferenceCountReg,
+			ReferenceCountReg,
+			ReferenceCountReg
 		];
 		
 		register ControlReg
@@ -120,6 +124,7 @@ namespace Eccelerators.Library.IP
 			enum ChannelStatus
 			{
 				Width = 2;
+				Behaviour = BitBehaviour.ReadTransparent;
 				Values = [
 					Idle,
 					Operating,
@@ -170,9 +175,9 @@ namespace Eccelerators.Library.IP
 			}
 		}
 
-		register ExpectedCountReg
+		register ChargedCountReg
 		{
-			Name = "Expected Count Register";
+			Name = "Charged Count Register";
 			Width = 32;
 			Bits = [
 				Count
@@ -194,13 +199,14 @@ namespace Eccelerators.Library.IP
 			data Count
 			{
 				Width = 32;
+				Behaviour = BitBehaviour.ReadTransparent;
 				Description = "Actual count of interrupts already generated.";		
 			}
 		}
 		
-		register ActualFailureCountReg
+		register FailureCountReg
 		{
-			Name = "Actual Failure Count Register";
+			Name = "Failure Count Register";
 			Width = 32;
 			Bits = [
 				Count
@@ -208,7 +214,8 @@ namespace Eccelerators.Library.IP
 			data Count
 			{
 				Width = 32;
-				Description = "Actual failure count of missed interrupts.";		
+				Behaviour = BitBehaviour.ReadTransparent;
+				Description = "Failure count of missed interrupts.";		
 			}
 		}
 		
@@ -227,17 +234,17 @@ namespace Eccelerators.Library.IP
 			}
 		}
 		
-		register ReferenceReg
+		register ReferenceCountReg
 		{
-			Name = "Reference Register";
+			Name = "Reference Count Register";
 			Width = 32;
 			Bits = [
-				ReferenceData
+				Count
 			];
-			data ReferenceData
+			data Count
 			{
 				Width = 32;
-				Description = "Reference data read and written by SW only.";		
+				Description = "Reference count written by SW to acknowledge a processed interrupt.";		
 			}
 		}
 	

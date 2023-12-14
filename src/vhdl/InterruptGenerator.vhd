@@ -31,58 +31,85 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-use work.InterruptCollectorIfcPackage.all;
+use work.InterruptGeneratorIfcPackage.all;
+use work.InterruptGeneratorPackage.all;
 
-entity InterruptCollector is
-    generic (
-        BIT_WIDTH : positive := 1
-    );
+
+entity InterruptGenerator is
+    generic(ClkPeriodInNs : natural);
     port (
         Clk : in std_logic;
         Rst : in std_logic;
-        InterruptIn : in std_logic_vector(BIT_WIDTH - 1 downto 0);
-        InterruptOut : out std_logic;
-        Mask : in std_logic_vector(BIT_WIDTH - 1 downto 0);
-        RequestWritten : in std_logic_vector(BIT_WIDTH - 1 downto 0);
-        WTransPulseInterruptRequestReg : in std_logic;
-        RequestToBeRead : out std_logic_vector(BIT_WIDTH - 1 downto 0);
-        ServiceWritten : in std_logic_vector(BIT_WIDTH - 1 downto 0);
-        WTransPulseInterruptServiceReg : in std_logic;
-        ServiceToBeRead : out std_logic_vector(BIT_WIDTH - 1 downto 0)
+        InterruptOut : out std_logic_vector;
+        FailureOut : out std_logic;
+        ChannelOperation : in std_logic_vector;
+        ChannelStatus : out std_logic_vector;
+        ChargedCount : in array_of_std_logic_vector;
+        ActualCount : out array_of_std_logic_vector;
+        FailureCount : out array_of_std_logic_vector;
+        Interval : in array_of_std_logic_vector;
+        ReferenceCount : in array_of_std_logic_vector
     );
 end entity;
 
-architecture RTL of InterruptCollector is
+architecture RTL of InterruptGenerator is
     
-    signal Request : std_logic_vector(BIT_WIDTH - 1 downto 0);
-    signal Service : std_logic_vector(BIT_WIDTH - 1 downto 0);
-    signal MaskedRequest : std_logic_vector(BIT_WIDTH - 1 downto 0);
+    variable n : positive := InterruptOut'lenght;
+    signal IntervalCount : array_of_std_logic_vector(n-1 downto 0)(Interval'left downto 0);
+    signal IntervalEnable : std_logic_vector(n-1 downto 0);
 
 begin
-
-    MaskedRequest <= Mask and Request;
-    InterruptOut <= '1' when unsigned(MaskedRequest) /= 0 else '0'; 
-    RequestToBeRead <= Catch;
-    ServiceToBeRead <= Overrun;
-    
-    prcRequestAndService : process ( Clk, Rst) is
+   
+    prcGenerator : process ( Clk, Rst) is
     begin
         if Rst then
-            Request <= (others => '0');
-            Service <= (others => '0');
+            InterruptOut <= (others => '0');
+            ActualCount <= (others => '0');
+            IntervalCount <= (others => '0');
+            IntervalEnable <= (others => '0');
+            FailureOut <= '0';
         elsif rising_edge(Clk) then
-            for i in 0 to BIT_WIDTH - 1 loop
-                if Service(i) then
-                    Request(i) <= '0';
-                elsif InterruptIn(i) then
-                    Request(i) <= '1';
+            for i in 0 to n-1 loop
+            
+                IntervalEnable <= (others => '0'); -- default assignment
+                 
+                if ChannelOperation(i) then
+                    if IntervalCount(i) + ClkPeriodInNs < Interval(i) then
+                        IntervalCount(i) <= IntervalCount(i) + unsigned(Interval(i));
+                    else
+                        IntervalCount(i) <= to_unsigned(0, Interval(i)'lenght);
+                        IntervalEnable(i) <= '1';
+                    end if;
+                else
+                    IntervalCount(i) <= to_unsigned(0, Interval(i)'lenght);
                 end if;
-                if RequestWritten(i) and WTransPulseInterruptRequestReg then
-                    Service(i) <= '1';
+
+                if ChannelOperation(i) then         
+                    if IntervalEnable(i) then
+                        if ActualCount(i) < ChargedCount(i) then
+                            ActualCount(i) <= ActualCount(i) + 1;
+                            if ActualCount(i) /= Reference(i) then
+                                FailureCount(i) <= FailureCount(i) + 1;
+                                FailureOut <= '1';
+                            end if;
+                        end if;                       
+                    end if;
+                else
+                    FailureCount(i) <= to_unsigned(0, FailureCount(i)'lenght);
+                    ActualCount(i) <= to_unsigned(0, ActualCount(i)'lenght);
+                    FailureOut <= '0';
                 end if;
-                if ServiceWritten(i) and WTransPulseInterruptServiceReg then
-                    Service(i) <= '0';
-                end if;                     
+                
+                if ChannelOperation(i) then
+                    if ActualCount(i) < ChargedCount(i) then
+                        ChannelStatus <= STATUSREG_CHANNELSTATUS1_OPERATING;
+                    else
+                        ChannelStatus <= STATUSREG_CHANNELSTATUS1_ENDED_LIST(0);
+                    end if;
+                else
+                    ChannelStatus <= STATUSREG_CHANNELSTATUS1_IDLE;
+                end if;
+                            
             end loop;
         end if;  
     end process;

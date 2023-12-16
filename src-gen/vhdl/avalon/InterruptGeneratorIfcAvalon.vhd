@@ -52,9 +52,13 @@ entity InterruptGeneratorBlk_InterruptGeneratorIfc is
 		IntervalReg2_Interval : out std_logic_vector(31 downto 0);
 		IntervalReg3_Interval : out std_logic_vector(31 downto 0);
 		ReferenceCountReg0_Count : out std_logic_vector(31 downto 0);
+		WRegPulseReferenceCountReg0 : out std_logic;
 		ReferenceCountReg1_Count : out std_logic_vector(31 downto 0);
+		WRegPulseReferenceCountReg1 : out std_logic;
 		ReferenceCountReg2_Count : out std_logic_vector(31 downto 0);
-		ReferenceCountReg3_Count : out std_logic_vector(31 downto 0)
+		WRegPulseReferenceCountReg2 : out std_logic;
+		ReferenceCountReg3_Count : out std_logic_vector(31 downto 0);
+		WRegPulseReferenceCountReg3 : out std_logic
 	);
 end;
 
@@ -196,6 +200,7 @@ architecture Behavioural of InterruptGeneratorBlk_InterruptGeneratorIfc is
 	signal ReadDiffReferenceCountReg0 : std_logic;
 	signal PreWriteAckReferenceCountReg0 : std_logic;
 	signal WriteDiffReferenceCountReg0 : std_logic;
+	signal DelWriteDiffReferenceCountReg0 : std_logic;
 	signal WRegReferenceCountReg0_Count : std_logic_vector(31 downto 0);
 	signal PreMatchReadReferenceCountReg0 : std_logic;
 	signal PreMatchWriteReferenceCountReg0 : std_logic;
@@ -205,6 +210,7 @@ architecture Behavioural of InterruptGeneratorBlk_InterruptGeneratorIfc is
 	signal ReadDiffReferenceCountReg1 : std_logic;
 	signal PreWriteAckReferenceCountReg1 : std_logic;
 	signal WriteDiffReferenceCountReg1 : std_logic;
+	signal DelWriteDiffReferenceCountReg1 : std_logic;
 	signal WRegReferenceCountReg1_Count : std_logic_vector(31 downto 0);
 	signal PreMatchReadReferenceCountReg1 : std_logic;
 	signal PreMatchWriteReferenceCountReg1 : std_logic;
@@ -214,6 +220,7 @@ architecture Behavioural of InterruptGeneratorBlk_InterruptGeneratorIfc is
 	signal ReadDiffReferenceCountReg2 : std_logic;
 	signal PreWriteAckReferenceCountReg2 : std_logic;
 	signal WriteDiffReferenceCountReg2 : std_logic;
+	signal DelWriteDiffReferenceCountReg2 : std_logic;
 	signal WRegReferenceCountReg2_Count : std_logic_vector(31 downto 0);
 	signal PreMatchReadReferenceCountReg2 : std_logic;
 	signal PreMatchWriteReferenceCountReg2 : std_logic;
@@ -223,6 +230,7 @@ architecture Behavioural of InterruptGeneratorBlk_InterruptGeneratorIfc is
 	signal ReadDiffReferenceCountReg3 : std_logic;
 	signal PreWriteAckReferenceCountReg3 : std_logic;
 	signal WriteDiffReferenceCountReg3 : std_logic;
+	signal DelWriteDiffReferenceCountReg3 : std_logic;
 	signal WRegReferenceCountReg3_Count : std_logic_vector(31 downto 0);
 	signal PreMatchReadReferenceCountReg3 : std_logic;
 	signal PreMatchWriteReferenceCountReg3 : std_logic;
@@ -1324,9 +1332,11 @@ begin
 	begin
 		if (Rst = '1') then
 			PreReadAckReferenceCountReg0 <= '0';
+			DelWriteDiffReferenceCountReg0 <= '0'; 
 			PreWriteAckReferenceCountReg0 <= '0';
 			WRegReferenceCountReg0_Count <= (others => '0');
 		elsif rising_edge(Clk) then
+			DelWriteDiffReferenceCountReg0 <= WriteDiffReferenceCountReg0;
 			PreWriteAckReferenceCountReg0 <= WriteDiffReferenceCountReg0;
 			PreReadAckReferenceCountReg0 <= ReadDiffReferenceCountReg0;
 			if (WriteDiffReferenceCountReg0 = '1') then
@@ -1344,6 +1354,8 @@ begin
 		PreReadDataReferenceCountReg0 <= (others => '0');
 		PreReadDataReferenceCountReg0(31 downto 0) <= WRegReferenceCountReg0_Count;
 	end process;
+	
+	WRegPulseReferenceCountReg0 <= DelWriteDiffReferenceCountReg0;
 	
 	ReferenceCountReg0_Count <= WRegReferenceCountReg0_Count;
 	
@@ -1387,9 +1399,11 @@ begin
 	begin
 		if (Rst = '1') then
 			PreReadAckReferenceCountReg1 <= '0';
+			DelWriteDiffReferenceCountReg1 <= '0'; 
 			PreWriteAckReferenceCountReg1 <= '0';
 			WRegReferenceCountReg1_Count <= (others => '0');
 		elsif rising_edge(Clk) then
+			DelWriteDiffReferenceCountReg1 <= WriteDiffReferenceCountReg1;
 			PreWriteAckReferenceCountReg1 <= WriteDiffReferenceCountReg1;
 			PreReadAckReferenceCountReg1 <= ReadDiffReferenceCountReg1;
 			if (WriteDiffReferenceCountReg1 = '1') then
@@ -1407,6 +1421,8 @@ begin
 		PreReadDataReferenceCountReg1 <= (others => '0');
 		PreReadDataReferenceCountReg1(31 downto 0) <= WRegReferenceCountReg1_Count;
 	end process;
+	
+	WRegPulseReferenceCountReg1 <= DelWriteDiffReferenceCountReg1;
 	
 	ReferenceCountReg1_Count <= WRegReferenceCountReg1_Count;
 	
@@ -1450,9 +1466,11 @@ begin
 	begin
 		if (Rst = '1') then
 			PreReadAckReferenceCountReg2 <= '0';
+			DelWriteDiffReferenceCountReg2 <= '0'; 
 			PreWriteAckReferenceCountReg2 <= '0';
 			WRegReferenceCountReg2_Count <= (others => '0');
 		elsif rising_edge(Clk) then
+			DelWriteDiffReferenceCountReg2 <= WriteDiffReferenceCountReg2;
 			PreWriteAckReferenceCountReg2 <= WriteDiffReferenceCountReg2;
 			PreReadAckReferenceCountReg2 <= ReadDiffReferenceCountReg2;
 			if (WriteDiffReferenceCountReg2 = '1') then
@@ -1470,6 +1488,8 @@ begin
 		PreReadDataReferenceCountReg2 <= (others => '0');
 		PreReadDataReferenceCountReg2(31 downto 0) <= WRegReferenceCountReg2_Count;
 	end process;
+	
+	WRegPulseReferenceCountReg2 <= DelWriteDiffReferenceCountReg2;
 	
 	ReferenceCountReg2_Count <= WRegReferenceCountReg2_Count;
 	
@@ -1513,9 +1533,11 @@ begin
 	begin
 		if (Rst = '1') then
 			PreReadAckReferenceCountReg3 <= '0';
+			DelWriteDiffReferenceCountReg3 <= '0'; 
 			PreWriteAckReferenceCountReg3 <= '0';
 			WRegReferenceCountReg3_Count <= (others => '0');
 		elsif rising_edge(Clk) then
+			DelWriteDiffReferenceCountReg3 <= WriteDiffReferenceCountReg3;
 			PreWriteAckReferenceCountReg3 <= WriteDiffReferenceCountReg3;
 			PreReadAckReferenceCountReg3 <= ReadDiffReferenceCountReg3;
 			if (WriteDiffReferenceCountReg3 = '1') then
@@ -1533,6 +1555,8 @@ begin
 		PreReadDataReferenceCountReg3 <= (others => '0');
 		PreReadDataReferenceCountReg3(31 downto 0) <= WRegReferenceCountReg3_Count;
 	end process;
+	
+	WRegPulseReferenceCountReg3 <= DelWriteDiffReferenceCountReg3;
 	
 	ReferenceCountReg3_Count <= WRegReferenceCountReg3_Count;
 	
@@ -1690,9 +1714,13 @@ begin
 			IntervalReg2_Interval => InterruptGeneratorBlkDown.IntervalReg2_Interval,
 			IntervalReg3_Interval => InterruptGeneratorBlkDown.IntervalReg3_Interval,
 			ReferenceCountReg0_Count => InterruptGeneratorBlkDown.ReferenceCountReg0_Count,
+			WRegPulseReferenceCountReg0 => InterruptGeneratorBlkDown.WRegPulseReferenceCountReg0,
 			ReferenceCountReg1_Count => InterruptGeneratorBlkDown.ReferenceCountReg1_Count,
+			WRegPulseReferenceCountReg1 => InterruptGeneratorBlkDown.WRegPulseReferenceCountReg1,
 			ReferenceCountReg2_Count => InterruptGeneratorBlkDown.ReferenceCountReg2_Count,
-			ReferenceCountReg3_Count => InterruptGeneratorBlkDown.ReferenceCountReg3_Count
+			WRegPulseReferenceCountReg2 => InterruptGeneratorBlkDown.WRegPulseReferenceCountReg2,
+			ReferenceCountReg3_Count => InterruptGeneratorBlkDown.ReferenceCountReg3_Count,
+			WRegPulseReferenceCountReg3 => InterruptGeneratorBlkDown.WRegPulseReferenceCountReg3
 		);
 	
 	Trace.AvalonDown <= AvalonDown;

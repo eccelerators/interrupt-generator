@@ -79,6 +79,10 @@ package InterruptGeneratorIfcPackage is
 		ReferenceCountReg1_Count : std_logic_vector(31 downto 0);
 		ReferenceCountReg2_Count : std_logic_vector(31 downto 0);
 		ReferenceCountReg3_Count : std_logic_vector(31 downto 0);
+		WRegPulseReferenceCountReg0 : std_logic;
+		WRegPulseReferenceCountReg1 : std_logic;
+		WRegPulseReferenceCountReg2 : std_logic;
+		WRegPulseReferenceCountReg3 : std_logic;
 	end record;
 	
 	type T_InterruptGeneratorIfcInterruptGeneratorBlkUp is

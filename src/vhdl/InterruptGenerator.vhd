@@ -43,7 +43,7 @@ entity InterruptGenerator is
         InterruptOut : out std_logic_vector;
         FailureOut : out std_logic;
         ChannelOperation : in std_logic_vector;
-        ChannelStatus : out std_logic_vector;
+        ChannelStatus : out array_of_std_logic_vector;
         ChargedCount : in array_of_std_logic_vector;
         ActualCount : out array_of_std_logic_vector;
         FailureCount : out array_of_std_logic_vector;
@@ -65,8 +65,8 @@ begin
             InterruptOut <= std_logic_vector(to_unsigned(0, InterruptOut'length));
             for i in 0 to InterruptOut'length-1 loop
                 ActualCount(i) <= std_logic_vector(to_unsigned(0, ActualCount(i)'length));
-                IntervalCount <= std_logic_vector(to_unsigned(0, IntervalCount(i)'length));
-                FailureCount <= std_logic_vector(to_unsigned(0, FailureCount(i)'length));
+                IntervalCount(i) <= std_logic_vector(to_unsigned(0, IntervalCount(i)'length));
+                FailureCount(i) <= std_logic_vector(to_unsigned(0, FailureCount(i)'length));
             end loop;
             IntervalEnable <= std_logic_vector(to_unsigned(0, IntervalEnable'length));
             FailureOut <= '0';
@@ -76,41 +76,41 @@ begin
                 IntervalEnable <= std_logic_vector(to_unsigned(0, IntervalEnable'length)); -- default assignment
                  
                 if ChannelOperation(i) then
-                    if IntervalCount(i) + ClkPeriodInNs < Interval(i) then
-                        IntervalCount(i) <= IntervalCount(i) + unsigned(Interval(i));
+                    if unsigned(IntervalCount(i)) + ClkPeriodInNs < unsigned(Interval(i)) then
+                        IntervalCount(i) <= std_logic_vector(unsigned(IntervalCount(i)) + unsigned(Interval(i)));
                     else
-                        IntervalCount(i) <= to_unsigned(0, Interval(i)'length);
+                        IntervalCount(i) <= std_logic_vector(to_unsigned(0, Interval(i)'length));
                         IntervalEnable(i) <= '1';
                         InterruptOut(i) <= '1';
                     end if;
                 else
-                    IntervalCount(i) <= to_unsigned(0, Interval(i)'length);
+                    IntervalCount(i) <= std_logic_vector(to_unsigned(0, Interval(i)'length));
                 end if;
 
                 if ChannelOperation(i) then         
                     if IntervalEnable(i) then
-                        if ActualCount(i) < ChargedCount(i) then
-                            ActualCount(i) <= ActualCount(i) + 1;
-                            if ActualCount(i) /= Reference(i) then
-                                FailureCount(i) <= FailureCount(i) + 1;
+                        if unsigned(ActualCount(i)) < unsigned(ChargedCount(i)) then
+                            ActualCount(i) <= std_logic_vector(unsigned(ActualCount(i)) + 1);
+                            if ActualCount(i) /= ReferenceCount(i) then
+                                FailureCount(i) <= std_logic_vector(unsigned(FailureCount(i)) + 1);
                                 FailureOut <= '1';
                             end if;
                         end if;                       
                     end if;
                 else
-                    FailureCount(i) <= to_unsigned(0, FailureCount(i)'length);
-                    ActualCount(i) <= to_unsigned(0, ActualCount(i)'length);
+                    FailureCount(i) <= std_logic_vector(to_unsigned(0, FailureCount(i)'length));
+                    ActualCount(i) <= std_logic_vector(to_unsigned(0, ActualCount(i)'length));
                     FailureOut <= '0';
                 end if;
                 
                 if ChannelOperation(i) then
-                    if ActualCount(i) < ChargedCount(i) then
-                        ChannelStatus <= STATUSREG_CHANNELSTATUS1_OPERATING;
+                    if unsigned(ActualCount(i)) < unsigned(ChargedCount(i)) then
+                        ChannelStatus(i) <= STATUSREG_CHANNELSTATUS1_OPERATING;
                     else
-                        ChannelStatus <= STATUSREG_CHANNELSTATUS1_ENDED_LIST(0);
+                        ChannelStatus(i) <= STATUSREG_CHANNELSTATUS1_ENDED_LIST(0);
                     end if;
                 else
-                    ChannelStatus <= STATUSREG_CHANNELSTATUS1_IDLE;
+                    ChannelStatus(i) <= STATUSREG_CHANNELSTATUS1_IDLE;
                 end if;
                             
             end loop;

@@ -54,33 +54,37 @@ end entity;
 
 architecture RTL of InterruptGenerator is
     
-    signal IntervalCount : array_of_std_logic_vector(InterruptOut'lenght-1 downto 0)(Interval'left downto 0);
-    signal IntervalEnable : std_logic_vector(InterruptOut'lenght-1 downto 0);
+    signal IntervalCount : array_of_std_logic_vector(InterruptOut'length-1 downto 0)(Interval'left downto 0);
+    signal IntervalEnable : std_logic_vector(InterruptOut'length-1 downto 0);
 
 begin
    
     prcGenerator : process ( Clk, Rst) is
     begin
         if Rst then
-            InterruptOut <= (others => '0');
-            ActualCount <= (others => '0');
-            IntervalCount <= (others => '0');
-            IntervalEnable <= (others => '0');
+            InterruptOut <= std_logic_vector(to_unsigned(0, InterruptOut'length));
+            for i in 0 to InterruptOut'length-1 loop
+                ActualCount(i) <= std_logic_vector(to_unsigned(0, ActualCount(i)'length));
+                IntervalCount <= std_logic_vector(to_unsigned(0, IntervalCount(i)'length));
+                FailureCount <= std_logic_vector(to_unsigned(0, FailureCount(i)'length));
+            end loop;
+            IntervalEnable <= std_logic_vector(to_unsigned(0, IntervalEnable'length));
             FailureOut <= '0';
         elsif rising_edge(Clk) then
-            for i in 0 to InterruptOut'lenght-1 loop
+            for i in 0 to InterruptOut'length-1 loop
             
-                IntervalEnable <= (others => '0'); -- default assignment
+                IntervalEnable <= std_logic_vector(to_unsigned(0, IntervalEnable'length)); -- default assignment
                  
                 if ChannelOperation(i) then
                     if IntervalCount(i) + ClkPeriodInNs < Interval(i) then
                         IntervalCount(i) <= IntervalCount(i) + unsigned(Interval(i));
                     else
-                        IntervalCount(i) <= to_unsigned(0, Interval(i)'lenght);
+                        IntervalCount(i) <= to_unsigned(0, Interval(i)'length);
                         IntervalEnable(i) <= '1';
+                        InterruptOut(i) <= '1';
                     end if;
                 else
-                    IntervalCount(i) <= to_unsigned(0, Interval(i)'lenght);
+                    IntervalCount(i) <= to_unsigned(0, Interval(i)'length);
                 end if;
 
                 if ChannelOperation(i) then         
@@ -94,8 +98,8 @@ begin
                         end if;                       
                     end if;
                 else
-                    FailureCount(i) <= to_unsigned(0, FailureCount(i)'lenght);
-                    ActualCount(i) <= to_unsigned(0, ActualCount(i)'lenght);
+                    FailureCount(i) <= to_unsigned(0, FailureCount(i)'length);
+                    ActualCount(i) <= to_unsigned(0, ActualCount(i)'length);
                     FailureOut <= '0';
                 end if;
                 

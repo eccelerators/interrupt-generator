@@ -238,6 +238,7 @@ namespace Eccelerators.Library.IP
 		{
 			Name = "Reference Count Register";
 			Width = 32;
+			WriteRegisterPulse = true;
 			Bits = [
 				Count
 			];

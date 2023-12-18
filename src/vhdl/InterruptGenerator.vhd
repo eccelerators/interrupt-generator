@@ -50,7 +50,8 @@ entity InterruptGenerator is
         ActualCount : out array_of_std_logic_vector;
         FailureCount : out array_of_std_logic_vector;
         Interval : in array_of_std_logic_vector;
-        ReferenceCount : in array_of_std_logic_vector
+        ReferenceCount : in array_of_std_logic_vector;
+        WRegPulseReferenceCount : in std_logic_vector
     );
 end entity;
 
@@ -103,6 +104,10 @@ begin
                     FailureCount(i) <= std_logic_vector(to_unsigned(0, FailureCount(i)'length));
                     ActualCount(i) <= std_logic_vector(to_unsigned(0, ActualCount(i)'length));
                     FailureOut <= '0';
+                end if;
+                
+                if WRegPulseReferenceCount(i) then
+                    InterruptOut(i) <= '0';
                 end if;
                 
                 if ChannelOperation(i) then

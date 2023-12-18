@@ -36,7 +36,6 @@ namespace Eccelerators.Library.IP
 		Description = "
 			Interface containing a basic Interrupt Generator block as predictable source and execurion check for interrupt simulation.
 		";
-		AddressBusWidth = 16;
 		DataBusWidth = 32;
 		Blocks = [InterruptGeneratorBlk];
 	}

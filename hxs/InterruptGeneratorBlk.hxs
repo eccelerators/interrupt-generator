@@ -94,19 +94,18 @@ namespace Eccelerators.Library.IP
 				Values = [
 					Enabled,
 					Disabled
-				];
-				value Enabled
-				{
-					Value = 0x1;
-					Behaviour = ValueBehaviour.Read;
-					Description = "An Interrupt is pending.";
-				}
-			
+				];				
 				value Disabled
 				{
 					Value = 0x0;
 					Behaviour = ValueBehaviour.Read;
 					Description = "An Interrupt is not pending.";
+				}
+				value Enabled
+				{
+					Value = 0x1;
+					Behaviour = ValueBehaviour.Read;
+					Description = "An Interrupt is pending.";
 				}
 			}
 		}

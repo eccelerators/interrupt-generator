@@ -57,7 +57,7 @@ end entity;
 
 architecture RTL of InterruptGenerator is
     
-    signal IntervalCount : array_of_std_logic_vector(InterruptOut'length-1 downto 0)(Interval'left downto 0);
+    signal IntervalCount : array_of_std_logic_vector(InterruptOut'length-1 downto 0)(Interval(0)'left downto 0);
     signal IntervalEnable : std_logic_vector(InterruptOut'length-1 downto 0);
 
 begin
@@ -67,6 +67,7 @@ begin
         if Rst then
             InterruptOut <= std_logic_vector(to_unsigned(0, InterruptOut'length));
             for i in 0 to InterruptOut'length-1 loop
+                ChannelStatus(i) <= std_logic_vector(to_unsigned(0, ChannelStatus(i)'length)); 
                 ActualCount(i) <= std_logic_vector(to_unsigned(0, ActualCount(i)'length));
                 IntervalCount(i) <= std_logic_vector(to_unsigned(0, IntervalCount(i)'length));
                 FailureCount(i) <= std_logic_vector(to_unsigned(0, FailureCount(i)'length));

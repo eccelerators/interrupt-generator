@@ -87,26 +87,26 @@ package InterruptGeneratorIfcPackage is
 	constant CONTROLREG_CHANNELOPERATION0_POSITION : integer := 3;
 	constant CONTROLREG_CHANNELOPERATION0_WIDTH : integer := 1;
 	constant CONTROLREG_CHANNELOPERATION0_MASK : std_logic_vector(31 downto 0) := x"00000008";
-	constant CONTROLREG_CHANNELOPERATION0_ENABLED : std_logic := '1';
 	constant CONTROLREG_CHANNELOPERATION0_DISABLED : std_logic := '0';
+	constant CONTROLREG_CHANNELOPERATION0_ENABLED : std_logic := '1';
 	
 	constant CONTROLREG_CHANNELOPERATION1_POSITION : integer := 2;
 	constant CONTROLREG_CHANNELOPERATION1_WIDTH : integer := 1;
 	constant CONTROLREG_CHANNELOPERATION1_MASK : std_logic_vector(31 downto 0) := x"00000004";
-	constant CONTROLREG_CHANNELOPERATION1_ENABLED : std_logic := '1';
 	constant CONTROLREG_CHANNELOPERATION1_DISABLED : std_logic := '0';
+	constant CONTROLREG_CHANNELOPERATION1_ENABLED : std_logic := '1';
 	
 	constant CONTROLREG_CHANNELOPERATION2_POSITION : integer := 1;
 	constant CONTROLREG_CHANNELOPERATION2_WIDTH : integer := 1;
 	constant CONTROLREG_CHANNELOPERATION2_MASK : std_logic_vector(31 downto 0) := x"00000002";
-	constant CONTROLREG_CHANNELOPERATION2_ENABLED : std_logic := '1';
 	constant CONTROLREG_CHANNELOPERATION2_DISABLED : std_logic := '0';
+	constant CONTROLREG_CHANNELOPERATION2_ENABLED : std_logic := '1';
 	
 	constant CONTROLREG_CHANNELOPERATION3_POSITION : integer := 0;
 	constant CONTROLREG_CHANNELOPERATION3_WIDTH : integer := 1;
 	constant CONTROLREG_CHANNELOPERATION3_MASK : std_logic_vector(31 downto 0) := x"00000001";
-	constant CONTROLREG_CHANNELOPERATION3_ENABLED : std_logic := '1';
 	constant CONTROLREG_CHANNELOPERATION3_DISABLED : std_logic := '0';
+	constant CONTROLREG_CHANNELOPERATION3_ENABLED : std_logic := '1';
 	
 	constant STATUSREG_WIDTH : integer := 4;
 	constant STATUSREG_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0000000" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));

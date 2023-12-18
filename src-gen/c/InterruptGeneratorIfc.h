@@ -29,29 +29,29 @@
 #define ControlReg_ChannelOperation0Mask 0x8
 #define ControlReg_ChannelOperation0Position 3
 #define ControlReg_ChannelOperation0Width 1
-#define ControlReg_ChannelOperation0_EnabledMVal 0x8
 #define ControlReg_ChannelOperation0_DisabledMVal 0x0
+#define ControlReg_ChannelOperation0_EnabledMVal 0x8
 #define ControlReg_ChannelOperation0BusResetMRstVal 0x0
 
 #define ControlReg_ChannelOperation1Mask 0x4
 #define ControlReg_ChannelOperation1Position 2
 #define ControlReg_ChannelOperation1Width 1
-#define ControlReg_ChannelOperation1_EnabledMVal 0x4
 #define ControlReg_ChannelOperation1_DisabledMVal 0x0
+#define ControlReg_ChannelOperation1_EnabledMVal 0x4
 #define ControlReg_ChannelOperation1BusResetMRstVal 0x0
 
 #define ControlReg_ChannelOperation2Mask 0x2
 #define ControlReg_ChannelOperation2Position 1
 #define ControlReg_ChannelOperation2Width 1
-#define ControlReg_ChannelOperation2_EnabledMVal 0x2
 #define ControlReg_ChannelOperation2_DisabledMVal 0x0
+#define ControlReg_ChannelOperation2_EnabledMVal 0x2
 #define ControlReg_ChannelOperation2BusResetMRstVal 0x0
 
 #define ControlReg_ChannelOperation3Mask 0x1
 #define ControlReg_ChannelOperation3Position 0
 #define ControlReg_ChannelOperation3Width 1
-#define ControlReg_ChannelOperation3_EnabledMVal 0x1
 #define ControlReg_ChannelOperation3_DisabledMVal 0x0
+#define ControlReg_ChannelOperation3_EnabledMVal 0x1
 #define ControlReg_ChannelOperation3BusResetMRstVal 0x0
 
 #define StatusRegAddress (0x00 + InterruptGeneratorBlkAddress)

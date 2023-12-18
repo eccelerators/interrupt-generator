@@ -79,7 +79,7 @@ architecture Behavioural of InterruptGeneratorBlk_InterruptGeneratorIfc is
 	signal PreMatchReadControlReg : std_logic;
 	signal PreMatchWriteControlReg : std_logic;
 	
-	signal PreDatOutStatusReg : std_logic_vector(7 downto 0);
+	signal PreDatOutStatusReg : std_logic_vector(3 downto 0);
 	signal PreReadAckStatusReg : std_logic;
 	signal ReadDiffStatusReg : std_logic;
 	signal PreMatchReadStatusReg : std_logic;
@@ -443,10 +443,10 @@ begin
 		if (Rst = '1') then
 			PreReadAckControlReg <= '0';
 			PreWriteAckControlReg <= '0';
-			WRegControlReg_ChannelOperation0 <= CONTROLREG_CHANNELOPERATION0_ENABLED;
-			WRegControlReg_ChannelOperation1 <= CONTROLREG_CHANNELOPERATION1_ENABLED;
-			WRegControlReg_ChannelOperation2 <= CONTROLREG_CHANNELOPERATION2_ENABLED;
-			WRegControlReg_ChannelOperation3 <= CONTROLREG_CHANNELOPERATION3_ENABLED;
+			WRegControlReg_ChannelOperation0 <= CONTROLREG_CHANNELOPERATION0_DISABLED;
+			WRegControlReg_ChannelOperation1 <= CONTROLREG_CHANNELOPERATION1_DISABLED;
+			WRegControlReg_ChannelOperation2 <= CONTROLREG_CHANNELOPERATION2_DISABLED;
+			WRegControlReg_ChannelOperation3 <= CONTROLREG_CHANNELOPERATION3_DISABLED;
 		elsif rising_edge(Clk) then
 			PreWriteAckControlReg <= WriteDiffControlReg;
 			PreReadAckControlReg <= ReadDiffControlReg;

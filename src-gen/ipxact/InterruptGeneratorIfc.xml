@@ -49,14 +49,14 @@
                         <ipxact:access>read-write</ipxact:access>
                         <ipxact:enumeratedValues>
                             <ipxact:enumeratedValue>
-<ipxact:name>ControlReg_ChannelOperation0_Enabled</ipxact:name>
-<ipxact:description>An Interrupt is pending.</ipxact:description>
-<ipxact:value>0x8</ipxact:value>
-                            </ipxact:enumeratedValue>
-                            <ipxact:enumeratedValue>
 <ipxact:name>ControlReg_ChannelOperation0_Disabled</ipxact:name>
 <ipxact:description>An Interrupt is not pending.</ipxact:description>
 <ipxact:value>0x0</ipxact:value>
+                            </ipxact:enumeratedValue>
+                            <ipxact:enumeratedValue>
+<ipxact:name>ControlReg_ChannelOperation0_Enabled</ipxact:name>
+<ipxact:description>An Interrupt is pending.</ipxact:description>
+<ipxact:value>0x8</ipxact:value>
                             </ipxact:enumeratedValue>
                         </ipxact:enumeratedValues>
                     </ipxact:field>
@@ -68,14 +68,14 @@
                         <ipxact:access>read-write</ipxact:access>
                         <ipxact:enumeratedValues>
                             <ipxact:enumeratedValue>
-<ipxact:name>ControlReg_ChannelOperation1_Enabled</ipxact:name>
-<ipxact:description>An Interrupt is pending.</ipxact:description>
-<ipxact:value>0x4</ipxact:value>
-                            </ipxact:enumeratedValue>
-                            <ipxact:enumeratedValue>
 <ipxact:name>ControlReg_ChannelOperation1_Disabled</ipxact:name>
 <ipxact:description>An Interrupt is not pending.</ipxact:description>
 <ipxact:value>0x0</ipxact:value>
+                            </ipxact:enumeratedValue>
+                            <ipxact:enumeratedValue>
+<ipxact:name>ControlReg_ChannelOperation1_Enabled</ipxact:name>
+<ipxact:description>An Interrupt is pending.</ipxact:description>
+<ipxact:value>0x4</ipxact:value>
                             </ipxact:enumeratedValue>
                         </ipxact:enumeratedValues>
                     </ipxact:field>
@@ -87,14 +87,14 @@
                         <ipxact:access>read-write</ipxact:access>
                         <ipxact:enumeratedValues>
                             <ipxact:enumeratedValue>
-<ipxact:name>ControlReg_ChannelOperation2_Enabled</ipxact:name>
-<ipxact:description>An Interrupt is pending.</ipxact:description>
-<ipxact:value>0x2</ipxact:value>
-                            </ipxact:enumeratedValue>
-                            <ipxact:enumeratedValue>
 <ipxact:name>ControlReg_ChannelOperation2_Disabled</ipxact:name>
 <ipxact:description>An Interrupt is not pending.</ipxact:description>
 <ipxact:value>0x0</ipxact:value>
+                            </ipxact:enumeratedValue>
+                            <ipxact:enumeratedValue>
+<ipxact:name>ControlReg_ChannelOperation2_Enabled</ipxact:name>
+<ipxact:description>An Interrupt is pending.</ipxact:description>
+<ipxact:value>0x2</ipxact:value>
                             </ipxact:enumeratedValue>
                         </ipxact:enumeratedValues>
                     </ipxact:field>
@@ -106,14 +106,14 @@
                         <ipxact:access>read-write</ipxact:access>
                         <ipxact:enumeratedValues>
                             <ipxact:enumeratedValue>
-<ipxact:name>ControlReg_ChannelOperation3_Enabled</ipxact:name>
-<ipxact:description>An Interrupt is pending.</ipxact:description>
-<ipxact:value>0x1</ipxact:value>
-                            </ipxact:enumeratedValue>
-                            <ipxact:enumeratedValue>
 <ipxact:name>ControlReg_ChannelOperation3_Disabled</ipxact:name>
 <ipxact:description>An Interrupt is not pending.</ipxact:description>
 <ipxact:value>0x0</ipxact:value>
+                            </ipxact:enumeratedValue>
+                            <ipxact:enumeratedValue>
+<ipxact:name>ControlReg_ChannelOperation3_Enabled</ipxact:name>
+<ipxact:description>An Interrupt is pending.</ipxact:description>
+<ipxact:value>0x1</ipxact:value>
                             </ipxact:enumeratedValue>
                         </ipxact:enumeratedValues>
                     </ipxact:field>

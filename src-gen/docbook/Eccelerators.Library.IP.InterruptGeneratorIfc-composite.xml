@@ -543,22 +543,6 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                       <row>
                         <entry>
                           <para>
-                            <code>0x1</code>
-                          </para>
-                        </entry>
-                        <entry xml:id="ac6827efbd33">
-                          <para>Enabled</para>
-                        </entry>
-                        <entry>
-                          <para>R</para>
-                        </entry>
-                        <entry>
-                          <para>An Interrupt is pending.</para>
-                        </entry>
-                      </row>
-                      <row>
-                        <entry>
-                          <para>
                             <code>0x0</code>
                           </para>
                         </entry>
@@ -570,6 +554,22 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                         </entry>
                         <entry>
                           <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x1</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="ac6827efbd33">
+                          <para>Enabled</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is pending.</para>
                         </entry>
                       </row>
                     </tbody>
@@ -641,22 +641,6 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                       <row>
                         <entry>
                           <para>
-                            <code>0x1</code>
-                          </para>
-                        </entry>
-                        <entry xml:id="a8f36117ba60">
-                          <para>Enabled</para>
-                        </entry>
-                        <entry>
-                          <para>R</para>
-                        </entry>
-                        <entry>
-                          <para>An Interrupt is pending.</para>
-                        </entry>
-                      </row>
-                      <row>
-                        <entry>
-                          <para>
                             <code>0x0</code>
                           </para>
                         </entry>
@@ -668,6 +652,22 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                         </entry>
                         <entry>
                           <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x1</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a8f36117ba60">
+                          <para>Enabled</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is pending.</para>
                         </entry>
                       </row>
                     </tbody>
@@ -739,22 +739,6 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                       <row>
                         <entry>
                           <para>
-                            <code>0x1</code>
-                          </para>
-                        </entry>
-                        <entry xml:id="ad8eafd03cc8">
-                          <para>Enabled</para>
-                        </entry>
-                        <entry>
-                          <para>R</para>
-                        </entry>
-                        <entry>
-                          <para>An Interrupt is pending.</para>
-                        </entry>
-                      </row>
-                      <row>
-                        <entry>
-                          <para>
                             <code>0x0</code>
                           </para>
                         </entry>
@@ -766,6 +750,22 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                         </entry>
                         <entry>
                           <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x1</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="ad8eafd03cc8">
+                          <para>Enabled</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is pending.</para>
                         </entry>
                       </row>
                     </tbody>
@@ -837,22 +837,6 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                       <row>
                         <entry>
                           <para>
-                            <code>0x1</code>
-                          </para>
-                        </entry>
-                        <entry xml:id="a04e0ab0d0c8">
-                          <para>Enabled</para>
-                        </entry>
-                        <entry>
-                          <para>R</para>
-                        </entry>
-                        <entry>
-                          <para>An Interrupt is pending.</para>
-                        </entry>
-                      </row>
-                      <row>
-                        <entry>
-                          <para>
                             <code>0x0</code>
                           </para>
                         </entry>
@@ -864,6 +848,22 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                         </entry>
                         <entry>
                           <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x1</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a04e0ab0d0c8">
+                          <para>Enabled</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is pending.</para>
                         </entry>
                       </row>
                     </tbody>

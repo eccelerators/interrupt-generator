@@ -91,9 +91,9 @@ namespace Eccelerators.Library.IP
 			enum ChannelOperation
 			{
 				Width = 1;
-				Values = [
-					Enabled,
-					Disabled
+				Values = [			
+					Disabled,
+					Enabled
 				];				
 				value Disabled
 				{

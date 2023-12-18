@@ -10,3 +10,6 @@
 [submodule "submodules/sphinx_docbook"]
 	path = submodules/sphinx_docbook
 	url = git@github.com:eccelerators/sphinx_docbook.git
+[submodule "submodules/vhdl-eccelerators-basic-package"]
+	path = submodules/vhdl-eccelerators-basic-package
+	url = git@github.com:eccelerators/vhdl-eccelerators-basic-package.git

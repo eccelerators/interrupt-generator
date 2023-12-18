@@ -14,16 +14,16 @@
 # -----------------------------------------------------
 # Addresses, widths, values and masks for direct access
 # -----------------------------------------------------
-InterruptGeneratorIfcAddressBusWidth = 16
+InterruptGeneratorIfcAddressBusWidth = 7
 InterruptGeneratorIfcDataBusWidth = 32
 
 class InterruptGeneratorBlk:
-    InterruptGeneratorBlkAddress = 0x0000 
-    InterruptGeneratorBlkSize = 0x0054 
+    InterruptGeneratorBlkAddress = 0x00 
+    InterruptGeneratorBlkSize = 0x54 
 
     @property
     def ControlRegAddress(self):
-        return (0x0000 + self.InterruptGeneratorBlkAddress)
+        return (0x00 + self.InterruptGeneratorBlkAddress)
 
     ControlRegWidth = 4
 
@@ -58,7 +58,7 @@ class InterruptGeneratorBlk:
 
     @property
     def StatusRegAddress(self):
-        return (0x0000 + self.InterruptGeneratorBlkAddress)
+        return (0x00 + self.InterruptGeneratorBlkAddress)
 
     StatusRegWidth = 4
 
@@ -101,7 +101,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ChargedCountReg0Address(self):
-        return (0x0000 + self.InterruptGeneratorBlkAddress)
+        return (0x00 + self.InterruptGeneratorBlkAddress)
 
     ChargedCountReg0Width = 32
 
@@ -113,7 +113,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ChargedCountReg1Address(self):
-        return (0x0004 + self.InterruptGeneratorBlkAddress)
+        return (0x04 + self.InterruptGeneratorBlkAddress)
 
     ChargedCountReg1Width = 32
 
@@ -125,7 +125,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ChargedCountReg2Address(self):
-        return (0x0008 + self.InterruptGeneratorBlkAddress)
+        return (0x08 + self.InterruptGeneratorBlkAddress)
 
     ChargedCountReg2Width = 32
 
@@ -137,7 +137,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ChargedCountReg3Address(self):
-        return (0x000C + self.InterruptGeneratorBlkAddress)
+        return (0x0C + self.InterruptGeneratorBlkAddress)
 
     ChargedCountReg3Width = 32
 
@@ -149,7 +149,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ActualCountReg0Address(self):
-        return (0x0010 + self.InterruptGeneratorBlkAddress)
+        return (0x10 + self.InterruptGeneratorBlkAddress)
 
     ActualCountReg0Width = 32
 
@@ -160,7 +160,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ActualCountReg1Address(self):
-        return (0x0014 + self.InterruptGeneratorBlkAddress)
+        return (0x14 + self.InterruptGeneratorBlkAddress)
 
     ActualCountReg1Width = 32
 
@@ -171,7 +171,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ActualCountReg2Address(self):
-        return (0x0018 + self.InterruptGeneratorBlkAddress)
+        return (0x18 + self.InterruptGeneratorBlkAddress)
 
     ActualCountReg2Width = 32
 
@@ -182,7 +182,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ActualCountReg3Address(self):
-        return (0x001C + self.InterruptGeneratorBlkAddress)
+        return (0x1C + self.InterruptGeneratorBlkAddress)
 
     ActualCountReg3Width = 32
 
@@ -193,7 +193,7 @@ class InterruptGeneratorBlk:
 
     @property
     def FailureCountReg0Address(self):
-        return (0x0020 + self.InterruptGeneratorBlkAddress)
+        return (0x20 + self.InterruptGeneratorBlkAddress)
 
     FailureCountReg0Width = 32
 
@@ -204,7 +204,7 @@ class InterruptGeneratorBlk:
 
     @property
     def FailureCountReg1Address(self):
-        return (0x0024 + self.InterruptGeneratorBlkAddress)
+        return (0x24 + self.InterruptGeneratorBlkAddress)
 
     FailureCountReg1Width = 32
 
@@ -215,7 +215,7 @@ class InterruptGeneratorBlk:
 
     @property
     def FailureCountReg2Address(self):
-        return (0x0028 + self.InterruptGeneratorBlkAddress)
+        return (0x28 + self.InterruptGeneratorBlkAddress)
 
     FailureCountReg2Width = 32
 
@@ -226,7 +226,7 @@ class InterruptGeneratorBlk:
 
     @property
     def FailureCountReg3Address(self):
-        return (0x002C + self.InterruptGeneratorBlkAddress)
+        return (0x2C + self.InterruptGeneratorBlkAddress)
 
     FailureCountReg3Width = 32
 
@@ -237,7 +237,7 @@ class InterruptGeneratorBlk:
 
     @property
     def IntervalReg0Address(self):
-        return (0x0030 + self.InterruptGeneratorBlkAddress)
+        return (0x30 + self.InterruptGeneratorBlkAddress)
 
     IntervalReg0Width = 32
 
@@ -249,7 +249,7 @@ class InterruptGeneratorBlk:
 
     @property
     def IntervalReg1Address(self):
-        return (0x0034 + self.InterruptGeneratorBlkAddress)
+        return (0x34 + self.InterruptGeneratorBlkAddress)
 
     IntervalReg1Width = 32
 
@@ -261,7 +261,7 @@ class InterruptGeneratorBlk:
 
     @property
     def IntervalReg2Address(self):
-        return (0x0038 + self.InterruptGeneratorBlkAddress)
+        return (0x38 + self.InterruptGeneratorBlkAddress)
 
     IntervalReg2Width = 32
 
@@ -273,7 +273,7 @@ class InterruptGeneratorBlk:
 
     @property
     def IntervalReg3Address(self):
-        return (0x003C + self.InterruptGeneratorBlkAddress)
+        return (0x3C + self.InterruptGeneratorBlkAddress)
 
     IntervalReg3Width = 32
 
@@ -285,7 +285,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ReferenceCountReg0Address(self):
-        return (0x0040 + self.InterruptGeneratorBlkAddress)
+        return (0x40 + self.InterruptGeneratorBlkAddress)
 
     ReferenceCountReg0Width = 32
 
@@ -297,7 +297,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ReferenceCountReg1Address(self):
-        return (0x0044 + self.InterruptGeneratorBlkAddress)
+        return (0x44 + self.InterruptGeneratorBlkAddress)
 
     ReferenceCountReg1Width = 32
 
@@ -309,7 +309,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ReferenceCountReg2Address(self):
-        return (0x0048 + self.InterruptGeneratorBlkAddress)
+        return (0x48 + self.InterruptGeneratorBlkAddress)
 
     ReferenceCountReg2Width = 32
 
@@ -321,7 +321,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ReferenceCountReg3Address(self):
-        return (0x004C + self.InterruptGeneratorBlkAddress)
+        return (0x4C + self.InterruptGeneratorBlkAddress)
 
     ReferenceCountReg3Width = 32
 

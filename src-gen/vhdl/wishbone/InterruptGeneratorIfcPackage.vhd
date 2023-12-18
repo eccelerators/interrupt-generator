@@ -17,7 +17,7 @@ package InterruptGeneratorIfcPackage is
 
 	type T_InterruptGeneratorIfcWishboneDown is
 	record
-		Adr : std_logic_vector(15 downto 0);
+		Adr : std_logic_vector(6 downto 0);
 		Sel : std_logic_vector(3 downto 0);
 		DatIn : std_logic_vector(31 downto 0);
 		We : std_logic;
@@ -79,11 +79,11 @@ package InterruptGeneratorIfcPackage is
 		FailureCountReg3_Count : std_logic_vector(31 downto 0);
 	end record;
 	
-	constant INTERRUPTGENERATORBLK_BASE_ADDRESS : std_logic_vector(15 downto 0) := x"0000";
-	constant INTERRUPTGENERATORBLK_SIZE : std_logic_vector(15 downto 0) := x"0054";
+	constant INTERRUPTGENERATORBLK_BASE_ADDRESS : std_logic_vector(6 downto 0) := "0000000";
+	constant INTERRUPTGENERATORBLK_SIZE : std_logic_vector(6 downto 0) := "1010100";
 	
 	constant CONTROLREG_WIDTH : integer := 4;
-	constant CONTROLREG_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0000" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant CONTROLREG_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0000000" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant CONTROLREG_CHANNELOPERATION0_POSITION : integer := 3;
 	constant CONTROLREG_CHANNELOPERATION0_WIDTH : integer := 1;
@@ -110,7 +110,7 @@ package InterruptGeneratorIfcPackage is
 	constant CONTROLREG_CHANNELOPERATION3_DISABLED : std_logic := '0';
 	
 	constant STATUSREG_WIDTH : integer := 4;
-	constant STATUSREG_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0000" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant STATUSREG_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0000000" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant STATUSREG_CHANNELSTATUS0_POSITION : integer := 6;
 	constant STATUSREG_CHANNELSTATUS0_WIDTH : integer := 2;
@@ -169,140 +169,140 @@ package InterruptGeneratorIfcPackage is
 	   "10", "11");
 	
 	constant CHARGEDCOUNTREG0_WIDTH : integer := 32;
-	constant CHARGEDCOUNTREG0_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0000" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant CHARGEDCOUNTREG0_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0000000" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant CHARGEDCOUNTREG0_COUNT_POSITION : integer := 0;
 	constant CHARGEDCOUNTREG0_COUNT_WIDTH : integer := 32;
 	constant CHARGEDCOUNTREG0_COUNT_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant CHARGEDCOUNTREG1_WIDTH : integer := 32;
-	constant CHARGEDCOUNTREG1_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0004" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant CHARGEDCOUNTREG1_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0000100" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant CHARGEDCOUNTREG1_COUNT_POSITION : integer := 0;
 	constant CHARGEDCOUNTREG1_COUNT_WIDTH : integer := 32;
 	constant CHARGEDCOUNTREG1_COUNT_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant CHARGEDCOUNTREG2_WIDTH : integer := 32;
-	constant CHARGEDCOUNTREG2_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0008" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant CHARGEDCOUNTREG2_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0001000" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant CHARGEDCOUNTREG2_COUNT_POSITION : integer := 0;
 	constant CHARGEDCOUNTREG2_COUNT_WIDTH : integer := 32;
 	constant CHARGEDCOUNTREG2_COUNT_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant CHARGEDCOUNTREG3_WIDTH : integer := 32;
-	constant CHARGEDCOUNTREG3_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"000C" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant CHARGEDCOUNTREG3_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0001100" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant CHARGEDCOUNTREG3_COUNT_POSITION : integer := 0;
 	constant CHARGEDCOUNTREG3_COUNT_WIDTH : integer := 32;
 	constant CHARGEDCOUNTREG3_COUNT_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant ACTUALCOUNTREG0_WIDTH : integer := 32;
-	constant ACTUALCOUNTREG0_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0010" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant ACTUALCOUNTREG0_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0010000" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant ACTUALCOUNTREG0_COUNT_POSITION : integer := 0;
 	constant ACTUALCOUNTREG0_COUNT_WIDTH : integer := 32;
 	constant ACTUALCOUNTREG0_COUNT_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant ACTUALCOUNTREG1_WIDTH : integer := 32;
-	constant ACTUALCOUNTREG1_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0014" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant ACTUALCOUNTREG1_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0010100" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant ACTUALCOUNTREG1_COUNT_POSITION : integer := 0;
 	constant ACTUALCOUNTREG1_COUNT_WIDTH : integer := 32;
 	constant ACTUALCOUNTREG1_COUNT_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant ACTUALCOUNTREG2_WIDTH : integer := 32;
-	constant ACTUALCOUNTREG2_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0018" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant ACTUALCOUNTREG2_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0011000" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant ACTUALCOUNTREG2_COUNT_POSITION : integer := 0;
 	constant ACTUALCOUNTREG2_COUNT_WIDTH : integer := 32;
 	constant ACTUALCOUNTREG2_COUNT_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant ACTUALCOUNTREG3_WIDTH : integer := 32;
-	constant ACTUALCOUNTREG3_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"001C" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant ACTUALCOUNTREG3_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0011100" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant ACTUALCOUNTREG3_COUNT_POSITION : integer := 0;
 	constant ACTUALCOUNTREG3_COUNT_WIDTH : integer := 32;
 	constant ACTUALCOUNTREG3_COUNT_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant FAILURECOUNTREG0_WIDTH : integer := 32;
-	constant FAILURECOUNTREG0_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0020" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant FAILURECOUNTREG0_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0100000" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant FAILURECOUNTREG0_COUNT_POSITION : integer := 0;
 	constant FAILURECOUNTREG0_COUNT_WIDTH : integer := 32;
 	constant FAILURECOUNTREG0_COUNT_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant FAILURECOUNTREG1_WIDTH : integer := 32;
-	constant FAILURECOUNTREG1_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0024" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant FAILURECOUNTREG1_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0100100" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant FAILURECOUNTREG1_COUNT_POSITION : integer := 0;
 	constant FAILURECOUNTREG1_COUNT_WIDTH : integer := 32;
 	constant FAILURECOUNTREG1_COUNT_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant FAILURECOUNTREG2_WIDTH : integer := 32;
-	constant FAILURECOUNTREG2_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0028" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant FAILURECOUNTREG2_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0101000" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant FAILURECOUNTREG2_COUNT_POSITION : integer := 0;
 	constant FAILURECOUNTREG2_COUNT_WIDTH : integer := 32;
 	constant FAILURECOUNTREG2_COUNT_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant FAILURECOUNTREG3_WIDTH : integer := 32;
-	constant FAILURECOUNTREG3_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"002C" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant FAILURECOUNTREG3_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0101100" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant FAILURECOUNTREG3_COUNT_POSITION : integer := 0;
 	constant FAILURECOUNTREG3_COUNT_WIDTH : integer := 32;
 	constant FAILURECOUNTREG3_COUNT_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant INTERVALREG0_WIDTH : integer := 32;
-	constant INTERVALREG0_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0030" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant INTERVALREG0_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0110000" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant INTERVALREG0_INTERVAL_POSITION : integer := 0;
 	constant INTERVALREG0_INTERVAL_WIDTH : integer := 32;
 	constant INTERVALREG0_INTERVAL_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant INTERVALREG1_WIDTH : integer := 32;
-	constant INTERVALREG1_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0034" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant INTERVALREG1_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0110100" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant INTERVALREG1_INTERVAL_POSITION : integer := 0;
 	constant INTERVALREG1_INTERVAL_WIDTH : integer := 32;
 	constant INTERVALREG1_INTERVAL_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant INTERVALREG2_WIDTH : integer := 32;
-	constant INTERVALREG2_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0038" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant INTERVALREG2_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0111000" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant INTERVALREG2_INTERVAL_POSITION : integer := 0;
 	constant INTERVALREG2_INTERVAL_WIDTH : integer := 32;
 	constant INTERVALREG2_INTERVAL_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant INTERVALREG3_WIDTH : integer := 32;
-	constant INTERVALREG3_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"003C" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant INTERVALREG3_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("0111100" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant INTERVALREG3_INTERVAL_POSITION : integer := 0;
 	constant INTERVALREG3_INTERVAL_WIDTH : integer := 32;
 	constant INTERVALREG3_INTERVAL_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant REFERENCECOUNTREG0_WIDTH : integer := 32;
-	constant REFERENCECOUNTREG0_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0040" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant REFERENCECOUNTREG0_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("1000000" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant REFERENCECOUNTREG0_COUNT_POSITION : integer := 0;
 	constant REFERENCECOUNTREG0_COUNT_WIDTH : integer := 32;
 	constant REFERENCECOUNTREG0_COUNT_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant REFERENCECOUNTREG1_WIDTH : integer := 32;
-	constant REFERENCECOUNTREG1_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0044" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant REFERENCECOUNTREG1_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("1000100" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant REFERENCECOUNTREG1_COUNT_POSITION : integer := 0;
 	constant REFERENCECOUNTREG1_COUNT_WIDTH : integer := 32;
 	constant REFERENCECOUNTREG1_COUNT_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant REFERENCECOUNTREG2_WIDTH : integer := 32;
-	constant REFERENCECOUNTREG2_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"0048" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant REFERENCECOUNTREG2_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("1001000" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant REFERENCECOUNTREG2_COUNT_POSITION : integer := 0;
 	constant REFERENCECOUNTREG2_COUNT_WIDTH : integer := 32;
 	constant REFERENCECOUNTREG2_COUNT_MASK : std_logic_vector(31 downto 0) := x"FFFFFFFF";
 	
 	constant REFERENCECOUNTREG3_WIDTH : integer := 32;
-	constant REFERENCECOUNTREG3_ADDRESS : std_logic_vector(15 downto 0) := std_logic_vector(x"004C" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
+	constant REFERENCECOUNTREG3_ADDRESS : std_logic_vector(6 downto 0) := std_logic_vector("1001100" + unsigned(INTERRUPTGENERATORBLK_BASE_ADDRESS));
 	
 	constant REFERENCECOUNTREG3_COUNT_POSITION : integer := 0;
 	constant REFERENCECOUNTREG3_COUNT_WIDTH : integer := 32;

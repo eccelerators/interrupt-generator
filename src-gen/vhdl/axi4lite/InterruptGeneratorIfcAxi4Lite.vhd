@@ -26,14 +26,14 @@ entity InterruptGeneratorBlk_InterruptGeneratorIfc is
 		Read : in std_logic;
 		ReadAddressMatch : in std_logic;
 		ReadAddressProt : in std_logic_vector(2 downto 0);
-		ReadAddress : in std_logic_vector(15 downto 0);
+		ReadAddress : in std_logic_vector(6 downto 0);
 		WriteMatch : out std_logic;
 		WriteAck : out std_logic;
 		WriteResp : out std_logic_vector(1 downto 0);
 		Write : in std_logic;
 		WriteAddrMatch : in std_logic;
 		WriteAddressProt : in std_logic_vector(2 downto 0);
-		WriteAddress : in std_logic_vector(15 downto 0);
+		WriteAddress : in std_logic_vector(6 downto 0);
 		WriteData : in std_logic_vector(31 downto 0);
 		WriteStrobe : in std_logic_vector(3 downto 0);
 		ControlReg_ChannelOperation0 : out std_logic;
@@ -1620,7 +1620,7 @@ entity InterruptGeneratorIfcAxi4LiteBusController is
 		Clk : in std_logic;
 		Rst : in std_logic;
 		AWVALID : in std_logic;
-		AWADDR : in std_logic_vector(15 downto 0);
+		AWADDR : in std_logic_vector(6 downto 0);
 		AWPROT : in std_logic_vector(2 downto 0);
 		AWREADY : out std_logic;
 		WVALID : in std_logic;
@@ -1631,7 +1631,7 @@ entity InterruptGeneratorIfcAxi4LiteBusController is
 		BVALID : out std_logic;
 		BRESP : out std_logic_vector(1 downto 0);
 		ARVALID : in std_logic;
-		ARADDR : in std_logic_vector(15 downto 0);
+		ARADDR : in std_logic_vector(6 downto 0);
 		ARPROT : in std_logic_vector(2 downto 0);
 		ARREADY : out std_logic;
 		RREADY : in std_logic;
@@ -1651,14 +1651,14 @@ entity InterruptGeneratorIfcAxi4LiteBusController is
 		Read : out std_logic;
 		ReadAddressMatch : out std_logic;
 		ReadAddressProt : out std_logic_vector(2 downto 0);
-		ReadAddress : out std_logic_vector(15 downto 0);
+		ReadAddress : out std_logic_vector(6 downto 0);
 		WriteMatch : in std_logic;
 		WriteAck : in std_logic;
 		WriteResp : in std_logic_vector(1 downto 0);
 		Write : out std_logic;
 		WriteAddrMatch : out std_logic;
 		WriteAddressProt : out std_logic_vector(2 downto 0);
-		WriteAddress : out std_logic_vector(15 downto 0);
+		WriteAddress : out std_logic_vector(6 downto 0);
 		WriteData : out std_logic_vector(31 downto 0);
 		WriteStrobe : out std_logic_vector(3 downto 0);
 		UnoccupiedAck : out std_logic;
@@ -1921,14 +1921,14 @@ architecture Behavioural of InterruptGeneratorIfcAxi4Lite is
 	signal Read : std_logic;
 	signal ReadAddressMatch : std_logic;
 	signal ReadAddressProt : std_logic_vector(2 downto 0);
-	signal ReadAddress : std_logic_vector(15 downto 0);
+	signal ReadAddress : std_logic_vector(6 downto 0);
 	signal WriteMatch : std_logic;
 	signal WriteAck : std_logic;
 	signal WriteResp : std_logic_vector(1 downto 0);
 	signal Write : std_logic;
 	signal WriteAddrMatch : std_logic;
 	signal WriteAddressProt : std_logic_vector(2 downto 0);
-	signal WriteAddress : std_logic_vector(15 downto 0);
+	signal WriteAddress : std_logic_vector(6 downto 0);
 	signal WriteData : std_logic_vector(31 downto 0);
 	signal WriteStrobe : std_logic_vector(3 downto 0);
 	

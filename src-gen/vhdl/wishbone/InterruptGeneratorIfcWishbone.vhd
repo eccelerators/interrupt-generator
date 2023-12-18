@@ -19,7 +19,7 @@ entity InterruptGeneratorBlk_InterruptGeneratorIfc is
 	port (
 		Clk : in std_logic;
 		Rst : in std_logic;
-		Adr : in std_logic_vector(15 downto 0);
+		Adr : in std_logic_vector(6 downto 0);
 		Sel : in std_logic_vector(3 downto 0);
 		DatIn : in std_logic_vector(31 downto 0);
 		We : in std_logic;

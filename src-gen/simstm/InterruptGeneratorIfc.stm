@@ -13,16 +13,16 @@
     
 -- Eccelerators.Library.IP
 
-const InterruptGeneratorIfcAddressBusWidth 16
+const InterruptGeneratorIfcAddressBusWidth 7
 const InterruptGeneratorIfcDataBusWidth 32
 
 var InterruptGeneratorIfcAddress 0
 bus InterruptGeneratorIfcBus 0
 
-var InterruptGeneratorBlkAddress 0x0000
-const InterruptGeneratorBlkSize 0x0054
+var InterruptGeneratorBlkAddress 0x00
+const InterruptGeneratorBlkSize 0x54
 
-var ControlRegAddress 0x0000
+var ControlRegAddress 0x00
 const ControlRegWidth 4
 
 const ControlReg_ChannelOperation0Mask 0x8
@@ -53,7 +53,7 @@ const ControlReg_ChannelOperation3_EnabledMVal 0x1
 const ControlReg_ChannelOperation3_DisabledMVal 0x0
 const ControlReg_ChannelOperation3BusResetMRstVal 0x0
 
-var StatusRegAddress 0x0000
+var StatusRegAddress 0x00
 const StatusRegWidth 4
 
 const StatusReg_ChannelStatus0Mask 0xC
@@ -92,7 +92,7 @@ const StatusReg_ChannelStatus3_EndedMValAMask 0x2
 const StatusReg_ChannelStatus3_EndedMValListSize 2
 array StatusReg_ChannelStatus3_EndedMValList 2
 
-var ChargedCountReg0Address 0x0000
+var ChargedCountReg0Address 0x00
 const ChargedCountReg0Width 32
 
 const ChargedCountReg0_CountMask 0xFFFFFFFF
@@ -100,7 +100,7 @@ const ChargedCountReg0_CountPosition 0
 const ChargedCountReg0_CountWidth 32
 const ChargedCountReg0_CountBusResetMRstVal 0x00000000
 
-var ChargedCountReg1Address 0x0000
+var ChargedCountReg1Address 0x00
 const ChargedCountReg1Width 32
 
 const ChargedCountReg1_CountMask 0xFFFFFFFF
@@ -108,7 +108,7 @@ const ChargedCountReg1_CountPosition 0
 const ChargedCountReg1_CountWidth 32
 const ChargedCountReg1_CountBusResetMRstVal 0x00000000
 
-var ChargedCountReg2Address 0x0000
+var ChargedCountReg2Address 0x00
 const ChargedCountReg2Width 32
 
 const ChargedCountReg2_CountMask 0xFFFFFFFF
@@ -116,7 +116,7 @@ const ChargedCountReg2_CountPosition 0
 const ChargedCountReg2_CountWidth 32
 const ChargedCountReg2_CountBusResetMRstVal 0x00000000
 
-var ChargedCountReg3Address 0x0000
+var ChargedCountReg3Address 0x00
 const ChargedCountReg3Width 32
 
 const ChargedCountReg3_CountMask 0xFFFFFFFF
@@ -124,63 +124,63 @@ const ChargedCountReg3_CountPosition 0
 const ChargedCountReg3_CountWidth 32
 const ChargedCountReg3_CountBusResetMRstVal 0x00000000
 
-var ActualCountReg0Address 0x0000
+var ActualCountReg0Address 0x00
 const ActualCountReg0Width 32
 
 const ActualCountReg0_CountMask 0xFFFFFFFF
 const ActualCountReg0_CountPosition 0
 const ActualCountReg0_CountWidth 32
 
-var ActualCountReg1Address 0x0000
+var ActualCountReg1Address 0x00
 const ActualCountReg1Width 32
 
 const ActualCountReg1_CountMask 0xFFFFFFFF
 const ActualCountReg1_CountPosition 0
 const ActualCountReg1_CountWidth 32
 
-var ActualCountReg2Address 0x0000
+var ActualCountReg2Address 0x00
 const ActualCountReg2Width 32
 
 const ActualCountReg2_CountMask 0xFFFFFFFF
 const ActualCountReg2_CountPosition 0
 const ActualCountReg2_CountWidth 32
 
-var ActualCountReg3Address 0x0000
+var ActualCountReg3Address 0x00
 const ActualCountReg3Width 32
 
 const ActualCountReg3_CountMask 0xFFFFFFFF
 const ActualCountReg3_CountPosition 0
 const ActualCountReg3_CountWidth 32
 
-var FailureCountReg0Address 0x0000
+var FailureCountReg0Address 0x00
 const FailureCountReg0Width 32
 
 const FailureCountReg0_CountMask 0xFFFFFFFF
 const FailureCountReg0_CountPosition 0
 const FailureCountReg0_CountWidth 32
 
-var FailureCountReg1Address 0x0000
+var FailureCountReg1Address 0x00
 const FailureCountReg1Width 32
 
 const FailureCountReg1_CountMask 0xFFFFFFFF
 const FailureCountReg1_CountPosition 0
 const FailureCountReg1_CountWidth 32
 
-var FailureCountReg2Address 0x0000
+var FailureCountReg2Address 0x00
 const FailureCountReg2Width 32
 
 const FailureCountReg2_CountMask 0xFFFFFFFF
 const FailureCountReg2_CountPosition 0
 const FailureCountReg2_CountWidth 32
 
-var FailureCountReg3Address 0x0000
+var FailureCountReg3Address 0x00
 const FailureCountReg3Width 32
 
 const FailureCountReg3_CountMask 0xFFFFFFFF
 const FailureCountReg3_CountPosition 0
 const FailureCountReg3_CountWidth 32
 
-var IntervalReg0Address 0x0000
+var IntervalReg0Address 0x00
 const IntervalReg0Width 32
 
 const IntervalReg0_IntervalMask 0xFFFFFFFF
@@ -188,7 +188,7 @@ const IntervalReg0_IntervalPosition 0
 const IntervalReg0_IntervalWidth 32
 const IntervalReg0_IntervalBusResetMRstVal 0x00000000
 
-var IntervalReg1Address 0x0000
+var IntervalReg1Address 0x00
 const IntervalReg1Width 32
 
 const IntervalReg1_IntervalMask 0xFFFFFFFF
@@ -196,7 +196,7 @@ const IntervalReg1_IntervalPosition 0
 const IntervalReg1_IntervalWidth 32
 const IntervalReg1_IntervalBusResetMRstVal 0x00000000
 
-var IntervalReg2Address 0x0000
+var IntervalReg2Address 0x00
 const IntervalReg2Width 32
 
 const IntervalReg2_IntervalMask 0xFFFFFFFF
@@ -204,7 +204,7 @@ const IntervalReg2_IntervalPosition 0
 const IntervalReg2_IntervalWidth 32
 const IntervalReg2_IntervalBusResetMRstVal 0x00000000
 
-var IntervalReg3Address 0x0000
+var IntervalReg3Address 0x00
 const IntervalReg3Width 32
 
 const IntervalReg3_IntervalMask 0xFFFFFFFF
@@ -212,7 +212,7 @@ const IntervalReg3_IntervalPosition 0
 const IntervalReg3_IntervalWidth 32
 const IntervalReg3_IntervalBusResetMRstVal 0x00000000
 
-var ReferenceCountReg0Address 0x0000
+var ReferenceCountReg0Address 0x00
 const ReferenceCountReg0Width 32
 
 const ReferenceCountReg0_CountMask 0xFFFFFFFF
@@ -220,7 +220,7 @@ const ReferenceCountReg0_CountPosition 0
 const ReferenceCountReg0_CountWidth 32
 const ReferenceCountReg0_CountBusResetMRstVal 0x00000000
 
-var ReferenceCountReg1Address 0x0000
+var ReferenceCountReg1Address 0x00
 const ReferenceCountReg1Width 32
 
 const ReferenceCountReg1_CountMask 0xFFFFFFFF
@@ -228,7 +228,7 @@ const ReferenceCountReg1_CountPosition 0
 const ReferenceCountReg1_CountWidth 32
 const ReferenceCountReg1_CountBusResetMRstVal 0x00000000
 
-var ReferenceCountReg2Address 0x0000
+var ReferenceCountReg2Address 0x00
 const ReferenceCountReg2Width 32
 
 const ReferenceCountReg2_CountMask 0xFFFFFFFF
@@ -236,7 +236,7 @@ const ReferenceCountReg2_CountPosition 0
 const ReferenceCountReg2_CountWidth 32
 const ReferenceCountReg2_CountBusResetMRstVal 0x00000000
 
-var ReferenceCountReg3Address 0x0000
+var ReferenceCountReg3Address 0x00
 const ReferenceCountReg3Width 32
 
 const ReferenceCountReg3_CountMask 0xFFFFFFFF
@@ -247,56 +247,56 @@ const ReferenceCountReg3_CountBusResetMRstVal 0x00000000
 
 InterruptGeneratorIfcInit:
 proc
-    equ InterruptGeneratorBlkAddress 0x0000
+    equ InterruptGeneratorBlkAddress 0x00
     add InterruptGeneratorBlkAddress $InterruptGeneratorIfcAddress
     call $InterruptGeneratorBlkInit
 end proc
 
 InterruptGeneratorBlkInit:
 proc
-    equ ControlRegAddress 0x0000
+    equ ControlRegAddress 0x00
     add ControlRegAddress $InterruptGeneratorBlkAddress
-    equ StatusRegAddress 0x0000
+    equ StatusRegAddress 0x00
     add StatusRegAddress $InterruptGeneratorBlkAddress
-    equ ChargedCountReg0Address 0x0000
+    equ ChargedCountReg0Address 0x00
     add ChargedCountReg0Address $InterruptGeneratorBlkAddress
-    equ ChargedCountReg1Address 0x0004
+    equ ChargedCountReg1Address 0x04
     add ChargedCountReg1Address $InterruptGeneratorBlkAddress
-    equ ChargedCountReg2Address 0x0008
+    equ ChargedCountReg2Address 0x08
     add ChargedCountReg2Address $InterruptGeneratorBlkAddress
-    equ ChargedCountReg3Address 0x000C
+    equ ChargedCountReg3Address 0x0C
     add ChargedCountReg3Address $InterruptGeneratorBlkAddress
-    equ ActualCountReg0Address 0x0010
+    equ ActualCountReg0Address 0x10
     add ActualCountReg0Address $InterruptGeneratorBlkAddress
-    equ ActualCountReg1Address 0x0014
+    equ ActualCountReg1Address 0x14
     add ActualCountReg1Address $InterruptGeneratorBlkAddress
-    equ ActualCountReg2Address 0x0018
+    equ ActualCountReg2Address 0x18
     add ActualCountReg2Address $InterruptGeneratorBlkAddress
-    equ ActualCountReg3Address 0x001C
+    equ ActualCountReg3Address 0x1C
     add ActualCountReg3Address $InterruptGeneratorBlkAddress
-    equ FailureCountReg0Address 0x0020
+    equ FailureCountReg0Address 0x20
     add FailureCountReg0Address $InterruptGeneratorBlkAddress
-    equ FailureCountReg1Address 0x0024
+    equ FailureCountReg1Address 0x24
     add FailureCountReg1Address $InterruptGeneratorBlkAddress
-    equ FailureCountReg2Address 0x0028
+    equ FailureCountReg2Address 0x28
     add FailureCountReg2Address $InterruptGeneratorBlkAddress
-    equ FailureCountReg3Address 0x002C
+    equ FailureCountReg3Address 0x2C
     add FailureCountReg3Address $InterruptGeneratorBlkAddress
-    equ IntervalReg0Address 0x0030
+    equ IntervalReg0Address 0x30
     add IntervalReg0Address $InterruptGeneratorBlkAddress
-    equ IntervalReg1Address 0x0034
+    equ IntervalReg1Address 0x34
     add IntervalReg1Address $InterruptGeneratorBlkAddress
-    equ IntervalReg2Address 0x0038
+    equ IntervalReg2Address 0x38
     add IntervalReg2Address $InterruptGeneratorBlkAddress
-    equ IntervalReg3Address 0x003C
+    equ IntervalReg3Address 0x3C
     add IntervalReg3Address $InterruptGeneratorBlkAddress
-    equ ReferenceCountReg0Address 0x0040
+    equ ReferenceCountReg0Address 0x40
     add ReferenceCountReg0Address $InterruptGeneratorBlkAddress
-    equ ReferenceCountReg1Address 0x0044
+    equ ReferenceCountReg1Address 0x44
     add ReferenceCountReg1Address $InterruptGeneratorBlkAddress
-    equ ReferenceCountReg2Address 0x0048
+    equ ReferenceCountReg2Address 0x48
     add ReferenceCountReg2Address $InterruptGeneratorBlkAddress
-    equ ReferenceCountReg3Address 0x004C
+    equ ReferenceCountReg3Address 0x4C
     add ReferenceCountReg3Address $InterruptGeneratorBlkAddress
     array set StatusReg_ChannelStatus0_EndedMValList 0 0x8
     array set StatusReg_ChannelStatus0_EndedMValList 1 0xC

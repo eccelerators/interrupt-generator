@@ -81,7 +81,7 @@ namespace Eccelerators.Library.IP
 		register ControlReg
 		{
 			Name = "Control Register";
-			Width = 4;
+			Width = 32;
 			Bits = [
 				ChannelOperation,
 				ChannelOperation,
@@ -113,7 +113,7 @@ namespace Eccelerators.Library.IP
 		register StatusReg
 		{
 			Name = "Status Register";
-			Width = 4;
+			Width = 32;
 			Bits = [
 				ChannelStatus,
 				ChannelStatus,

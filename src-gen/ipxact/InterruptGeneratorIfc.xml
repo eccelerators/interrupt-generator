@@ -124,13 +124,13 @@
                 <ipxact:displayName>Status Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
                 <ipxact:baseAddress>0</ipxact:baseAddress>
-                <ipxact:range>0</ipxact:range>
+                <ipxact:range>1</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>StatusReg</ipxact:name>
                     <ipxact:displayName>Status Register</ipxact:displayName>
                     <ipxact:addressOffset>0x00</ipxact:addressOffset>
-                    <ipxact:size>4</ipxact:size>
+                    <ipxact:size>8</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-only</ipxact:access>
                     <ipxact:field>
@@ -142,15 +142,15 @@
                         <ipxact:enumeratedValues>
                             <ipxact:enumeratedValue>
 <ipxact:name>StatusReg_ChannelStatus0_Idle</ipxact:name>
-<ipxact:value>0x0</ipxact:value>
+<ipxact:value>0x00</ipxact:value>
                             </ipxact:enumeratedValue>
                             <ipxact:enumeratedValue>
 <ipxact:name>StatusReg_ChannelStatus0_Operating</ipxact:name>
-<ipxact:value>0x1</ipxact:value>
+<ipxact:value>0x01</ipxact:value>
                             </ipxact:enumeratedValue>
                             <ipxact:enumeratedValue>
 <ipxact:name>StatusReg_ChannelStatus0_Ended</ipxact:name>
-<ipxact:value>0x2</ipxact:value>
+<ipxact:value>0x02</ipxact:value>
                             </ipxact:enumeratedValue>
                         </ipxact:enumeratedValues>
                     </ipxact:field>
@@ -163,15 +163,15 @@
                         <ipxact:enumeratedValues>
                             <ipxact:enumeratedValue>
 <ipxact:name>StatusReg_ChannelStatus1_Idle</ipxact:name>
-<ipxact:value>0x0</ipxact:value>
+<ipxact:value>0x00</ipxact:value>
                             </ipxact:enumeratedValue>
                             <ipxact:enumeratedValue>
 <ipxact:name>StatusReg_ChannelStatus1_Operating</ipxact:name>
-<ipxact:value>0x1</ipxact:value>
+<ipxact:value>0x01</ipxact:value>
                             </ipxact:enumeratedValue>
                             <ipxact:enumeratedValue>
 <ipxact:name>StatusReg_ChannelStatus1_Ended</ipxact:name>
-<ipxact:value>0x2</ipxact:value>
+<ipxact:value>0x02</ipxact:value>
                             </ipxact:enumeratedValue>
                         </ipxact:enumeratedValues>
                     </ipxact:field>
@@ -184,15 +184,15 @@
                         <ipxact:enumeratedValues>
                             <ipxact:enumeratedValue>
 <ipxact:name>StatusReg_ChannelStatus2_Idle</ipxact:name>
-<ipxact:value>0x0</ipxact:value>
+<ipxact:value>0x00</ipxact:value>
                             </ipxact:enumeratedValue>
                             <ipxact:enumeratedValue>
 <ipxact:name>StatusReg_ChannelStatus2_Operating</ipxact:name>
-<ipxact:value>0x1</ipxact:value>
+<ipxact:value>0x01</ipxact:value>
                             </ipxact:enumeratedValue>
                             <ipxact:enumeratedValue>
 <ipxact:name>StatusReg_ChannelStatus2_Ended</ipxact:name>
-<ipxact:value>0x2</ipxact:value>
+<ipxact:value>0x02</ipxact:value>
                             </ipxact:enumeratedValue>
                         </ipxact:enumeratedValues>
                     </ipxact:field>
@@ -205,15 +205,15 @@
                         <ipxact:enumeratedValues>
                             <ipxact:enumeratedValue>
 <ipxact:name>StatusReg_ChannelStatus3_Idle</ipxact:name>
-<ipxact:value>0x0</ipxact:value>
+<ipxact:value>0x00</ipxact:value>
                             </ipxact:enumeratedValue>
                             <ipxact:enumeratedValue>
 <ipxact:name>StatusReg_ChannelStatus3_Operating</ipxact:name>
-<ipxact:value>0x1</ipxact:value>
+<ipxact:value>0x01</ipxact:value>
                             </ipxact:enumeratedValue>
                             <ipxact:enumeratedValue>
 <ipxact:name>StatusReg_ChannelStatus3_Ended</ipxact:name>
-<ipxact:value>0x2</ipxact:value>
+<ipxact:value>0x02</ipxact:value>
                             </ipxact:enumeratedValue>
                         </ipxact:enumeratedValues>
                     </ipxact:field>
@@ -223,13 +223,13 @@
                 <ipxact:name>ChargedCountReg0</ipxact:name>
                 <ipxact:displayName>Charged Count Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>0</ipxact:baseAddress>
+                <ipxact:baseAddress>1</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>ChargedCountReg0</ipxact:name>
                     <ipxact:displayName>Charged Count Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x00</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x01</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-write</ipxact:access>
@@ -247,13 +247,13 @@
                 <ipxact:name>ChargedCountReg1</ipxact:name>
                 <ipxact:displayName>Charged Count Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>4</ipxact:baseAddress>
+                <ipxact:baseAddress>5</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>ChargedCountReg1</ipxact:name>
                     <ipxact:displayName>Charged Count Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x04</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x05</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-write</ipxact:access>
@@ -271,13 +271,13 @@
                 <ipxact:name>ChargedCountReg2</ipxact:name>
                 <ipxact:displayName>Charged Count Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>8</ipxact:baseAddress>
+                <ipxact:baseAddress>9</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>ChargedCountReg2</ipxact:name>
                     <ipxact:displayName>Charged Count Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x08</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x09</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-write</ipxact:access>
@@ -295,13 +295,13 @@
                 <ipxact:name>ChargedCountReg3</ipxact:name>
                 <ipxact:displayName>Charged Count Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>12</ipxact:baseAddress>
+                <ipxact:baseAddress>13</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>ChargedCountReg3</ipxact:name>
                     <ipxact:displayName>Charged Count Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x0c</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x0d</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-write</ipxact:access>
@@ -319,13 +319,13 @@
                 <ipxact:name>ActualCountReg0</ipxact:name>
                 <ipxact:displayName>Actual Count Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>16</ipxact:baseAddress>
+                <ipxact:baseAddress>17</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>ActualCountReg0</ipxact:name>
                     <ipxact:displayName>Actual Count Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x10</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x11</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-only</ipxact:access>
@@ -343,13 +343,13 @@
                 <ipxact:name>ActualCountReg1</ipxact:name>
                 <ipxact:displayName>Actual Count Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>20</ipxact:baseAddress>
+                <ipxact:baseAddress>21</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>ActualCountReg1</ipxact:name>
                     <ipxact:displayName>Actual Count Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x14</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x15</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-only</ipxact:access>
@@ -367,13 +367,13 @@
                 <ipxact:name>ActualCountReg2</ipxact:name>
                 <ipxact:displayName>Actual Count Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>24</ipxact:baseAddress>
+                <ipxact:baseAddress>25</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>ActualCountReg2</ipxact:name>
                     <ipxact:displayName>Actual Count Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x18</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x19</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-only</ipxact:access>
@@ -391,13 +391,13 @@
                 <ipxact:name>ActualCountReg3</ipxact:name>
                 <ipxact:displayName>Actual Count Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>28</ipxact:baseAddress>
+                <ipxact:baseAddress>29</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>ActualCountReg3</ipxact:name>
                     <ipxact:displayName>Actual Count Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x1c</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x1d</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-only</ipxact:access>
@@ -415,13 +415,13 @@
                 <ipxact:name>FailureCountReg0</ipxact:name>
                 <ipxact:displayName>Failure Count Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>32</ipxact:baseAddress>
+                <ipxact:baseAddress>33</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>FailureCountReg0</ipxact:name>
                     <ipxact:displayName>Failure Count Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x20</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x21</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-only</ipxact:access>
@@ -439,13 +439,13 @@
                 <ipxact:name>FailureCountReg1</ipxact:name>
                 <ipxact:displayName>Failure Count Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>36</ipxact:baseAddress>
+                <ipxact:baseAddress>37</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>FailureCountReg1</ipxact:name>
                     <ipxact:displayName>Failure Count Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x24</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x25</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-only</ipxact:access>
@@ -463,13 +463,13 @@
                 <ipxact:name>FailureCountReg2</ipxact:name>
                 <ipxact:displayName>Failure Count Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>40</ipxact:baseAddress>
+                <ipxact:baseAddress>41</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>FailureCountReg2</ipxact:name>
                     <ipxact:displayName>Failure Count Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x28</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x29</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-only</ipxact:access>
@@ -487,13 +487,13 @@
                 <ipxact:name>FailureCountReg3</ipxact:name>
                 <ipxact:displayName>Failure Count Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>44</ipxact:baseAddress>
+                <ipxact:baseAddress>45</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>FailureCountReg3</ipxact:name>
                     <ipxact:displayName>Failure Count Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x2c</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x2d</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-only</ipxact:access>
@@ -511,13 +511,13 @@
                 <ipxact:name>IntervalReg0</ipxact:name>
                 <ipxact:displayName>Interval Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>48</ipxact:baseAddress>
+                <ipxact:baseAddress>49</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>IntervalReg0</ipxact:name>
                     <ipxact:displayName>Interval Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x30</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x31</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-write</ipxact:access>
@@ -535,13 +535,13 @@
                 <ipxact:name>IntervalReg1</ipxact:name>
                 <ipxact:displayName>Interval Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>52</ipxact:baseAddress>
+                <ipxact:baseAddress>53</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>IntervalReg1</ipxact:name>
                     <ipxact:displayName>Interval Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x34</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x35</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-write</ipxact:access>
@@ -559,13 +559,13 @@
                 <ipxact:name>IntervalReg2</ipxact:name>
                 <ipxact:displayName>Interval Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>56</ipxact:baseAddress>
+                <ipxact:baseAddress>57</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>IntervalReg2</ipxact:name>
                     <ipxact:displayName>Interval Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x38</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x39</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-write</ipxact:access>
@@ -583,13 +583,13 @@
                 <ipxact:name>IntervalReg3</ipxact:name>
                 <ipxact:displayName>Interval Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>60</ipxact:baseAddress>
+                <ipxact:baseAddress>61</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>IntervalReg3</ipxact:name>
                     <ipxact:displayName>Interval Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x3c</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x3d</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-write</ipxact:access>
@@ -607,13 +607,13 @@
                 <ipxact:name>ReferenceCountReg0</ipxact:name>
                 <ipxact:displayName>Reference Count Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>64</ipxact:baseAddress>
+                <ipxact:baseAddress>65</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>ReferenceCountReg0</ipxact:name>
                     <ipxact:displayName>Reference Count Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x40</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x41</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-write</ipxact:access>
@@ -631,13 +631,13 @@
                 <ipxact:name>ReferenceCountReg1</ipxact:name>
                 <ipxact:displayName>Reference Count Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>68</ipxact:baseAddress>
+                <ipxact:baseAddress>69</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>ReferenceCountReg1</ipxact:name>
                     <ipxact:displayName>Reference Count Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x44</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x45</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-write</ipxact:access>
@@ -655,13 +655,13 @@
                 <ipxact:name>ReferenceCountReg2</ipxact:name>
                 <ipxact:displayName>Reference Count Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>72</ipxact:baseAddress>
+                <ipxact:baseAddress>73</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>ReferenceCountReg2</ipxact:name>
                     <ipxact:displayName>Reference Count Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x48</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x49</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-write</ipxact:access>
@@ -679,13 +679,13 @@
                 <ipxact:name>ReferenceCountReg3</ipxact:name>
                 <ipxact:displayName>Reference Count Register</ipxact:displayName>
                 <ipxact:description></ipxact:description>
-                <ipxact:baseAddress>76</ipxact:baseAddress>
+                <ipxact:baseAddress>77</ipxact:baseAddress>
                 <ipxact:range>4</ipxact:range>
                 <ipxact:width>8</ipxact:width>
                 <ipxact:register>
                     <ipxact:name>ReferenceCountReg3</ipxact:name>
                     <ipxact:displayName>Reference Count Register</ipxact:displayName>
-                    <ipxact:addressOffset>0x4c</ipxact:addressOffset>
+                    <ipxact:addressOffset>0x4d</ipxact:addressOffset>
                     <ipxact:size>32</ipxact:size>
                     <ipxact:volatile>true</ipxact:volatile>
                     <ipxact:access>read-write</ipxact:access>

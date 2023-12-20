@@ -166,7 +166,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x00</code>
+                <code>0x01</code>
               </para>
             </entry>
             <entry xml:id="aa0dfca7eaf6">
@@ -181,7 +181,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x04</code>
+                <code>0x05</code>
               </para>
             </entry>
             <entry xml:id="a132cf324d37">
@@ -196,7 +196,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x08</code>
+                <code>0x09</code>
               </para>
             </entry>
             <entry xml:id="ad59fd7e370e">
@@ -211,7 +211,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x0c</code>
+                <code>0x0d</code>
               </para>
             </entry>
             <entry xml:id="a7bf43ea2187">
@@ -226,7 +226,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x10</code>
+                <code>0x11</code>
               </para>
             </entry>
             <entry xml:id="a236d228d2b6">
@@ -241,7 +241,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x14</code>
+                <code>0x15</code>
               </para>
             </entry>
             <entry xml:id="a195551d267e">
@@ -256,7 +256,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x18</code>
+                <code>0x19</code>
               </para>
             </entry>
             <entry xml:id="a608640262d1">
@@ -271,7 +271,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x1c</code>
+                <code>0x1d</code>
               </para>
             </entry>
             <entry xml:id="a37643fa7ac3">
@@ -286,7 +286,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x20</code>
+                <code>0x21</code>
               </para>
             </entry>
             <entry xml:id="ad89f88e0dac">
@@ -301,7 +301,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x24</code>
+                <code>0x25</code>
               </para>
             </entry>
             <entry xml:id="a74d21831782">
@@ -316,7 +316,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x28</code>
+                <code>0x29</code>
               </para>
             </entry>
             <entry xml:id="ae1f98972b82">
@@ -331,7 +331,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x2c</code>
+                <code>0x2d</code>
               </para>
             </entry>
             <entry xml:id="a9de8ec5a7f4">
@@ -346,7 +346,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x30</code>
+                <code>0x31</code>
               </para>
             </entry>
             <entry xml:id="a0ea8a602d73">
@@ -361,7 +361,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x34</code>
+                <code>0x35</code>
               </para>
             </entry>
             <entry xml:id="ad10f4ae8b6f">
@@ -376,7 +376,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x38</code>
+                <code>0x39</code>
               </para>
             </entry>
             <entry xml:id="a82d3204a098">
@@ -391,7 +391,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x3c</code>
+                <code>0x3d</code>
               </para>
             </entry>
             <entry xml:id="a1906c38fac1">
@@ -406,7 +406,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x40</code>
+                <code>0x41</code>
               </para>
             </entry>
             <entry xml:id="a214508aba0d">
@@ -421,7 +421,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x44</code>
+                <code>0x45</code>
               </para>
             </entry>
             <entry xml:id="a37dcfb6b8bc">
@@ -436,7 +436,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x48</code>
+                <code>0x49</code>
               </para>
             </entry>
             <entry xml:id="adcaae45b694">
@@ -451,7 +451,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x4c</code>
+                <code>0x4d</code>
               </para>
             </entry>
             <entry xml:id="ab72de44ab07">
@@ -1322,7 +1322,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x00</code>
+                  <code>0x01</code>
                 </para>
               </entry>
               <entry xml:id="a0db3b6116e5">
@@ -1410,7 +1410,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x04</code>
+                  <code>0x05</code>
                 </para>
               </entry>
               <entry xml:id="abc68b2c2fb4">
@@ -1498,7 +1498,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x08</code>
+                  <code>0x09</code>
                 </para>
               </entry>
               <entry xml:id="a948ab506dde">
@@ -1586,7 +1586,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x0c</code>
+                  <code>0x0d</code>
                 </para>
               </entry>
               <entry xml:id="a3e9cdd4ec35">
@@ -1674,7 +1674,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x10</code>
+                  <code>0x11</code>
                 </para>
               </entry>
               <entry xml:id="a2cb1678bc40">
@@ -1735,7 +1735,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x14</code>
+                  <code>0x15</code>
                 </para>
               </entry>
               <entry xml:id="a10654a50f89">
@@ -1796,7 +1796,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x18</code>
+                  <code>0x19</code>
                 </para>
               </entry>
               <entry xml:id="a2fb71bf02a8">
@@ -1857,7 +1857,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x1c</code>
+                  <code>0x1d</code>
                 </para>
               </entry>
               <entry xml:id="acb3054124ed">
@@ -1918,7 +1918,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x20</code>
+                  <code>0x21</code>
                 </para>
               </entry>
               <entry xml:id="aba236b9d33d">
@@ -1979,7 +1979,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x24</code>
+                  <code>0x25</code>
                 </para>
               </entry>
               <entry xml:id="a9446ad6c9b3">
@@ -2040,7 +2040,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x28</code>
+                  <code>0x29</code>
                 </para>
               </entry>
               <entry xml:id="a502a2bc5d6c">
@@ -2101,7 +2101,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x2c</code>
+                  <code>0x2d</code>
                 </para>
               </entry>
               <entry xml:id="a7bba5b7e4b9">
@@ -2162,7 +2162,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x30</code>
+                  <code>0x31</code>
                 </para>
               </entry>
               <entry xml:id="a2a37762ecc0">
@@ -2250,7 +2250,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x34</code>
+                  <code>0x35</code>
                 </para>
               </entry>
               <entry xml:id="a89684d8915f">
@@ -2338,7 +2338,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x38</code>
+                  <code>0x39</code>
                 </para>
               </entry>
               <entry xml:id="ac72e4c655c6">
@@ -2426,7 +2426,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x3c</code>
+                  <code>0x3d</code>
                 </para>
               </entry>
               <entry xml:id="a776e7a831e1">
@@ -2514,7 +2514,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x40</code>
+                  <code>0x41</code>
                 </para>
               </entry>
               <entry xml:id="a9a7df46e1de">
@@ -2602,7 +2602,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x44</code>
+                  <code>0x45</code>
                 </para>
               </entry>
               <entry xml:id="a6540a8cf639">
@@ -2690,7 +2690,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x48</code>
+                  <code>0x49</code>
                 </para>
               </entry>
               <entry xml:id="a9b5c49549ef">
@@ -2778,7 +2778,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x4c</code>
+                  <code>0x4d</code>
                 </para>
               </entry>
               <entry xml:id="a414e8dad704">

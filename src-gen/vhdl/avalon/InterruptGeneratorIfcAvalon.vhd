@@ -78,7 +78,7 @@ architecture Behavioural of InterruptGeneratorBlk_InterruptGeneratorIfc is
 	signal PreMatchReadControlReg : std_logic;
 	signal PreMatchWriteControlReg : std_logic;
 	
-	signal PreReadDataStatusReg : std_logic_vector(3 downto 0);
+	signal PreReadDataStatusReg : std_logic_vector(7 downto 0);
 	signal PreReadAckStatusReg : std_logic;
 	signal ReadDiffStatusReg : std_logic;
 	signal PreMatchReadStatusReg : std_logic;

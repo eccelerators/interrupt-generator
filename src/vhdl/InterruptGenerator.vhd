@@ -80,15 +80,22 @@ begin
         
             for i in 0 to InterruptOut'length-1 loop       
                 if ChannelOperation(i) then
-                    if IntervalCount(i) + ClkPeriodInNs < unsigned(Interval(i)) then
-                        IntervalCount(i) <= IntervalCount(i) + ClkPeriodInNs;
+                
+                    if unsigned(ActualCount(i)) < unsigned(ChargedCount(i)) then
+                        ChannelStatus(i) <= STATUSREG_CHANNELSTATUS1_OPERATING;
+                        if IntervalCount(i) + ClkPeriodInNs < unsigned(Interval(i)) then
+                            IntervalCount(i) <= IntervalCount(i) + ClkPeriodInNs;
+                        else
+                            IntervalCount(i) <= to_unsigned(0, Interval(i)'length);
+                            IntervalEnable(i) <= '1';
+                            InterruptOut(i) <= '1';
+                        end if;
                     else
-                        IntervalCount(i) <= to_unsigned(0, Interval(i)'length);
-                        IntervalEnable(i) <= '1';
-                        InterruptOut(i) <= '1';
-                    end if;
+                        ChannelStatus(i) <= STATUSREG_CHANNELSTATUS1_ENDED_LIST(0);                     
+                    end if;                    
                 else
                     IntervalCount(i) <= to_unsigned(0, Interval(i)'length);
+                    ChannelStatus(i) <= STATUSREG_CHANNELSTATUS1_IDLE;
                 end if;
 
                 if ChannelOperation(i) then         
@@ -110,17 +117,7 @@ begin
                 if WRegPulseReferenceCount(i) then
                     InterruptOut(i) <= '0';
                 end if;
-                
-                if ChannelOperation(i) then
-                    if unsigned(ActualCount(i)) < unsigned(ChargedCount(i)) then
-                        ChannelStatus(i) <= STATUSREG_CHANNELSTATUS1_OPERATING;
-                    else
-                        ChannelStatus(i) <= STATUSREG_CHANNELSTATUS1_ENDED_LIST(0);
-                    end if;
-                else
-                    ChannelStatus(i) <= STATUSREG_CHANNELSTATUS1_IDLE;
-                end if;
-                            
+                                          
             end loop;
         end if;  
     end process;

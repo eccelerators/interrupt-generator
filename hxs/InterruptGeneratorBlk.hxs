@@ -52,7 +52,7 @@ namespace Eccelerators.Library.IP
 			   Interrupt Generator details
 			   												 			 
 			";
-			   			   												 			 
+						   			   												 			 
 		Registers = [
 			ControlReg,
 			StatusReg,
@@ -83,10 +83,10 @@ namespace Eccelerators.Library.IP
 			Name = "Control Register";
 			Width = 32;
 			Bits = [
-				ChannelOperation,
-				ChannelOperation,
-				ChannelOperation,
-				ChannelOperation
+				ChannelOperation(Id="ChannelOperation0"),
+				ChannelOperation(Id="ChannelOperation1"),
+				ChannelOperation(Id="ChannelOperation2"),
+				ChannelOperation(Id="ChannelOperation3")
 			];
 			enum ChannelOperation
 			{
@@ -115,10 +115,10 @@ namespace Eccelerators.Library.IP
 			Name = "Status Register";
 			Width = 32;
 			Bits = [
-				ChannelStatus,
-				ChannelStatus,
-				ChannelStatus,
-				ChannelStatus
+				ChannelStatus(Id="ChannelStatus0"),
+				ChannelStatus(Id="ChannelStatus1"),
+				ChannelStatus(Id="ChannelStatus2"),
+				ChannelStatus(Id="ChannelStatus3")
 			];
 			enum ChannelStatus
 			{
@@ -149,28 +149,6 @@ namespace Eccelerators.Library.IP
 					Behaviour = ValueBehaviour.Read;
 					Description = "An Interrupt is not pending.";
 				}			
-			}
-			enum ChannelResult
-			{
-				Width = 1;
-				Values = [
-					Failure,
-					Success
-				];
-				value Failure
-				{
-					Value = 0x1;
-					Behaviour = ValueBehaviour.Read;
-					Description = "An Interrupt is pending.";
-				}
-			
-				value Success
-				{
-					Value = 0x0;
-					Behaviour = ValueBehaviour.Read;
-					Description = "An Interrupt is not pending.";
-				}
-						
 			}
 		}
 

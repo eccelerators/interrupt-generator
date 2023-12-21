@@ -19,89 +19,89 @@ InterruptGeneratorIfcDataBusWidth = 32
 
 class InterruptGeneratorBlk:
     InterruptGeneratorBlkAddress = 0x00 
-    InterruptGeneratorBlkSize = 0x54 
+    InterruptGeneratorBlkSize = 0x58 
 
     @property
     def ControlRegAddress(self):
         return (0x00 + self.InterruptGeneratorBlkAddress)
 
-    ControlRegWidth = 4
+    ControlRegWidth = 32
 
-    ControlReg_ChannelOperation0Mask = 0x8
-    ControlReg_ChannelOperation0Position = 3
-    ControlReg_ChannelOperation0Width = 1
-    ControlReg_ChannelOperation0_DisabledMVal = 0x0
-    ControlReg_ChannelOperation0_EnabledMVal = 0x8
-    ControlReg_ChannelOperation0BusResetMRstVal = 0x0
-
-    ControlReg_ChannelOperation1Mask = 0x4
-    ControlReg_ChannelOperation1Position = 2
-    ControlReg_ChannelOperation1Width = 1
-    ControlReg_ChannelOperation1_DisabledMVal = 0x0
-    ControlReg_ChannelOperation1_EnabledMVal = 0x4
-    ControlReg_ChannelOperation1BusResetMRstVal = 0x0
-
-    ControlReg_ChannelOperation2Mask = 0x2
-    ControlReg_ChannelOperation2Position = 1
-    ControlReg_ChannelOperation2Width = 1
-    ControlReg_ChannelOperation2_DisabledMVal = 0x0
-    ControlReg_ChannelOperation2_EnabledMVal = 0x2
-    ControlReg_ChannelOperation2BusResetMRstVal = 0x0
-
-    ControlReg_ChannelOperation3Mask = 0x1
-    ControlReg_ChannelOperation3Position = 0
+    ControlReg_ChannelOperation3Mask = 0x00000008
+    ControlReg_ChannelOperation3Position = 3
     ControlReg_ChannelOperation3Width = 1
-    ControlReg_ChannelOperation3_DisabledMVal = 0x0
-    ControlReg_ChannelOperation3_EnabledMVal = 0x1
-    ControlReg_ChannelOperation3BusResetMRstVal = 0x0
+    ControlReg_ChannelOperation3_DisabledMVal = 0x00000000
+    ControlReg_ChannelOperation3_EnabledMVal = 0x00000008
+    ControlReg_ChannelOperation3BusResetMRstVal = 0x00000000
+
+    ControlReg_ChannelOperation2Mask = 0x00000004
+    ControlReg_ChannelOperation2Position = 2
+    ControlReg_ChannelOperation2Width = 1
+    ControlReg_ChannelOperation2_DisabledMVal = 0x00000000
+    ControlReg_ChannelOperation2_EnabledMVal = 0x00000004
+    ControlReg_ChannelOperation2BusResetMRstVal = 0x00000000
+
+    ControlReg_ChannelOperation1Mask = 0x00000002
+    ControlReg_ChannelOperation1Position = 1
+    ControlReg_ChannelOperation1Width = 1
+    ControlReg_ChannelOperation1_DisabledMVal = 0x00000000
+    ControlReg_ChannelOperation1_EnabledMVal = 0x00000002
+    ControlReg_ChannelOperation1BusResetMRstVal = 0x00000000
+
+    ControlReg_ChannelOperation0Mask = 0x00000001
+    ControlReg_ChannelOperation0Position = 0
+    ControlReg_ChannelOperation0Width = 1
+    ControlReg_ChannelOperation0_DisabledMVal = 0x00000000
+    ControlReg_ChannelOperation0_EnabledMVal = 0x00000001
+    ControlReg_ChannelOperation0BusResetMRstVal = 0x00000000
 
 
     @property
     def StatusRegAddress(self):
-        return (0x00 + self.InterruptGeneratorBlkAddress)
+        return (0x04 + self.InterruptGeneratorBlkAddress)
 
-    StatusRegWidth = 8
+    StatusRegWidth = 32
 
-    StatusReg_ChannelStatus0Mask = 0xC0
-    StatusReg_ChannelStatus0Position = 6
-    StatusReg_ChannelStatus0Width = 2
-    StatusReg_ChannelStatus0_IdleMVal = 0x00
-    StatusReg_ChannelStatus0_OperatingMVal = 0x40
-    StatusReg_ChannelStatus0_EndedMValAMask = 0x80
-    StatusReg_ChannelStatus0_EndedMValList = [
-        0x80, 0xC0]
-
-    StatusReg_ChannelStatus1Mask = 0x30
-    StatusReg_ChannelStatus1Position = 4
-    StatusReg_ChannelStatus1Width = 2
-    StatusReg_ChannelStatus1_IdleMVal = 0x00
-    StatusReg_ChannelStatus1_OperatingMVal = 0x10
-    StatusReg_ChannelStatus1_EndedMValAMask = 0x20
-    StatusReg_ChannelStatus1_EndedMValList = [
-        0x20, 0x30]
-
-    StatusReg_ChannelStatus2Mask = 0x0C
-    StatusReg_ChannelStatus2Position = 2
-    StatusReg_ChannelStatus2Width = 2
-    StatusReg_ChannelStatus2_IdleMVal = 0x00
-    StatusReg_ChannelStatus2_OperatingMVal = 0x04
-    StatusReg_ChannelStatus2_EndedMValAMask = 0x08
-    StatusReg_ChannelStatus2_EndedMValList = [
-        0x08, 0x0C]
-
-    StatusReg_ChannelStatus3Mask = 0x03
-    StatusReg_ChannelStatus3Position = 0
+    StatusReg_ChannelStatus3Mask = 0x000000C0
+    StatusReg_ChannelStatus3Position = 6
     StatusReg_ChannelStatus3Width = 2
-    StatusReg_ChannelStatus3_IdleMVal = 0x00
-    StatusReg_ChannelStatus3_OperatingMVal = 0x01
-    StatusReg_ChannelStatus3_EndedMValAMask = 0x02
+    StatusReg_ChannelStatus3_IdleMVal = 0x00000000
+    StatusReg_ChannelStatus3_OperatingMVal = 0x00000040
+    StatusReg_ChannelStatus3_EndedMValAMask = 0x00000080
     StatusReg_ChannelStatus3_EndedMValList = [
-        0x02, 0x03]
+        0x00000080, 0x000000C0]
+
+    StatusReg_ChannelStatus2Mask = 0x00000030
+    StatusReg_ChannelStatus2Position = 4
+    StatusReg_ChannelStatus2Width = 2
+    StatusReg_ChannelStatus2_IdleMVal = 0x00000000
+    StatusReg_ChannelStatus2_OperatingMVal = 0x00000010
+    StatusReg_ChannelStatus2_EndedMValAMask = 0x00000020
+    StatusReg_ChannelStatus2_EndedMValList = [
+        0x00000020, 0x00000030]
+
+    StatusReg_ChannelStatus1Mask = 0x0000000C
+    StatusReg_ChannelStatus1Position = 2
+    StatusReg_ChannelStatus1Width = 2
+    StatusReg_ChannelStatus1_IdleMVal = 0x00000000
+    StatusReg_ChannelStatus1_OperatingMVal = 0x00000004
+    StatusReg_ChannelStatus1_EndedMValAMask = 0x00000008
+    StatusReg_ChannelStatus1_EndedMValList = [
+        0x00000008, 0x0000000C]
+
+    StatusReg_ChannelStatus0Mask = 0x00000003
+    StatusReg_ChannelStatus0Position = 0
+    StatusReg_ChannelStatus0Width = 2
+    StatusReg_ChannelStatus0_IdleMVal = 0x00000000
+    StatusReg_ChannelStatus0_OperatingMVal = 0x00000001
+    StatusReg_ChannelStatus0_EndedMValAMask = 0x00000002
+    StatusReg_ChannelStatus0_EndedMValList = [
+        0x00000002, 0x00000003]
 
 
     @property
     def ChargedCountReg0Address(self):
-        return (0x01 + self.InterruptGeneratorBlkAddress)
+        return (0x08 + self.InterruptGeneratorBlkAddress)
 
     ChargedCountReg0Width = 32
 
@@ -113,7 +113,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ChargedCountReg1Address(self):
-        return (0x05 + self.InterruptGeneratorBlkAddress)
+        return (0x0C + self.InterruptGeneratorBlkAddress)
 
     ChargedCountReg1Width = 32
 
@@ -125,7 +125,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ChargedCountReg2Address(self):
-        return (0x09 + self.InterruptGeneratorBlkAddress)
+        return (0x10 + self.InterruptGeneratorBlkAddress)
 
     ChargedCountReg2Width = 32
 
@@ -137,7 +137,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ChargedCountReg3Address(self):
-        return (0x0D + self.InterruptGeneratorBlkAddress)
+        return (0x14 + self.InterruptGeneratorBlkAddress)
 
     ChargedCountReg3Width = 32
 
@@ -149,7 +149,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ActualCountReg0Address(self):
-        return (0x11 + self.InterruptGeneratorBlkAddress)
+        return (0x18 + self.InterruptGeneratorBlkAddress)
 
     ActualCountReg0Width = 32
 
@@ -160,7 +160,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ActualCountReg1Address(self):
-        return (0x15 + self.InterruptGeneratorBlkAddress)
+        return (0x1C + self.InterruptGeneratorBlkAddress)
 
     ActualCountReg1Width = 32
 
@@ -171,7 +171,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ActualCountReg2Address(self):
-        return (0x19 + self.InterruptGeneratorBlkAddress)
+        return (0x20 + self.InterruptGeneratorBlkAddress)
 
     ActualCountReg2Width = 32
 
@@ -182,7 +182,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ActualCountReg3Address(self):
-        return (0x1D + self.InterruptGeneratorBlkAddress)
+        return (0x24 + self.InterruptGeneratorBlkAddress)
 
     ActualCountReg3Width = 32
 
@@ -193,7 +193,7 @@ class InterruptGeneratorBlk:
 
     @property
     def FailureCountReg0Address(self):
-        return (0x21 + self.InterruptGeneratorBlkAddress)
+        return (0x28 + self.InterruptGeneratorBlkAddress)
 
     FailureCountReg0Width = 32
 
@@ -204,7 +204,7 @@ class InterruptGeneratorBlk:
 
     @property
     def FailureCountReg1Address(self):
-        return (0x25 + self.InterruptGeneratorBlkAddress)
+        return (0x2C + self.InterruptGeneratorBlkAddress)
 
     FailureCountReg1Width = 32
 
@@ -215,7 +215,7 @@ class InterruptGeneratorBlk:
 
     @property
     def FailureCountReg2Address(self):
-        return (0x29 + self.InterruptGeneratorBlkAddress)
+        return (0x30 + self.InterruptGeneratorBlkAddress)
 
     FailureCountReg2Width = 32
 
@@ -226,7 +226,7 @@ class InterruptGeneratorBlk:
 
     @property
     def FailureCountReg3Address(self):
-        return (0x2D + self.InterruptGeneratorBlkAddress)
+        return (0x34 + self.InterruptGeneratorBlkAddress)
 
     FailureCountReg3Width = 32
 
@@ -237,7 +237,7 @@ class InterruptGeneratorBlk:
 
     @property
     def IntervalReg0Address(self):
-        return (0x31 + self.InterruptGeneratorBlkAddress)
+        return (0x38 + self.InterruptGeneratorBlkAddress)
 
     IntervalReg0Width = 32
 
@@ -249,7 +249,7 @@ class InterruptGeneratorBlk:
 
     @property
     def IntervalReg1Address(self):
-        return (0x35 + self.InterruptGeneratorBlkAddress)
+        return (0x3C + self.InterruptGeneratorBlkAddress)
 
     IntervalReg1Width = 32
 
@@ -261,7 +261,7 @@ class InterruptGeneratorBlk:
 
     @property
     def IntervalReg2Address(self):
-        return (0x39 + self.InterruptGeneratorBlkAddress)
+        return (0x40 + self.InterruptGeneratorBlkAddress)
 
     IntervalReg2Width = 32
 
@@ -273,7 +273,7 @@ class InterruptGeneratorBlk:
 
     @property
     def IntervalReg3Address(self):
-        return (0x3D + self.InterruptGeneratorBlkAddress)
+        return (0x44 + self.InterruptGeneratorBlkAddress)
 
     IntervalReg3Width = 32
 
@@ -285,7 +285,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ReferenceCountReg0Address(self):
-        return (0x41 + self.InterruptGeneratorBlkAddress)
+        return (0x48 + self.InterruptGeneratorBlkAddress)
 
     ReferenceCountReg0Width = 32
 
@@ -297,7 +297,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ReferenceCountReg1Address(self):
-        return (0x45 + self.InterruptGeneratorBlkAddress)
+        return (0x4C + self.InterruptGeneratorBlkAddress)
 
     ReferenceCountReg1Width = 32
 
@@ -309,7 +309,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ReferenceCountReg2Address(self):
-        return (0x49 + self.InterruptGeneratorBlkAddress)
+        return (0x50 + self.InterruptGeneratorBlkAddress)
 
     ReferenceCountReg2Width = 32
 
@@ -321,7 +321,7 @@ class InterruptGeneratorBlk:
 
     @property
     def ReferenceCountReg3Address(self):
-        return (0x4D + self.InterruptGeneratorBlkAddress)
+        return (0x54 + self.InterruptGeneratorBlkAddress)
 
     ReferenceCountReg3Width = 32
 

@@ -25,72 +25,72 @@ const InterruptGeneratorBlkSize 0x58
 var ControlRegAddress 0x00
 const ControlRegWidth 32
 
-const ControlReg_ChannelOperation0Mask 0x00000008
-const ControlReg_ChannelOperation0Position 3
-const ControlReg_ChannelOperation0Width 1
-const ControlReg_ChannelOperation0_DisabledMVal 0x00000000
-const ControlReg_ChannelOperation0_EnabledMVal 0x00000008
-const ControlReg_ChannelOperation0BusResetMRstVal 0x00000000
-
-const ControlReg_ChannelOperation1Mask 0x00000004
-const ControlReg_ChannelOperation1Position 2
-const ControlReg_ChannelOperation1Width 1
-const ControlReg_ChannelOperation1_DisabledMVal 0x00000000
-const ControlReg_ChannelOperation1_EnabledMVal 0x00000004
-const ControlReg_ChannelOperation1BusResetMRstVal 0x00000000
-
-const ControlReg_ChannelOperation2Mask 0x00000002
-const ControlReg_ChannelOperation2Position 1
-const ControlReg_ChannelOperation2Width 1
-const ControlReg_ChannelOperation2_DisabledMVal 0x00000000
-const ControlReg_ChannelOperation2_EnabledMVal 0x00000002
-const ControlReg_ChannelOperation2BusResetMRstVal 0x00000000
-
-const ControlReg_ChannelOperation3Mask 0x00000001
-const ControlReg_ChannelOperation3Position 0
+const ControlReg_ChannelOperation3Mask 0x00000008
+const ControlReg_ChannelOperation3Position 3
 const ControlReg_ChannelOperation3Width 1
 const ControlReg_ChannelOperation3_DisabledMVal 0x00000000
-const ControlReg_ChannelOperation3_EnabledMVal 0x00000001
+const ControlReg_ChannelOperation3_EnabledMVal 0x00000008
 const ControlReg_ChannelOperation3BusResetMRstVal 0x00000000
+
+const ControlReg_ChannelOperation2Mask 0x00000004
+const ControlReg_ChannelOperation2Position 2
+const ControlReg_ChannelOperation2Width 1
+const ControlReg_ChannelOperation2_DisabledMVal 0x00000000
+const ControlReg_ChannelOperation2_EnabledMVal 0x00000004
+const ControlReg_ChannelOperation2BusResetMRstVal 0x00000000
+
+const ControlReg_ChannelOperation1Mask 0x00000002
+const ControlReg_ChannelOperation1Position 1
+const ControlReg_ChannelOperation1Width 1
+const ControlReg_ChannelOperation1_DisabledMVal 0x00000000
+const ControlReg_ChannelOperation1_EnabledMVal 0x00000002
+const ControlReg_ChannelOperation1BusResetMRstVal 0x00000000
+
+const ControlReg_ChannelOperation0Mask 0x00000001
+const ControlReg_ChannelOperation0Position 0
+const ControlReg_ChannelOperation0Width 1
+const ControlReg_ChannelOperation0_DisabledMVal 0x00000000
+const ControlReg_ChannelOperation0_EnabledMVal 0x00000001
+const ControlReg_ChannelOperation0BusResetMRstVal 0x00000000
 
 var StatusRegAddress 0x00
 const StatusRegWidth 32
 
-const StatusReg_ChannelStatus0Mask 0x000000C0
-const StatusReg_ChannelStatus0Position 6
-const StatusReg_ChannelStatus0Width 2
-const StatusReg_ChannelStatus0_IdleMVal 0x00000000
-const StatusReg_ChannelStatus0_OperatingMVal 0x00000040
-const StatusReg_ChannelStatus0_EndedMValAMask 0x00000080
-const StatusReg_ChannelStatus0_EndedMValListSize 2
-array StatusReg_ChannelStatus0_EndedMValList 2
+const StatusReg_ChannelStatus3Mask 0x000000C0
+const StatusReg_ChannelStatus3Position 6
+const StatusReg_ChannelStatus3Width 2
+const StatusReg_ChannelStatus3_IdleMVal 0x00000000
+const StatusReg_ChannelStatus3_OperatingMVal 0x00000040
+const StatusReg_ChannelStatus3_EndedMValAMask 0x00000080
+const StatusReg_ChannelStatus3_EndedMValListSize 2
+array StatusReg_ChannelStatus3_EndedMValList 2
 
-const StatusReg_ChannelStatus1Mask 0x00000030
-const StatusReg_ChannelStatus1Position 4
-const StatusReg_ChannelStatus1Width 2
-const StatusReg_ChannelStatus1_IdleMVal 0x00000000
-const StatusReg_ChannelStatus1_OperatingMVal 0x00000010
-const StatusReg_ChannelStatus1_EndedMValAMask 0x00000020
-const StatusReg_ChannelStatus1_EndedMValListSize 2
-array StatusReg_ChannelStatus1_EndedMValList 2
-
-const StatusReg_ChannelStatus2Mask 0x0000000C
-const StatusReg_ChannelStatus2Position 2
+const StatusReg_ChannelStatus2Mask 0x00000030
+const StatusReg_ChannelStatus2Position 4
 const StatusReg_ChannelStatus2Width 2
 const StatusReg_ChannelStatus2_IdleMVal 0x00000000
-const StatusReg_ChannelStatus2_OperatingMVal 0x00000004
-const StatusReg_ChannelStatus2_EndedMValAMask 0x00000008
+const StatusReg_ChannelStatus2_OperatingMVal 0x00000010
+const StatusReg_ChannelStatus2_EndedMValAMask 0x00000020
 const StatusReg_ChannelStatus2_EndedMValListSize 2
 array StatusReg_ChannelStatus2_EndedMValList 2
 
-const StatusReg_ChannelStatus3Mask 0x00000003
-const StatusReg_ChannelStatus3Position 0
-const StatusReg_ChannelStatus3Width 2
-const StatusReg_ChannelStatus3_IdleMVal 0x00000000
-const StatusReg_ChannelStatus3_OperatingMVal 0x00000001
-const StatusReg_ChannelStatus3_EndedMValAMask 0x00000002
-const StatusReg_ChannelStatus3_EndedMValListSize 2
-array StatusReg_ChannelStatus3_EndedMValList 2
+const StatusReg_ChannelStatus1Mask 0x0000000C
+const StatusReg_ChannelStatus1Position 2
+const StatusReg_ChannelStatus1Width 2
+const StatusReg_ChannelStatus1_IdleMVal 0x00000000
+const StatusReg_ChannelStatus1_OperatingMVal 0x00000004
+const StatusReg_ChannelStatus1_EndedMValAMask 0x00000008
+const StatusReg_ChannelStatus1_EndedMValListSize 2
+array StatusReg_ChannelStatus1_EndedMValList 2
+
+const StatusReg_ChannelStatus0Mask 0x00000003
+const StatusReg_ChannelStatus0Position 0
+const StatusReg_ChannelStatus0Width 2
+const StatusReg_ChannelStatus0_IdleMVal 0x00000000
+const StatusReg_ChannelStatus0_OperatingMVal 0x00000001
+const StatusReg_ChannelStatus0_EndedMValAMask 0x00000002
+const StatusReg_ChannelStatus0_EndedMValListSize 2
+array StatusReg_ChannelStatus0_EndedMValList 2
 
 var ChargedCountReg0Address 0x00
 const ChargedCountReg0Width 32
@@ -298,24 +298,24 @@ proc
     add ReferenceCountReg2Address $InterruptGeneratorBlkAddress
     equ ReferenceCountReg3Address 0x54
     add ReferenceCountReg3Address $InterruptGeneratorBlkAddress
-    array set StatusReg_ChannelStatus0_EndedMValList 0 0x00000080
-    array set StatusReg_ChannelStatus0_EndedMValList 1 0x000000C0
-    array set StatusReg_ChannelStatus1_EndedMValList 0 0x00000020
-    array set StatusReg_ChannelStatus1_EndedMValList 1 0x00000030
-    array set StatusReg_ChannelStatus2_EndedMValList 0 0x00000008
-    array set StatusReg_ChannelStatus2_EndedMValList 1 0x0000000C
-    array set StatusReg_ChannelStatus3_EndedMValList 0 0x00000002
-    array set StatusReg_ChannelStatus3_EndedMValList 1 0x00000003
+    array set StatusReg_ChannelStatus3_EndedMValList 0 0x00000080
+    array set StatusReg_ChannelStatus3_EndedMValList 1 0x000000C0
+    array set StatusReg_ChannelStatus2_EndedMValList 0 0x00000020
+    array set StatusReg_ChannelStatus2_EndedMValList 1 0x00000030
+    array set StatusReg_ChannelStatus1_EndedMValList 0 0x00000008
+    array set StatusReg_ChannelStatus1_EndedMValList 1 0x0000000C
+    array set StatusReg_ChannelStatus0_EndedMValList 0 0x00000002
+    array set StatusReg_ChannelStatus0_EndedMValList 1 0x00000003
 end proc
 
 var RvalInterruptGeneratorBlk_BusReset 0
 
 ResetTestInterruptGeneratorBlkByBusReset:
 proc
-    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RvalInterruptGeneratorBlk_BusReset 0 $ControlReg_ChannelOperation0Mask
-    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RvalInterruptGeneratorBlk_BusReset 0 $ControlReg_ChannelOperation1Mask
-    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RvalInterruptGeneratorBlk_BusReset 0 $ControlReg_ChannelOperation2Mask
     bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RvalInterruptGeneratorBlk_BusReset 0 $ControlReg_ChannelOperation3Mask
+    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RvalInterruptGeneratorBlk_BusReset 0 $ControlReg_ChannelOperation2Mask
+    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RvalInterruptGeneratorBlk_BusReset 0 $ControlReg_ChannelOperation1Mask
+    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RvalInterruptGeneratorBlk_BusReset 0 $ControlReg_ChannelOperation0Mask
     bus verify InterruptGeneratorIfcBus 32 $ChargedCountReg0Address RvalInterruptGeneratorBlk_BusReset 0 $ChargedCountReg0_CountMask
     bus verify InterruptGeneratorIfcBus 32 $ChargedCountReg1Address RvalInterruptGeneratorBlk_BusReset 0 $ChargedCountReg1_CountMask
     bus verify InterruptGeneratorIfcBus 32 $ChargedCountReg2Address RvalInterruptGeneratorBlk_BusReset 0 $ChargedCountReg2_CountMask
@@ -336,21 +336,21 @@ var RbvlInterruptGeneratorBlk 0
 ReadBackTestInterruptGeneratorBlk:
 proc
     bus write InterruptGeneratorIfcBus 32 $ControlRegAddress 0x00000000
-    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RbvlInterruptGeneratorBlk 0x00000000 $ControlReg_ChannelOperation0Mask
+    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RbvlInterruptGeneratorBlk 0x00000000 $ControlReg_ChannelOperation3Mask
     bus write InterruptGeneratorIfcBus 32 $ControlRegAddress 0x00000008
-    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RbvlInterruptGeneratorBlk 0x00000008 $ControlReg_ChannelOperation0Mask
-    bus write InterruptGeneratorIfcBus 32 $ControlRegAddress 0x00000000
-    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RbvlInterruptGeneratorBlk 0x00000000 $ControlReg_ChannelOperation1Mask
-    bus write InterruptGeneratorIfcBus 32 $ControlRegAddress 0x00000004
-    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RbvlInterruptGeneratorBlk 0x00000004 $ControlReg_ChannelOperation1Mask
+    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RbvlInterruptGeneratorBlk 0x00000008 $ControlReg_ChannelOperation3Mask
     bus write InterruptGeneratorIfcBus 32 $ControlRegAddress 0x00000000
     bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RbvlInterruptGeneratorBlk 0x00000000 $ControlReg_ChannelOperation2Mask
-    bus write InterruptGeneratorIfcBus 32 $ControlRegAddress 0x00000002
-    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RbvlInterruptGeneratorBlk 0x00000002 $ControlReg_ChannelOperation2Mask
+    bus write InterruptGeneratorIfcBus 32 $ControlRegAddress 0x00000004
+    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RbvlInterruptGeneratorBlk 0x00000004 $ControlReg_ChannelOperation2Mask
     bus write InterruptGeneratorIfcBus 32 $ControlRegAddress 0x00000000
-    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RbvlInterruptGeneratorBlk 0x00000000 $ControlReg_ChannelOperation3Mask
+    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RbvlInterruptGeneratorBlk 0x00000000 $ControlReg_ChannelOperation1Mask
+    bus write InterruptGeneratorIfcBus 32 $ControlRegAddress 0x00000002
+    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RbvlInterruptGeneratorBlk 0x00000002 $ControlReg_ChannelOperation1Mask
+    bus write InterruptGeneratorIfcBus 32 $ControlRegAddress 0x00000000
+    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RbvlInterruptGeneratorBlk 0x00000000 $ControlReg_ChannelOperation0Mask
     bus write InterruptGeneratorIfcBus 32 $ControlRegAddress 0x00000001
-    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RbvlInterruptGeneratorBlk 0x00000001 $ControlReg_ChannelOperation3Mask
+    bus verify InterruptGeneratorIfcBus 32 $ControlRegAddress RbvlInterruptGeneratorBlk 0x00000001 $ControlReg_ChannelOperation0Mask
     bus write InterruptGeneratorIfcBus 32 $ChargedCountReg0Address 0x7FFFFFFF
     bus verify InterruptGeneratorIfcBus 32 $ChargedCountReg0Address RbvlInterruptGeneratorBlk 0x7FFFFFFF $ChargedCountReg0_CountMask
     bus write InterruptGeneratorIfcBus 32 $ChargedCountReg0Address 0xBFFFFFFF

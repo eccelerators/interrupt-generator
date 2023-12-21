@@ -36,14 +36,14 @@ entity InterruptGeneratorBlk_InterruptGeneratorIfc is
 		WriteAddress : in std_logic_vector(6 downto 0);
 		WriteData : in std_logic_vector(31 downto 0);
 		WriteStrobe : in std_logic_vector(3 downto 0);
-		ControlReg_ChannelOperation0 : out std_logic;
-		ControlReg_ChannelOperation1 : out std_logic;
-		ControlReg_ChannelOperation2 : out std_logic;
 		ControlReg_ChannelOperation3 : out std_logic;
-		StatusReg_ChannelStatus0 : in std_logic_vector(1 downto 0);
-		StatusReg_ChannelStatus1 : in std_logic_vector(1 downto 0);
-		StatusReg_ChannelStatus2 : in std_logic_vector(1 downto 0);
+		ControlReg_ChannelOperation2 : out std_logic;
+		ControlReg_ChannelOperation1 : out std_logic;
+		ControlReg_ChannelOperation0 : out std_logic;
 		StatusReg_ChannelStatus3 : in std_logic_vector(1 downto 0);
+		StatusReg_ChannelStatus2 : in std_logic_vector(1 downto 0);
+		StatusReg_ChannelStatus1 : in std_logic_vector(1 downto 0);
+		StatusReg_ChannelStatus0 : in std_logic_vector(1 downto 0);
 		ChargedCountReg0_Count : out std_logic_vector(31 downto 0);
 		ChargedCountReg1_Count : out std_logic_vector(31 downto 0);
 		ChargedCountReg2_Count : out std_logic_vector(31 downto 0);
@@ -75,19 +75,19 @@ architecture Behavioural of InterruptGeneratorBlk_InterruptGeneratorIfc is
 
 	signal PreReadData : std_logic_vector(31 downto 0);
 	
-	signal PreReadDataControlReg : std_logic_vector(3 downto 0);
+	signal PreReadDataControlReg : std_logic_vector(31 downto 0);
 	signal PreReadAckControlReg : std_logic;
 	signal ReadDiffControlReg : std_logic;
 	signal PreWriteAckControlReg : std_logic;
 	signal WriteDiffControlReg : std_logic;
-	signal WRegControlReg_ChannelOperation0 : std_logic;
-	signal WRegControlReg_ChannelOperation1 : std_logic;
-	signal WRegControlReg_ChannelOperation2 : std_logic;
 	signal WRegControlReg_ChannelOperation3 : std_logic;
+	signal WRegControlReg_ChannelOperation2 : std_logic;
+	signal WRegControlReg_ChannelOperation1 : std_logic;
+	signal WRegControlReg_ChannelOperation0 : std_logic;
 	signal PreMatchReadControlReg : std_logic;
 	signal PreMatchWriteControlReg : std_logic;
 	
-	signal PreReadDataStatusReg : std_logic_vector(7 downto 0);
+	signal PreReadDataStatusReg : std_logic_vector(31 downto 0);
 	signal PreReadAckStatusReg : std_logic;
 	signal ReadDiffStatusReg : std_logic;
 	signal PreMatchReadStatusReg : std_logic;
@@ -491,39 +491,39 @@ begin
 		if (Rst = '1') then
 			PreReadAckControlReg <= '0';
 			PreWriteAckControlReg <= '0';
-			WRegControlReg_ChannelOperation0 <= CONTROLREG_CHANNELOPERATION0_DISABLED;
-			WRegControlReg_ChannelOperation1 <= CONTROLREG_CHANNELOPERATION1_DISABLED;
-			WRegControlReg_ChannelOperation2 <= CONTROLREG_CHANNELOPERATION2_DISABLED;
 			WRegControlReg_ChannelOperation3 <= CONTROLREG_CHANNELOPERATION3_DISABLED;
+			WRegControlReg_ChannelOperation2 <= CONTROLREG_CHANNELOPERATION2_DISABLED;
+			WRegControlReg_ChannelOperation1 <= CONTROLREG_CHANNELOPERATION1_DISABLED;
+			WRegControlReg_ChannelOperation0 <= CONTROLREG_CHANNELOPERATION0_DISABLED;
 		elsif rising_edge(Clk) then
 			PreWriteAckControlReg <= WriteDiffControlReg;
 			PreReadAckControlReg <= ReadDiffControlReg;
 			if (WriteDiffControlReg = '1') then
-				if (WriteStrobe(0) = '1') then WRegControlReg_ChannelOperation3 <= WriteData(0); end if;
-				if (WriteStrobe(0) = '1') then WRegControlReg_ChannelOperation2 <= WriteData(1); end if;
-				if (WriteStrobe(0) = '1') then WRegControlReg_ChannelOperation1 <= WriteData(2); end if;
-				if (WriteStrobe(0) = '1') then WRegControlReg_ChannelOperation0 <= WriteData(3); end if;
+				if (WriteStrobe(0) = '1') then WRegControlReg_ChannelOperation0 <= WriteData(0); end if;
+				if (WriteStrobe(0) = '1') then WRegControlReg_ChannelOperation1 <= WriteData(1); end if;
+				if (WriteStrobe(0) = '1') then WRegControlReg_ChannelOperation2 <= WriteData(2); end if;
+				if (WriteStrobe(0) = '1') then WRegControlReg_ChannelOperation3 <= WriteData(3); end if;
 			end if;
 		end if;
 	end process;
 	
 	DataOutPreMuxForControlReg : process (
-		WRegControlReg_ChannelOperation0,
-		WRegControlReg_ChannelOperation1,
+		WRegControlReg_ChannelOperation3,
 		WRegControlReg_ChannelOperation2,
-		WRegControlReg_ChannelOperation3
+		WRegControlReg_ChannelOperation1,
+		WRegControlReg_ChannelOperation0
 	) begin
 		PreReadDataControlReg <= (others => '0');
-		PreReadDataControlReg(3) <= WRegControlReg_ChannelOperation0;
-		PreReadDataControlReg(2) <= WRegControlReg_ChannelOperation1;
-		PreReadDataControlReg(1) <= WRegControlReg_ChannelOperation2;
-		PreReadDataControlReg(0) <= WRegControlReg_ChannelOperation3;
+		PreReadDataControlReg(3) <= WRegControlReg_ChannelOperation3;
+		PreReadDataControlReg(2) <= WRegControlReg_ChannelOperation2;
+		PreReadDataControlReg(1) <= WRegControlReg_ChannelOperation1;
+		PreReadDataControlReg(0) <= WRegControlReg_ChannelOperation0;
 	end process;
 	
-	ControlReg_ChannelOperation0 <= WRegControlReg_ChannelOperation0;
-	ControlReg_ChannelOperation1 <= WRegControlReg_ChannelOperation1;
-	ControlReg_ChannelOperation2 <= WRegControlReg_ChannelOperation2;
 	ControlReg_ChannelOperation3 <= WRegControlReg_ChannelOperation3;
+	ControlReg_ChannelOperation2 <= WRegControlReg_ChannelOperation2;
+	ControlReg_ChannelOperation1 <= WRegControlReg_ChannelOperation1;
+	ControlReg_ChannelOperation0 <= WRegControlReg_ChannelOperation0;
 	
 	PreMatchReadStatusRegProcess : process (ReadAddress, ReadAddressMatch)
 	begin
@@ -553,16 +553,16 @@ begin
 	end process;
 	
 	DataOutPreMuxForStatusReg : process (
-		StatusReg_ChannelStatus0,
-		StatusReg_ChannelStatus1,
+		StatusReg_ChannelStatus3,
 		StatusReg_ChannelStatus2,
-		StatusReg_ChannelStatus3
+		StatusReg_ChannelStatus1,
+		StatusReg_ChannelStatus0
 	) begin
 		PreReadDataStatusReg <= (others => '0');
-		PreReadDataStatusReg(7 downto 6) <= StatusReg_ChannelStatus0;
-		PreReadDataStatusReg(5 downto 4) <= StatusReg_ChannelStatus1;
-		PreReadDataStatusReg(3 downto 2) <= StatusReg_ChannelStatus2;
-		PreReadDataStatusReg(1 downto 0) <= StatusReg_ChannelStatus3;
+		PreReadDataStatusReg(7 downto 6) <= StatusReg_ChannelStatus3;
+		PreReadDataStatusReg(5 downto 4) <= StatusReg_ChannelStatus2;
+		PreReadDataStatusReg(3 downto 2) <= StatusReg_ChannelStatus1;
+		PreReadDataStatusReg(1 downto 0) <= StatusReg_ChannelStatus0;
 	end process;
 	
 	PreMatchReadChargedCountReg0Process : process (ReadAddress, ReadAddressMatch)
@@ -2013,14 +2013,14 @@ begin
 			WriteAddress => WriteAddress,
 			WriteData => WriteData,
 			WriteStrobe => WriteStrobe,
-			ControlReg_ChannelOperation0 => InterruptGeneratorBlkDown.ControlReg_ChannelOperation0,
-			ControlReg_ChannelOperation1 => InterruptGeneratorBlkDown.ControlReg_ChannelOperation1,
-			ControlReg_ChannelOperation2 => InterruptGeneratorBlkDown.ControlReg_ChannelOperation2,
 			ControlReg_ChannelOperation3 => InterruptGeneratorBlkDown.ControlReg_ChannelOperation3,
-			StatusReg_ChannelStatus0 => InterruptGeneratorBlkUp.StatusReg_ChannelStatus0,
-			StatusReg_ChannelStatus1 => InterruptGeneratorBlkUp.StatusReg_ChannelStatus1,
-			StatusReg_ChannelStatus2 => InterruptGeneratorBlkUp.StatusReg_ChannelStatus2,
+			ControlReg_ChannelOperation2 => InterruptGeneratorBlkDown.ControlReg_ChannelOperation2,
+			ControlReg_ChannelOperation1 => InterruptGeneratorBlkDown.ControlReg_ChannelOperation1,
+			ControlReg_ChannelOperation0 => InterruptGeneratorBlkDown.ControlReg_ChannelOperation0,
 			StatusReg_ChannelStatus3 => InterruptGeneratorBlkUp.StatusReg_ChannelStatus3,
+			StatusReg_ChannelStatus2 => InterruptGeneratorBlkUp.StatusReg_ChannelStatus2,
+			StatusReg_ChannelStatus1 => InterruptGeneratorBlkUp.StatusReg_ChannelStatus1,
+			StatusReg_ChannelStatus0 => InterruptGeneratorBlkUp.StatusReg_ChannelStatus0,
 			ChargedCountReg0_Count => InterruptGeneratorBlkDown.ChargedCountReg0_Count,
 			ChargedCountReg1_Count => InterruptGeneratorBlkDown.ChargedCountReg1_Count,
 			ChargedCountReg2_Count => InterruptGeneratorBlkDown.ChargedCountReg2_Count,

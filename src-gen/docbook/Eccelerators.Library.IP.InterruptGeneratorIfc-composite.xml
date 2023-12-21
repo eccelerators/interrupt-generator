@@ -113,7 +113,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>..</code>
               </para>
               <para>
-                <code>0x53</code>
+                <code>0x57</code>
               </para>
             </entry>
             <entry xml:id="a4152ca7d3fe">
@@ -151,7 +151,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x00</code>
+                <code>0x04</code>
               </para>
             </entry>
             <entry xml:id="a220d1e07b4c">
@@ -166,7 +166,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x01</code>
+                <code>0x08</code>
               </para>
             </entry>
             <entry xml:id="aa0dfca7eaf6">
@@ -181,7 +181,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x05</code>
+                <code>0x0c</code>
               </para>
             </entry>
             <entry xml:id="a132cf324d37">
@@ -196,7 +196,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x09</code>
+                <code>0x10</code>
               </para>
             </entry>
             <entry xml:id="ad59fd7e370e">
@@ -211,7 +211,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x0d</code>
+                <code>0x14</code>
               </para>
             </entry>
             <entry xml:id="a7bf43ea2187">
@@ -226,7 +226,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x11</code>
+                <code>0x18</code>
               </para>
             </entry>
             <entry xml:id="a236d228d2b6">
@@ -241,7 +241,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x15</code>
+                <code>0x1c</code>
               </para>
             </entry>
             <entry xml:id="a195551d267e">
@@ -256,7 +256,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x19</code>
+                <code>0x20</code>
               </para>
             </entry>
             <entry xml:id="a608640262d1">
@@ -271,7 +271,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x1d</code>
+                <code>0x24</code>
               </para>
             </entry>
             <entry xml:id="a37643fa7ac3">
@@ -286,7 +286,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x21</code>
+                <code>0x28</code>
               </para>
             </entry>
             <entry xml:id="ad89f88e0dac">
@@ -301,7 +301,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x25</code>
+                <code>0x2c</code>
               </para>
             </entry>
             <entry xml:id="a74d21831782">
@@ -316,7 +316,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x29</code>
+                <code>0x30</code>
               </para>
             </entry>
             <entry xml:id="ae1f98972b82">
@@ -331,7 +331,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x2d</code>
+                <code>0x34</code>
               </para>
             </entry>
             <entry xml:id="a9de8ec5a7f4">
@@ -346,7 +346,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x31</code>
+                <code>0x38</code>
               </para>
             </entry>
             <entry xml:id="a0ea8a602d73">
@@ -361,7 +361,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x35</code>
+                <code>0x3c</code>
               </para>
             </entry>
             <entry xml:id="ad10f4ae8b6f">
@@ -376,7 +376,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x39</code>
+                <code>0x40</code>
               </para>
             </entry>
             <entry xml:id="a82d3204a098">
@@ -391,7 +391,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x3d</code>
+                <code>0x44</code>
               </para>
             </entry>
             <entry xml:id="a1906c38fac1">
@@ -406,7 +406,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x41</code>
+                <code>0x48</code>
               </para>
             </entry>
             <entry xml:id="a214508aba0d">
@@ -421,7 +421,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x45</code>
+                <code>0x4c</code>
               </para>
             </entry>
             <entry xml:id="a37dcfb6b8bc">
@@ -436,7 +436,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x49</code>
+                <code>0x50</code>
               </para>
             </entry>
             <entry xml:id="adcaae45b694">
@@ -451,7 +451,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
           <row>
             <entry>
               <para>
-                <code>0x4d</code>
+                <code>0x54</code>
               </para>
             </entry>
             <entry xml:id="ab72de44ab07">
@@ -509,17 +509,17 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             </row>
             <row>
               <entry>
-                <para>3</para>
+                <para>03</para>
               </entry>
               <entry>
-                <para>ChannelOperation</para>
+                <para>ChannelOperation3</para>
               </entry>
-              <entry xml:id="abfc6970dfd8">
+              <entry xml:id="a6654a8c858a">
                 <para>RW</para>
               </entry>
               <entry>
                 <table>
-                  <title>Values of ChannelOperation</title>
+                  <title>Values of ChannelOperation3</title>
                   <tgroup cols="4">
                     <colspec colnum="1" colwidth="59" colname="col1"/>
                     <colspec colnum="2" colwidth="35" colname="col2"/>
@@ -546,7 +546,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x0</code>
                           </para>
                         </entry>
-                        <entry xml:id="aaa97209909f">
+                        <entry xml:id="a305ed71fc31">
                           <para>Disabled</para>
                         </entry>
                         <entry>
@@ -562,7 +562,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x1</code>
                           </para>
                         </entry>
-                        <entry xml:id="ac6827efbd33">
+                        <entry xml:id="ae374bfda51f">
                           <para>Enabled</para>
                         </entry>
                         <entry>
@@ -577,7 +577,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 </table>
                 <para/>
                 <table>
-                  <title>Resets of ChannelOperation</title>
+                  <title>Resets of ChannelOperation3</title>
                   <tgroup cols="4">
                     <colspec colnum="1" colwidth="59" colname="col1"/>
                     <colspec colnum="2" colwidth="59" colname="col2"/>
@@ -590,7 +590,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x0</code>
                           </para>
                         </entry>
-                        <entry xml:id="a4922b901091">
+                        <entry xml:id="a3153aa611cb">
                           <para>BusReset</para>
                         </entry>
                         <entry>
@@ -607,213 +607,17 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             </row>
             <row>
               <entry>
-                <para>2</para>
+                <para>02</para>
               </entry>
               <entry>
-                <para>ChannelOperation</para>
-              </entry>
-              <entry xml:id="ab2dc42a1d83">
-                <para>RW</para>
-              </entry>
-              <entry>
-                <table>
-                  <title>Values of ChannelOperation</title>
-                  <tgroup cols="4">
-                    <colspec colnum="1" colwidth="59" colname="col1"/>
-                    <colspec colnum="2" colwidth="35" colname="col2"/>
-                    <colspec colnum="3" colwidth="28" colname="col3"/>
-                    <colspec colnum="4" colwidth="448" colname="col4"/>
-                    <tbody>
-                      <row>
-                        <entry>
-                          <para>Value</para>
-                        </entry>
-                        <entry>
-                          <para>ID</para>
-                        </entry>
-                        <entry>
-                          <para>Type</para>
-                        </entry>
-                        <entry>
-                          <para>Description</para>
-                        </entry>
-                      </row>
-                      <row>
-                        <entry>
-                          <para>
-                            <code>0x0</code>
-                          </para>
-                        </entry>
-                        <entry xml:id="ac3fbdb7f564">
-                          <para>Disabled</para>
-                        </entry>
-                        <entry>
-                          <para>R</para>
-                        </entry>
-                        <entry>
-                          <para>An Interrupt is not pending.</para>
-                        </entry>
-                      </row>
-                      <row>
-                        <entry>
-                          <para>
-                            <code>0x1</code>
-                          </para>
-                        </entry>
-                        <entry xml:id="a8f36117ba60">
-                          <para>Enabled</para>
-                        </entry>
-                        <entry>
-                          <para>R</para>
-                        </entry>
-                        <entry>
-                          <para>An Interrupt is pending.</para>
-                        </entry>
-                      </row>
-                    </tbody>
-                  </tgroup>
-                </table>
-                <para/>
-                <table>
-                  <title>Resets of ChannelOperation</title>
-                  <tgroup cols="4">
-                    <colspec colnum="1" colwidth="59" colname="col1"/>
-                    <colspec colnum="2" colwidth="59" colname="col2"/>
-                    <colspec colnum="3" colwidth="28" colname="col3"/>
-                    <colspec colnum="4" colwidth="423" colname="col4"/>
-                    <tbody>
-                      <row>
-                        <entry>
-                          <para>
-                            <code>0x0</code>
-                          </para>
-                        </entry>
-                        <entry xml:id="a876a365fdae">
-                          <para>BusReset</para>
-                        </entry>
-                        <entry>
-                          <para>RW</para>
-                        </entry>
-                        <entry>
-                          <para>Default Bus Reset</para>
-                        </entry>
-                      </row>
-                    </tbody>
-                  </tgroup>
-                </table>
-              </entry>
-            </row>
-            <row>
-              <entry>
-                <para>1</para>
-              </entry>
-              <entry>
-                <para>ChannelOperation</para>
-              </entry>
-              <entry xml:id="acb8d44b0a39">
-                <para>RW</para>
-              </entry>
-              <entry>
-                <table>
-                  <title>Values of ChannelOperation</title>
-                  <tgroup cols="4">
-                    <colspec colnum="1" colwidth="59" colname="col1"/>
-                    <colspec colnum="2" colwidth="35" colname="col2"/>
-                    <colspec colnum="3" colwidth="28" colname="col3"/>
-                    <colspec colnum="4" colwidth="448" colname="col4"/>
-                    <tbody>
-                      <row>
-                        <entry>
-                          <para>Value</para>
-                        </entry>
-                        <entry>
-                          <para>ID</para>
-                        </entry>
-                        <entry>
-                          <para>Type</para>
-                        </entry>
-                        <entry>
-                          <para>Description</para>
-                        </entry>
-                      </row>
-                      <row>
-                        <entry>
-                          <para>
-                            <code>0x0</code>
-                          </para>
-                        </entry>
-                        <entry xml:id="a27a346233f3">
-                          <para>Disabled</para>
-                        </entry>
-                        <entry>
-                          <para>R</para>
-                        </entry>
-                        <entry>
-                          <para>An Interrupt is not pending.</para>
-                        </entry>
-                      </row>
-                      <row>
-                        <entry>
-                          <para>
-                            <code>0x1</code>
-                          </para>
-                        </entry>
-                        <entry xml:id="ad8eafd03cc8">
-                          <para>Enabled</para>
-                        </entry>
-                        <entry>
-                          <para>R</para>
-                        </entry>
-                        <entry>
-                          <para>An Interrupt is pending.</para>
-                        </entry>
-                      </row>
-                    </tbody>
-                  </tgroup>
-                </table>
-                <para/>
-                <table>
-                  <title>Resets of ChannelOperation</title>
-                  <tgroup cols="4">
-                    <colspec colnum="1" colwidth="59" colname="col1"/>
-                    <colspec colnum="2" colwidth="59" colname="col2"/>
-                    <colspec colnum="3" colwidth="28" colname="col3"/>
-                    <colspec colnum="4" colwidth="423" colname="col4"/>
-                    <tbody>
-                      <row>
-                        <entry>
-                          <para>
-                            <code>0x0</code>
-                          </para>
-                        </entry>
-                        <entry xml:id="a89c0f695a75">
-                          <para>BusReset</para>
-                        </entry>
-                        <entry>
-                          <para>RW</para>
-                        </entry>
-                        <entry>
-                          <para>Default Bus Reset</para>
-                        </entry>
-                      </row>
-                    </tbody>
-                  </tgroup>
-                </table>
-              </entry>
-            </row>
-            <row>
-              <entry>
-                <para>0</para>
-              </entry>
-              <entry>
-                <para>ChannelOperation</para>
+                <para>ChannelOperation2</para>
               </entry>
               <entry xml:id="abd72e638831">
                 <para>RW</para>
               </entry>
               <entry>
                 <table>
-                  <title>Values of ChannelOperation</title>
+                  <title>Values of ChannelOperation2</title>
                   <tgroup cols="4">
                     <colspec colnum="1" colwidth="59" colname="col1"/>
                     <colspec colnum="2" colwidth="35" colname="col2"/>
@@ -840,7 +644,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x0</code>
                           </para>
                         </entry>
-                        <entry xml:id="aec562afaf70">
+                        <entry xml:id="ae2c2c19611f">
                           <para>Disabled</para>
                         </entry>
                         <entry>
@@ -856,7 +660,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x1</code>
                           </para>
                         </entry>
-                        <entry xml:id="a04e0ab0d0c8">
+                        <entry xml:id="aa3bb34f190e">
                           <para>Enabled</para>
                         </entry>
                         <entry>
@@ -871,7 +675,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 </table>
                 <para/>
                 <table>
-                  <title>Resets of ChannelOperation</title>
+                  <title>Resets of ChannelOperation2</title>
                   <tgroup cols="4">
                     <colspec colnum="1" colwidth="59" colname="col1"/>
                     <colspec colnum="2" colwidth="59" colname="col2"/>
@@ -884,7 +688,203 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x0</code>
                           </para>
                         </entry>
-                        <entry xml:id="a51c6970946a">
+                        <entry xml:id="a161431d8261">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>01</para>
+              </entry>
+              <entry>
+                <para>ChannelOperation1</para>
+              </entry>
+              <entry xml:id="acb8d44b0a39">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <table>
+                  <title>Values of ChannelOperation1</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="35" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="448" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>Value</para>
+                        </entry>
+                        <entry>
+                          <para>ID</para>
+                        </entry>
+                        <entry>
+                          <para>Type</para>
+                        </entry>
+                        <entry>
+                          <para>Description</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a7598ba9e64d">
+                          <para>Disabled</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x1</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a28bf70b3708">
+                          <para>Enabled</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is pending.</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+                <para/>
+                <table>
+                  <title>Resets of ChannelOperation1</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="aa4e7c38031f">
+                          <para>BusReset</para>
+                        </entry>
+                        <entry>
+                          <para>RW</para>
+                        </entry>
+                        <entry>
+                          <para>Default Bus Reset</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>ChannelOperation0</para>
+              </entry>
+              <entry xml:id="ab2dc42a1d83">
+                <para>RW</para>
+              </entry>
+              <entry>
+                <table>
+                  <title>Values of ChannelOperation0</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="35" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="448" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>Value</para>
+                        </entry>
+                        <entry>
+                          <para>ID</para>
+                        </entry>
+                        <entry>
+                          <para>Type</para>
+                        </entry>
+                        <entry>
+                          <para>Description</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a6261d2f7d14">
+                          <para>Disabled</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x1</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a5c5b394d4d7">
+                          <para>Enabled</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is pending.</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+                <para/>
+                <table>
+                  <title>Resets of ChannelOperation0</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="59" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="423" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0x0</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a080090c8e93">
                           <para>BusReset</para>
                         </entry>
                         <entry>
@@ -921,7 +921,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x00</code>
+                  <code>0x04</code>
                 </para>
               </entry>
               <entry xml:id="a2be60be6817">
@@ -946,19 +946,19 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             </row>
             <row>
               <entry>
-                <para>7</para>
+                <para>07</para>
                 <para>..</para>
-                <para>6</para>
+                <para>06</para>
               </entry>
               <entry>
-                <para>ChannelStatus</para>
+                <para>ChannelStatus3</para>
               </entry>
-              <entry xml:id="a1660b69e837">
+              <entry xml:id="a1066e364a2b">
                 <para>R</para>
               </entry>
               <entry>
                 <table>
-                  <title>Values of ChannelStatus</title>
+                  <title>Values of ChannelStatus3</title>
                   <tgroup cols="4">
                     <colspec colnum="1" colwidth="59" colname="col1"/>
                     <colspec colnum="2" colwidth="35" colname="col2"/>
@@ -985,7 +985,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0b00</code>
                           </para>
                         </entry>
-                        <entry xml:id="add6508cf8ca">
+                        <entry xml:id="af0fd5bc0530">
                           <para>Idle</para>
                         </entry>
                         <entry>
@@ -1001,7 +1001,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0b01</code>
                           </para>
                         </entry>
-                        <entry xml:id="a6fbdf021143">
+                        <entry xml:id="a7d789a32b00">
                           <para>Operating</para>
                         </entry>
                         <entry>
@@ -1017,7 +1017,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0b1*</code>
                           </para>
                         </entry>
-                        <entry xml:id="a22dbffe225e">
+                        <entry xml:id="aaca5fac56f8">
                           <para>Ended</para>
                         </entry>
                         <entry>
@@ -1035,197 +1035,19 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             </row>
             <row>
               <entry>
-                <para>5</para>
+                <para>05</para>
                 <para>..</para>
-                <para>4</para>
+                <para>04</para>
               </entry>
               <entry>
-                <para>ChannelStatus</para>
-              </entry>
-              <entry xml:id="acafa119b1b5">
-                <para>R</para>
-              </entry>
-              <entry>
-                <table>
-                  <title>Values of ChannelStatus</title>
-                  <tgroup cols="4">
-                    <colspec colnum="1" colwidth="59" colname="col1"/>
-                    <colspec colnum="2" colwidth="35" colname="col2"/>
-                    <colspec colnum="3" colwidth="28" colname="col3"/>
-                    <colspec colnum="4" colwidth="448" colname="col4"/>
-                    <tbody>
-                      <row>
-                        <entry>
-                          <para>Value</para>
-                        </entry>
-                        <entry>
-                          <para>ID</para>
-                        </entry>
-                        <entry>
-                          <para>Type</para>
-                        </entry>
-                        <entry>
-                          <para>Description</para>
-                        </entry>
-                      </row>
-                      <row>
-                        <entry>
-                          <para>
-                            <code>0b00</code>
-                          </para>
-                        </entry>
-                        <entry xml:id="a141263e359a">
-                          <para>Idle</para>
-                        </entry>
-                        <entry>
-                          <para>R</para>
-                        </entry>
-                        <entry>
-                          <para>An Interrupt is pending.</para>
-                        </entry>
-                      </row>
-                      <row>
-                        <entry>
-                          <para>
-                            <code>0b01</code>
-                          </para>
-                        </entry>
-                        <entry xml:id="ad5c20d62656">
-                          <para>Operating</para>
-                        </entry>
-                        <entry>
-                          <para>R</para>
-                        </entry>
-                        <entry>
-                          <para>An Interrupt is not pending.</para>
-                        </entry>
-                      </row>
-                      <row>
-                        <entry>
-                          <para>
-                            <code>0b1*</code>
-                          </para>
-                        </entry>
-                        <entry xml:id="a0a75b24ca30">
-                          <para>Ended</para>
-                        </entry>
-                        <entry>
-                          <para>R</para>
-                        </entry>
-                        <entry>
-                          <para>An Interrupt is not pending.</para>
-                        </entry>
-                      </row>
-                    </tbody>
-                  </tgroup>
-                </table>
-                <para/>
-              </entry>
-            </row>
-            <row>
-              <entry>
-                <para>3</para>
-                <para>..</para>
-                <para>2</para>
-              </entry>
-              <entry>
-                <para>ChannelStatus</para>
-              </entry>
-              <entry xml:id="a58fa998ba14">
-                <para>R</para>
-              </entry>
-              <entry>
-                <table>
-                  <title>Values of ChannelStatus</title>
-                  <tgroup cols="4">
-                    <colspec colnum="1" colwidth="59" colname="col1"/>
-                    <colspec colnum="2" colwidth="35" colname="col2"/>
-                    <colspec colnum="3" colwidth="28" colname="col3"/>
-                    <colspec colnum="4" colwidth="448" colname="col4"/>
-                    <tbody>
-                      <row>
-                        <entry>
-                          <para>Value</para>
-                        </entry>
-                        <entry>
-                          <para>ID</para>
-                        </entry>
-                        <entry>
-                          <para>Type</para>
-                        </entry>
-                        <entry>
-                          <para>Description</para>
-                        </entry>
-                      </row>
-                      <row>
-                        <entry>
-                          <para>
-                            <code>0b00</code>
-                          </para>
-                        </entry>
-                        <entry xml:id="ace5b59d6d2c">
-                          <para>Idle</para>
-                        </entry>
-                        <entry>
-                          <para>R</para>
-                        </entry>
-                        <entry>
-                          <para>An Interrupt is pending.</para>
-                        </entry>
-                      </row>
-                      <row>
-                        <entry>
-                          <para>
-                            <code>0b01</code>
-                          </para>
-                        </entry>
-                        <entry xml:id="a4ead7bcea6f">
-                          <para>Operating</para>
-                        </entry>
-                        <entry>
-                          <para>R</para>
-                        </entry>
-                        <entry>
-                          <para>An Interrupt is not pending.</para>
-                        </entry>
-                      </row>
-                      <row>
-                        <entry>
-                          <para>
-                            <code>0b1*</code>
-                          </para>
-                        </entry>
-                        <entry xml:id="afd452e43ce5">
-                          <para>Ended</para>
-                        </entry>
-                        <entry>
-                          <para>R</para>
-                        </entry>
-                        <entry>
-                          <para>An Interrupt is not pending.</para>
-                        </entry>
-                      </row>
-                    </tbody>
-                  </tgroup>
-                </table>
-                <para/>
-              </entry>
-            </row>
-            <row>
-              <entry>
-                <para>1</para>
-                <para>..</para>
-                <para>0</para>
-              </entry>
-              <entry>
-                <para>ChannelStatus</para>
+                <para>ChannelStatus2</para>
               </entry>
               <entry xml:id="a265d5d34450">
                 <para>R</para>
               </entry>
               <entry>
                 <table>
-                  <title>Values of ChannelStatus</title>
+                  <title>Values of ChannelStatus2</title>
                   <tgroup cols="4">
                     <colspec colnum="1" colwidth="59" colname="col1"/>
                     <colspec colnum="2" colwidth="35" colname="col2"/>
@@ -1252,7 +1074,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0b00</code>
                           </para>
                         </entry>
-                        <entry xml:id="a34946e2b998">
+                        <entry xml:id="aa50ec9fd459">
                           <para>Idle</para>
                         </entry>
                         <entry>
@@ -1268,7 +1090,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0b01</code>
                           </para>
                         </entry>
-                        <entry xml:id="ad278b8bbf89">
+                        <entry xml:id="a5e03d4272e8">
                           <para>Operating</para>
                         </entry>
                         <entry>
@@ -1284,7 +1106,185 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0b1*</code>
                           </para>
                         </entry>
-                        <entry xml:id="a0dea4672bf0">
+                        <entry xml:id="a16ab7772de4">
+                          <para>Ended</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+                <para/>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>03</para>
+                <para>..</para>
+                <para>02</para>
+              </entry>
+              <entry>
+                <para>ChannelStatus1</para>
+              </entry>
+              <entry xml:id="a58fa998ba14">
+                <para>R</para>
+              </entry>
+              <entry>
+                <table>
+                  <title>Values of ChannelStatus1</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="35" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="448" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>Value</para>
+                        </entry>
+                        <entry>
+                          <para>ID</para>
+                        </entry>
+                        <entry>
+                          <para>Type</para>
+                        </entry>
+                        <entry>
+                          <para>Description</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b00</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="ab391629c0ac">
+                          <para>Idle</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b01</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a1aff58b488e">
+                          <para>Operating</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b1*</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a6ba433b8121">
+                          <para>Ended</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                    </tbody>
+                  </tgroup>
+                </table>
+                <para/>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para>01</para>
+                <para>..</para>
+                <para>00</para>
+              </entry>
+              <entry>
+                <para>ChannelStatus0</para>
+              </entry>
+              <entry xml:id="acafa119b1b5">
+                <para>R</para>
+              </entry>
+              <entry>
+                <table>
+                  <title>Values of ChannelStatus0</title>
+                  <tgroup cols="4">
+                    <colspec colnum="1" colwidth="59" colname="col1"/>
+                    <colspec colnum="2" colwidth="35" colname="col2"/>
+                    <colspec colnum="3" colwidth="28" colname="col3"/>
+                    <colspec colnum="4" colwidth="448" colname="col4"/>
+                    <tbody>
+                      <row>
+                        <entry>
+                          <para>Value</para>
+                        </entry>
+                        <entry>
+                          <para>ID</para>
+                        </entry>
+                        <entry>
+                          <para>Type</para>
+                        </entry>
+                        <entry>
+                          <para>Description</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b00</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a9e5a3f81ff7">
+                          <para>Idle</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b01</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a73822efb649">
+                          <para>Operating</para>
+                        </entry>
+                        <entry>
+                          <para>R</para>
+                        </entry>
+                        <entry>
+                          <para>An Interrupt is not pending.</para>
+                        </entry>
+                      </row>
+                      <row>
+                        <entry>
+                          <para>
+                            <code>0b1*</code>
+                          </para>
+                        </entry>
+                        <entry xml:id="a7ee7e95ff94">
                           <para>Ended</para>
                         </entry>
                         <entry>
@@ -1322,7 +1322,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x01</code>
+                  <code>0x08</code>
                 </para>
               </entry>
               <entry xml:id="a0db3b6116e5">
@@ -1410,7 +1410,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x05</code>
+                  <code>0x0c</code>
                 </para>
               </entry>
               <entry xml:id="abc68b2c2fb4">
@@ -1498,7 +1498,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x09</code>
+                  <code>0x10</code>
                 </para>
               </entry>
               <entry xml:id="a948ab506dde">
@@ -1586,7 +1586,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x0d</code>
+                  <code>0x14</code>
                 </para>
               </entry>
               <entry xml:id="a3e9cdd4ec35">
@@ -1674,7 +1674,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x11</code>
+                  <code>0x18</code>
                 </para>
               </entry>
               <entry xml:id="a2cb1678bc40">
@@ -1735,7 +1735,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x15</code>
+                  <code>0x1c</code>
                 </para>
               </entry>
               <entry xml:id="a10654a50f89">
@@ -1796,7 +1796,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x19</code>
+                  <code>0x20</code>
                 </para>
               </entry>
               <entry xml:id="a2fb71bf02a8">
@@ -1857,7 +1857,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x1d</code>
+                  <code>0x24</code>
                 </para>
               </entry>
               <entry xml:id="acb3054124ed">
@@ -1918,7 +1918,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x21</code>
+                  <code>0x28</code>
                 </para>
               </entry>
               <entry xml:id="aba236b9d33d">
@@ -1979,7 +1979,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x25</code>
+                  <code>0x2c</code>
                 </para>
               </entry>
               <entry xml:id="a9446ad6c9b3">
@@ -2040,7 +2040,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x29</code>
+                  <code>0x30</code>
                 </para>
               </entry>
               <entry xml:id="a502a2bc5d6c">
@@ -2101,7 +2101,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x2d</code>
+                  <code>0x34</code>
                 </para>
               </entry>
               <entry xml:id="a7bba5b7e4b9">
@@ -2162,7 +2162,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x31</code>
+                  <code>0x38</code>
                 </para>
               </entry>
               <entry xml:id="a2a37762ecc0">
@@ -2250,7 +2250,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x35</code>
+                  <code>0x3c</code>
                 </para>
               </entry>
               <entry xml:id="a89684d8915f">
@@ -2338,7 +2338,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x39</code>
+                  <code>0x40</code>
                 </para>
               </entry>
               <entry xml:id="ac72e4c655c6">
@@ -2426,7 +2426,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x3d</code>
+                  <code>0x44</code>
                 </para>
               </entry>
               <entry xml:id="a776e7a831e1">
@@ -2514,7 +2514,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x41</code>
+                  <code>0x48</code>
                 </para>
               </entry>
               <entry xml:id="a9a7df46e1de">
@@ -2602,7 +2602,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x45</code>
+                  <code>0x4c</code>
                 </para>
               </entry>
               <entry xml:id="a6540a8cf639">
@@ -2690,7 +2690,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x49</code>
+                  <code>0x50</code>
                 </para>
               </entry>
               <entry xml:id="a9b5c49549ef">
@@ -2778,7 +2778,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
             <row>
               <entry namest="col1" nameend="col3">
                 <para>
-                  <code>0x4d</code>
+                  <code>0x54</code>
                 </para>
               </entry>
               <entry xml:id="a414e8dad704">

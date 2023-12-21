@@ -57,7 +57,7 @@ end entity;
 
 architecture RTL of InterruptGenerator is
     
-    signal IntervalCount : array_of_std_logic_vector(InterruptOut'length-1 downto 0)(Interval(0)'left downto 0);
+    signal IntervalCount : array_of_unsigned(InterruptOut'length-1 downto 0)(Interval(0)'left downto 0);
     signal IntervalEnable : std_logic_vector(InterruptOut'length-1 downto 0);
 
 begin
@@ -69,26 +69,26 @@ begin
             for i in 0 to InterruptOut'length-1 loop
                 ChannelStatus(i) <= std_logic_vector(to_unsigned(0, ChannelStatus(i)'length)); 
                 ActualCount(i) <= std_logic_vector(to_unsigned(0, ActualCount(i)'length));
-                IntervalCount(i) <= std_logic_vector(to_unsigned(0, IntervalCount(i)'length));
+                IntervalCount(i) <= to_unsigned(0, IntervalCount(i)'length);
                 FailureCount(i) <= std_logic_vector(to_unsigned(0, FailureCount(i)'length));
             end loop;
             IntervalEnable <= std_logic_vector(to_unsigned(0, IntervalEnable'length));
             FailureOut <= '0';
         elsif rising_edge(Clk) then
-            for i in 0 to InterruptOut'length-1 loop
-            
-                IntervalEnable <= std_logic_vector(to_unsigned(0, IntervalEnable'length)); -- default assignment
-                 
+        
+            IntervalEnable <= std_logic_vector(to_unsigned(0, IntervalEnable'length)); -- default assignment
+        
+            for i in 0 to InterruptOut'length-1 loop       
                 if ChannelOperation(i) then
-                    if unsigned(IntervalCount(i)) + ClkPeriodInNs < unsigned(Interval(i)) then
-                        IntervalCount(i) <= std_logic_vector(unsigned(IntervalCount(i)) + unsigned(Interval(i)));
+                    if IntervalCount(i) + ClkPeriodInNs < unsigned(Interval(i)) then
+                        IntervalCount(i) <= IntervalCount(i) + ClkPeriodInNs;
                     else
-                        IntervalCount(i) <= std_logic_vector(to_unsigned(0, Interval(i)'length));
+                        IntervalCount(i) <= to_unsigned(0, Interval(i)'length);
                         IntervalEnable(i) <= '1';
                         InterruptOut(i) <= '1';
                     end if;
                 else
-                    IntervalCount(i) <= std_logic_vector(to_unsigned(0, Interval(i)'length));
+                    IntervalCount(i) <= to_unsigned(0, Interval(i)'length);
                 end if;
 
                 if ChannelOperation(i) then         

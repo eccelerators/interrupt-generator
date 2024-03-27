@@ -96,8 +96,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
       <title>Registers or Delegates of Interrupt Generator Block</title>
       <tgroup cols="3">
         <colspec colnum="1" colwidth="59" colname="col1"/>
-        <colspec colnum="2" colwidth="59" colname="col2"/>
-        <colspec colnum="3" colwidth="581" colname="col3"/>
+        <colspec colnum="2" colwidth="63" colname="col2"/>
+        <colspec colnum="3" colwidth="577" colname="col3"/>
         <tbody>
           <row>
             <entry namest="col1" nameend="col3">
@@ -169,12 +169,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x08</code>
               </para>
             </entry>
-            <entry xml:id="aa0dfca7eaf6">
-              <para>ChargedCountReg</para>
+            <entry xml:id="a132cf324d37">
+              <para>ChargedCountReg0</para>
             </entry>
             <entry>
               <para>
-                <link linkend="a0db3b6116e5">Charged Count Register</link>
+                <link linkend="abc68b2c2fb4">Charged Count Register</link>
               </para>
             </entry>
           </row>
@@ -184,12 +184,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x0c</code>
               </para>
             </entry>
-            <entry xml:id="a132cf324d37">
-              <para>ChargedCountReg</para>
+            <entry xml:id="ad59fd7e370e">
+              <para>ChargedCountReg1</para>
             </entry>
             <entry>
               <para>
-                <link linkend="a0db3b6116e5">Charged Count Register</link>
+                <link linkend="a948ab506dde">Charged Count Register</link>
               </para>
             </entry>
           </row>
@@ -199,12 +199,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x10</code>
               </para>
             </entry>
-            <entry xml:id="ad59fd7e370e">
-              <para>ChargedCountReg</para>
+            <entry xml:id="a7bf43ea2187">
+              <para>ChargedCountReg2</para>
             </entry>
             <entry>
               <para>
-                <link linkend="a0db3b6116e5">Charged Count Register</link>
+                <link linkend="a3e9cdd4ec35">Charged Count Register</link>
               </para>
             </entry>
           </row>
@@ -214,12 +214,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x14</code>
               </para>
             </entry>
-            <entry xml:id="a7bf43ea2187">
-              <para>ChargedCountReg</para>
+            <entry xml:id="a1e931755f70">
+              <para>ChargedCountReg3</para>
             </entry>
             <entry>
               <para>
-                <link linkend="a0db3b6116e5">Charged Count Register</link>
+                <link linkend="aa7fc83d3332">Charged Count Register</link>
               </para>
             </entry>
           </row>
@@ -229,12 +229,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x18</code>
               </para>
             </entry>
-            <entry xml:id="a236d228d2b6">
-              <para>ActualCountReg</para>
+            <entry xml:id="a195551d267e">
+              <para>ActualCountReg0</para>
             </entry>
             <entry>
               <para>
-                <link linkend="a2cb1678bc40">Actual Count Register</link>
+                <link linkend="a10654a50f89">Actual Count Register</link>
               </para>
             </entry>
           </row>
@@ -244,12 +244,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x1c</code>
               </para>
             </entry>
-            <entry xml:id="a195551d267e">
-              <para>ActualCountReg</para>
+            <entry xml:id="a608640262d1">
+              <para>ActualCountReg1</para>
             </entry>
             <entry>
               <para>
-                <link linkend="a2cb1678bc40">Actual Count Register</link>
+                <link linkend="a2fb71bf02a8">Actual Count Register</link>
               </para>
             </entry>
           </row>
@@ -259,12 +259,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x20</code>
               </para>
             </entry>
-            <entry xml:id="a608640262d1">
-              <para>ActualCountReg</para>
+            <entry xml:id="a37643fa7ac3">
+              <para>ActualCountReg2</para>
             </entry>
             <entry>
               <para>
-                <link linkend="a2cb1678bc40">Actual Count Register</link>
+                <link linkend="acb3054124ed">Actual Count Register</link>
               </para>
             </entry>
           </row>
@@ -274,12 +274,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x24</code>
               </para>
             </entry>
-            <entry xml:id="a37643fa7ac3">
-              <para>ActualCountReg</para>
+            <entry xml:id="a1a61b63ea6f">
+              <para>ActualCountReg3</para>
             </entry>
             <entry>
               <para>
-                <link linkend="a2cb1678bc40">Actual Count Register</link>
+                <link linkend="a21bf4195305">Actual Count Register</link>
               </para>
             </entry>
           </row>
@@ -289,12 +289,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x28</code>
               </para>
             </entry>
-            <entry xml:id="ad89f88e0dac">
-              <para>FailureCountReg</para>
+            <entry xml:id="a74d21831782">
+              <para>FailureCountReg0</para>
             </entry>
             <entry>
               <para>
-                <link linkend="aba236b9d33d">Failure Count Register</link>
+                <link linkend="a9446ad6c9b3">Failure Count Register</link>
               </para>
             </entry>
           </row>
@@ -304,12 +304,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x2c</code>
               </para>
             </entry>
-            <entry xml:id="a74d21831782">
-              <para>FailureCountReg</para>
+            <entry xml:id="ae1f98972b82">
+              <para>FailureCountReg1</para>
             </entry>
             <entry>
               <para>
-                <link linkend="aba236b9d33d">Failure Count Register</link>
+                <link linkend="a502a2bc5d6c">Failure Count Register</link>
               </para>
             </entry>
           </row>
@@ -319,12 +319,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x30</code>
               </para>
             </entry>
-            <entry xml:id="ae1f98972b82">
-              <para>FailureCountReg</para>
+            <entry xml:id="a9de8ec5a7f4">
+              <para>FailureCountReg2</para>
             </entry>
             <entry>
               <para>
-                <link linkend="aba236b9d33d">Failure Count Register</link>
+                <link linkend="a7bba5b7e4b9">Failure Count Register</link>
               </para>
             </entry>
           </row>
@@ -334,12 +334,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x34</code>
               </para>
             </entry>
-            <entry xml:id="a9de8ec5a7f4">
-              <para>FailureCountReg</para>
+            <entry xml:id="aca47e2421ee">
+              <para>FailureCountReg3</para>
             </entry>
             <entry>
               <para>
-                <link linkend="aba236b9d33d">Failure Count Register</link>
+                <link linkend="a87edd1bcf15">Failure Count Register</link>
               </para>
             </entry>
           </row>
@@ -349,12 +349,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x38</code>
               </para>
             </entry>
-            <entry xml:id="a0ea8a602d73">
-              <para>IntervalReg</para>
+            <entry xml:id="ad10f4ae8b6f">
+              <para>IntervalReg0</para>
             </entry>
             <entry>
               <para>
-                <link linkend="a2a37762ecc0">Interval Register</link>
+                <link linkend="a89684d8915f">Interval Register</link>
               </para>
             </entry>
           </row>
@@ -364,12 +364,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x3c</code>
               </para>
             </entry>
-            <entry xml:id="ad10f4ae8b6f">
-              <para>IntervalReg</para>
+            <entry xml:id="a82d3204a098">
+              <para>IntervalReg1</para>
             </entry>
             <entry>
               <para>
-                <link linkend="a2a37762ecc0">Interval Register</link>
+                <link linkend="ac72e4c655c6">Interval Register</link>
               </para>
             </entry>
           </row>
@@ -379,12 +379,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x40</code>
               </para>
             </entry>
-            <entry xml:id="a82d3204a098">
-              <para>IntervalReg</para>
+            <entry xml:id="a1906c38fac1">
+              <para>IntervalReg2</para>
             </entry>
             <entry>
               <para>
-                <link linkend="a2a37762ecc0">Interval Register</link>
+                <link linkend="a776e7a831e1">Interval Register</link>
               </para>
             </entry>
           </row>
@@ -394,12 +394,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x44</code>
               </para>
             </entry>
-            <entry xml:id="a1906c38fac1">
-              <para>IntervalReg</para>
+            <entry xml:id="ac574f6be917">
+              <para>IntervalReg3</para>
             </entry>
             <entry>
               <para>
-                <link linkend="a2a37762ecc0">Interval Register</link>
+                <link linkend="aac4f3f7042c">Interval Register</link>
               </para>
             </entry>
           </row>
@@ -409,12 +409,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x48</code>
               </para>
             </entry>
-            <entry xml:id="a214508aba0d">
-              <para>ReferenceCountReg</para>
+            <entry xml:id="a37dcfb6b8bc">
+              <para>ReferenceCountReg0</para>
             </entry>
             <entry>
               <para>
-                <link linkend="a9a7df46e1de">Reference Count Register</link>
+                <link linkend="a6540a8cf639">Reference Count Register</link>
               </para>
             </entry>
           </row>
@@ -424,12 +424,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x4c</code>
               </para>
             </entry>
-            <entry xml:id="a37dcfb6b8bc">
-              <para>ReferenceCountReg</para>
+            <entry xml:id="adcaae45b694">
+              <para>ReferenceCountReg1</para>
             </entry>
             <entry>
               <para>
-                <link linkend="a9a7df46e1de">Reference Count Register</link>
+                <link linkend="a9b5c49549ef">Reference Count Register</link>
               </para>
             </entry>
           </row>
@@ -439,12 +439,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x50</code>
               </para>
             </entry>
-            <entry xml:id="adcaae45b694">
-              <para>ReferenceCountReg</para>
+            <entry xml:id="ab72de44ab07">
+              <para>ReferenceCountReg2</para>
             </entry>
             <entry>
               <para>
-                <link linkend="a9a7df46e1de">Reference Count Register</link>
+                <link linkend="a414e8dad704">Reference Count Register</link>
               </para>
             </entry>
           </row>
@@ -454,12 +454,12 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <code>0x54</code>
               </para>
             </entry>
-            <entry xml:id="ab72de44ab07">
-              <para>ReferenceCountReg</para>
+            <entry xml:id="a3406914e83c">
+              <para>ReferenceCountReg3</para>
             </entry>
             <entry>
               <para>
-                <link linkend="a9a7df46e1de">Reference Count Register</link>
+                <link linkend="ae26892235f3">Reference Count Register</link>
               </para>
             </entry>
           </row>
@@ -1304,8 +1304,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="charged-count-register-chargedcountreg">
-      <title>Charged Count Register (ChargedCountReg)</title>
+    <section xml:id="charged-count-register-chargedcountreg0">
+      <title>Charged Count Register (ChargedCountReg0)</title>
       <table>
         <title>Bits of Charged Count Register</title>
         <tgroup cols="4">
@@ -1325,9 +1325,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x08</code>
                 </para>
               </entry>
-              <entry xml:id="a0db3b6116e5">
+              <entry xml:id="abc68b2c2fb4">
                 <para>
-                  <link linkend="aa0dfca7eaf6">Charged Count Register (ChargedCountReg)</link>
+                  <link linkend="a132cf324d37">Charged Count Register (ChargedCountReg0)</link>
                 </para>
               </entry>
             </row>
@@ -1354,7 +1354,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Count</para>
               </entry>
-              <entry xml:id="a374df898eed">
+              <entry xml:id="a9982a341834">
                 <para>RW</para>
               </entry>
               <entry>
@@ -1373,7 +1373,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x0000.0000</code>
                           </para>
                         </entry>
-                        <entry xml:id="ab5b19eb534d">
+                        <entry xml:id="a34f9974d88c">
                           <para>BusReset</para>
                         </entry>
                         <entry>
@@ -1392,8 +1392,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="id1">
-      <title>Charged Count Register (ChargedCountReg)</title>
+    <section xml:id="charged-count-register-chargedcountreg1">
+      <title>Charged Count Register (ChargedCountReg1)</title>
       <table>
         <title>Bits of Charged Count Register</title>
         <tgroup cols="4">
@@ -1413,9 +1413,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x0c</code>
                 </para>
               </entry>
-              <entry xml:id="abc68b2c2fb4">
+              <entry xml:id="a948ab506dde">
                 <para>
-                  <link linkend="aa0dfca7eaf6">Charged Count Register (ChargedCountReg)</link>
+                  <link linkend="ad59fd7e370e">Charged Count Register (ChargedCountReg1)</link>
                 </para>
               </entry>
             </row>
@@ -1442,7 +1442,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Count</para>
               </entry>
-              <entry xml:id="a8bb696eb6df">
+              <entry xml:id="a40271dcf856">
                 <para>RW</para>
               </entry>
               <entry>
@@ -1461,7 +1461,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x0000.0000</code>
                           </para>
                         </entry>
-                        <entry xml:id="a2004d63cfb7">
+                        <entry xml:id="ab404bf03d6e">
                           <para>BusReset</para>
                         </entry>
                         <entry>
@@ -1480,8 +1480,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="id2">
-      <title>Charged Count Register (ChargedCountReg)</title>
+    <section xml:id="charged-count-register-chargedcountreg2">
+      <title>Charged Count Register (ChargedCountReg2)</title>
       <table>
         <title>Bits of Charged Count Register</title>
         <tgroup cols="4">
@@ -1501,9 +1501,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x10</code>
                 </para>
               </entry>
-              <entry xml:id="a948ab506dde">
+              <entry xml:id="a3e9cdd4ec35">
                 <para>
-                  <link linkend="aa0dfca7eaf6">Charged Count Register (ChargedCountReg)</link>
+                  <link linkend="a7bf43ea2187">Charged Count Register (ChargedCountReg2)</link>
                 </para>
               </entry>
             </row>
@@ -1530,7 +1530,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Count</para>
               </entry>
-              <entry xml:id="ab8f354f9472">
+              <entry xml:id="ae08518a1484">
                 <para>RW</para>
               </entry>
               <entry>
@@ -1549,7 +1549,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x0000.0000</code>
                           </para>
                         </entry>
-                        <entry xml:id="a2f408681c72">
+                        <entry xml:id="a835ec86b646">
                           <para>BusReset</para>
                         </entry>
                         <entry>
@@ -1568,8 +1568,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="id3">
-      <title>Charged Count Register (ChargedCountReg)</title>
+    <section xml:id="charged-count-register-chargedcountreg3">
+      <title>Charged Count Register (ChargedCountReg3)</title>
       <table>
         <title>Bits of Charged Count Register</title>
         <tgroup cols="4">
@@ -1589,9 +1589,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x14</code>
                 </para>
               </entry>
-              <entry xml:id="a3e9cdd4ec35">
+              <entry xml:id="aa7fc83d3332">
                 <para>
-                  <link linkend="aa0dfca7eaf6">Charged Count Register (ChargedCountReg)</link>
+                  <link linkend="a1e931755f70">Charged Count Register (ChargedCountReg3)</link>
                 </para>
               </entry>
             </row>
@@ -1618,7 +1618,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Count</para>
               </entry>
-              <entry xml:id="a8cfa65c1014">
+              <entry xml:id="a8124c01cda4">
                 <para>RW</para>
               </entry>
               <entry>
@@ -1637,7 +1637,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x0000.0000</code>
                           </para>
                         </entry>
-                        <entry xml:id="a2fdfe1a9a56">
+                        <entry xml:id="ad0bab20e844">
                           <para>BusReset</para>
                         </entry>
                         <entry>
@@ -1656,8 +1656,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="actual-count-register-actualcountreg">
-      <title>Actual Count Register (ActualCountReg)</title>
+    <section xml:id="actual-count-register-actualcountreg0">
+      <title>Actual Count Register (ActualCountReg0)</title>
       <table>
         <title>Bits of Actual Count Register</title>
         <tgroup cols="4">
@@ -1677,9 +1677,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x18</code>
                 </para>
               </entry>
-              <entry xml:id="a2cb1678bc40">
+              <entry xml:id="a10654a50f89">
                 <para>
-                  <link linkend="a236d228d2b6">Actual Count Register (ActualCountReg)</link>
+                  <link linkend="a195551d267e">Actual Count Register (ActualCountReg0)</link>
                 </para>
               </entry>
             </row>
@@ -1706,7 +1706,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Count</para>
               </entry>
-              <entry xml:id="a9dad31862d9">
+              <entry xml:id="a463c6055668">
                 <para>R</para>
               </entry>
               <entry>
@@ -1717,8 +1717,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="id4">
-      <title>Actual Count Register (ActualCountReg)</title>
+    <section xml:id="actual-count-register-actualcountreg1">
+      <title>Actual Count Register (ActualCountReg1)</title>
       <table>
         <title>Bits of Actual Count Register</title>
         <tgroup cols="4">
@@ -1738,9 +1738,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x1c</code>
                 </para>
               </entry>
-              <entry xml:id="a10654a50f89">
+              <entry xml:id="a2fb71bf02a8">
                 <para>
-                  <link linkend="a236d228d2b6">Actual Count Register (ActualCountReg)</link>
+                  <link linkend="a608640262d1">Actual Count Register (ActualCountReg1)</link>
                 </para>
               </entry>
             </row>
@@ -1767,7 +1767,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Count</para>
               </entry>
-              <entry xml:id="a2b888e669e0">
+              <entry xml:id="a8b52d6814a3">
                 <para>R</para>
               </entry>
               <entry>
@@ -1778,8 +1778,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="id5">
-      <title>Actual Count Register (ActualCountReg)</title>
+    <section xml:id="actual-count-register-actualcountreg2">
+      <title>Actual Count Register (ActualCountReg2)</title>
       <table>
         <title>Bits of Actual Count Register</title>
         <tgroup cols="4">
@@ -1799,9 +1799,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x20</code>
                 </para>
               </entry>
-              <entry xml:id="a2fb71bf02a8">
+              <entry xml:id="acb3054124ed">
                 <para>
-                  <link linkend="a236d228d2b6">Actual Count Register (ActualCountReg)</link>
+                  <link linkend="a37643fa7ac3">Actual Count Register (ActualCountReg2)</link>
                 </para>
               </entry>
             </row>
@@ -1828,7 +1828,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Count</para>
               </entry>
-              <entry xml:id="ae7470c3ca3c">
+              <entry xml:id="a2305b6d75a9">
                 <para>R</para>
               </entry>
               <entry>
@@ -1839,8 +1839,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="id6">
-      <title>Actual Count Register (ActualCountReg)</title>
+    <section xml:id="actual-count-register-actualcountreg3">
+      <title>Actual Count Register (ActualCountReg3)</title>
       <table>
         <title>Bits of Actual Count Register</title>
         <tgroup cols="4">
@@ -1860,9 +1860,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x24</code>
                 </para>
               </entry>
-              <entry xml:id="acb3054124ed">
+              <entry xml:id="a21bf4195305">
                 <para>
-                  <link linkend="a236d228d2b6">Actual Count Register (ActualCountReg)</link>
+                  <link linkend="a1a61b63ea6f">Actual Count Register (ActualCountReg3)</link>
                 </para>
               </entry>
             </row>
@@ -1889,7 +1889,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Count</para>
               </entry>
-              <entry xml:id="aace4be7f642">
+              <entry xml:id="a7403bd6b162">
                 <para>R</para>
               </entry>
               <entry>
@@ -1900,8 +1900,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="failure-count-register-failurecountreg">
-      <title>Failure Count Register (FailureCountReg)</title>
+    <section xml:id="failure-count-register-failurecountreg0">
+      <title>Failure Count Register (FailureCountReg0)</title>
       <table>
         <title>Bits of Failure Count Register</title>
         <tgroup cols="4">
@@ -1921,9 +1921,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x28</code>
                 </para>
               </entry>
-              <entry xml:id="aba236b9d33d">
+              <entry xml:id="a9446ad6c9b3">
                 <para>
-                  <link linkend="ad89f88e0dac">Failure Count Register (FailureCountReg)</link>
+                  <link linkend="a74d21831782">Failure Count Register (FailureCountReg0)</link>
                 </para>
               </entry>
             </row>
@@ -1950,7 +1950,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Count</para>
               </entry>
-              <entry xml:id="ae4de7b9148f">
+              <entry xml:id="a6e5556e92fb">
                 <para>R</para>
               </entry>
               <entry>
@@ -1961,8 +1961,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="id7">
-      <title>Failure Count Register (FailureCountReg)</title>
+    <section xml:id="failure-count-register-failurecountreg1">
+      <title>Failure Count Register (FailureCountReg1)</title>
       <table>
         <title>Bits of Failure Count Register</title>
         <tgroup cols="4">
@@ -1982,9 +1982,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x2c</code>
                 </para>
               </entry>
-              <entry xml:id="a9446ad6c9b3">
+              <entry xml:id="a502a2bc5d6c">
                 <para>
-                  <link linkend="ad89f88e0dac">Failure Count Register (FailureCountReg)</link>
+                  <link linkend="ae1f98972b82">Failure Count Register (FailureCountReg1)</link>
                 </para>
               </entry>
             </row>
@@ -2011,7 +2011,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Count</para>
               </entry>
-              <entry xml:id="a0959a79a9a4">
+              <entry xml:id="a644f94975e7">
                 <para>R</para>
               </entry>
               <entry>
@@ -2022,8 +2022,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="id8">
-      <title>Failure Count Register (FailureCountReg)</title>
+    <section xml:id="failure-count-register-failurecountreg2">
+      <title>Failure Count Register (FailureCountReg2)</title>
       <table>
         <title>Bits of Failure Count Register</title>
         <tgroup cols="4">
@@ -2043,9 +2043,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x30</code>
                 </para>
               </entry>
-              <entry xml:id="a502a2bc5d6c">
+              <entry xml:id="a7bba5b7e4b9">
                 <para>
-                  <link linkend="ad89f88e0dac">Failure Count Register (FailureCountReg)</link>
+                  <link linkend="a9de8ec5a7f4">Failure Count Register (FailureCountReg2)</link>
                 </para>
               </entry>
             </row>
@@ -2072,7 +2072,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Count</para>
               </entry>
-              <entry xml:id="a65fe16b80cb">
+              <entry xml:id="a64d4912d8aa">
                 <para>R</para>
               </entry>
               <entry>
@@ -2083,8 +2083,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="id9">
-      <title>Failure Count Register (FailureCountReg)</title>
+    <section xml:id="failure-count-register-failurecountreg3">
+      <title>Failure Count Register (FailureCountReg3)</title>
       <table>
         <title>Bits of Failure Count Register</title>
         <tgroup cols="4">
@@ -2104,9 +2104,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x34</code>
                 </para>
               </entry>
-              <entry xml:id="a7bba5b7e4b9">
+              <entry xml:id="a87edd1bcf15">
                 <para>
-                  <link linkend="ad89f88e0dac">Failure Count Register (FailureCountReg)</link>
+                  <link linkend="aca47e2421ee">Failure Count Register (FailureCountReg3)</link>
                 </para>
               </entry>
             </row>
@@ -2133,7 +2133,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Count</para>
               </entry>
-              <entry xml:id="a40bf6542f5f">
+              <entry xml:id="ab4079680b30">
                 <para>R</para>
               </entry>
               <entry>
@@ -2144,8 +2144,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="interval-register-intervalreg">
-      <title>Interval Register (IntervalReg)</title>
+    <section xml:id="interval-register-intervalreg0">
+      <title>Interval Register (IntervalReg0)</title>
       <table>
         <title>Bits of Interval Register</title>
         <tgroup cols="4">
@@ -2165,9 +2165,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x38</code>
                 </para>
               </entry>
-              <entry xml:id="a2a37762ecc0">
+              <entry xml:id="a89684d8915f">
                 <para>
-                  <link linkend="a0ea8a602d73">Interval Register (IntervalReg)</link>
+                  <link linkend="ad10f4ae8b6f">Interval Register (IntervalReg0)</link>
                 </para>
               </entry>
             </row>
@@ -2194,7 +2194,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Interval</para>
               </entry>
-              <entry xml:id="a20e5368705d">
+              <entry xml:id="ac727d1975db">
                 <para>RW</para>
               </entry>
               <entry>
@@ -2213,7 +2213,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x0000.0000</code>
                           </para>
                         </entry>
-                        <entry xml:id="a5ad52eac1fa">
+                        <entry xml:id="acdef7161e76">
                           <para>BusReset</para>
                         </entry>
                         <entry>
@@ -2232,8 +2232,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="id10">
-      <title>Interval Register (IntervalReg)</title>
+    <section xml:id="interval-register-intervalreg1">
+      <title>Interval Register (IntervalReg1)</title>
       <table>
         <title>Bits of Interval Register</title>
         <tgroup cols="4">
@@ -2253,9 +2253,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x3c</code>
                 </para>
               </entry>
-              <entry xml:id="a89684d8915f">
+              <entry xml:id="ac72e4c655c6">
                 <para>
-                  <link linkend="a0ea8a602d73">Interval Register (IntervalReg)</link>
+                  <link linkend="a82d3204a098">Interval Register (IntervalReg1)</link>
                 </para>
               </entry>
             </row>
@@ -2282,7 +2282,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Interval</para>
               </entry>
-              <entry xml:id="a8ca678477b7">
+              <entry xml:id="a50334c3b6a2">
                 <para>RW</para>
               </entry>
               <entry>
@@ -2301,7 +2301,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x0000.0000</code>
                           </para>
                         </entry>
-                        <entry xml:id="a04c5c7579e5">
+                        <entry xml:id="abb6e2f1ea79">
                           <para>BusReset</para>
                         </entry>
                         <entry>
@@ -2320,8 +2320,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="id11">
-      <title>Interval Register (IntervalReg)</title>
+    <section xml:id="interval-register-intervalreg2">
+      <title>Interval Register (IntervalReg2)</title>
       <table>
         <title>Bits of Interval Register</title>
         <tgroup cols="4">
@@ -2341,9 +2341,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x40</code>
                 </para>
               </entry>
-              <entry xml:id="ac72e4c655c6">
+              <entry xml:id="a776e7a831e1">
                 <para>
-                  <link linkend="a0ea8a602d73">Interval Register (IntervalReg)</link>
+                  <link linkend="a1906c38fac1">Interval Register (IntervalReg2)</link>
                 </para>
               </entry>
             </row>
@@ -2370,7 +2370,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Interval</para>
               </entry>
-              <entry xml:id="a4d80d77ed0e">
+              <entry xml:id="a506e3a9913a">
                 <para>RW</para>
               </entry>
               <entry>
@@ -2389,7 +2389,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x0000.0000</code>
                           </para>
                         </entry>
-                        <entry xml:id="a75204c88bd3">
+                        <entry xml:id="ad069c11c701">
                           <para>BusReset</para>
                         </entry>
                         <entry>
@@ -2408,8 +2408,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="id12">
-      <title>Interval Register (IntervalReg)</title>
+    <section xml:id="interval-register-intervalreg3">
+      <title>Interval Register (IntervalReg3)</title>
       <table>
         <title>Bits of Interval Register</title>
         <tgroup cols="4">
@@ -2429,9 +2429,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x44</code>
                 </para>
               </entry>
-              <entry xml:id="a776e7a831e1">
+              <entry xml:id="aac4f3f7042c">
                 <para>
-                  <link linkend="a0ea8a602d73">Interval Register (IntervalReg)</link>
+                  <link linkend="ac574f6be917">Interval Register (IntervalReg3)</link>
                 </para>
               </entry>
             </row>
@@ -2458,7 +2458,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Interval</para>
               </entry>
-              <entry xml:id="ad16ee11aea8">
+              <entry xml:id="a4d9bafa93c7">
                 <para>RW</para>
               </entry>
               <entry>
@@ -2477,7 +2477,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x0000.0000</code>
                           </para>
                         </entry>
-                        <entry xml:id="a4a4bd46de7f">
+                        <entry xml:id="a7818ca7152f">
                           <para>BusReset</para>
                         </entry>
                         <entry>
@@ -2496,8 +2496,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="reference-count-register-referencecountreg">
-      <title>Reference Count Register (ReferenceCountReg)</title>
+    <section xml:id="reference-count-register-referencecountreg0">
+      <title>Reference Count Register (ReferenceCountReg0)</title>
       <table>
         <title>Bits of Reference Count Register</title>
         <tgroup cols="4">
@@ -2517,9 +2517,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x48</code>
                 </para>
               </entry>
-              <entry xml:id="a9a7df46e1de">
+              <entry xml:id="a6540a8cf639">
                 <para>
-                  <link linkend="a214508aba0d">Reference Count Register (ReferenceCountReg)</link>
+                  <link linkend="a37dcfb6b8bc">Reference Count Register (ReferenceCountReg0)</link>
                 </para>
               </entry>
             </row>
@@ -2546,7 +2546,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Count</para>
               </entry>
-              <entry xml:id="a0e24d83f255">
+              <entry xml:id="a93d1ac13de1">
                 <para>RW</para>
               </entry>
               <entry>
@@ -2565,7 +2565,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x0000.0000</code>
                           </para>
                         </entry>
-                        <entry xml:id="ac26c27f8534">
+                        <entry xml:id="a87297087024">
                           <para>BusReset</para>
                         </entry>
                         <entry>
@@ -2584,8 +2584,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="id13">
-      <title>Reference Count Register (ReferenceCountReg)</title>
+    <section xml:id="reference-count-register-referencecountreg1">
+      <title>Reference Count Register (ReferenceCountReg1)</title>
       <table>
         <title>Bits of Reference Count Register</title>
         <tgroup cols="4">
@@ -2605,9 +2605,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x4c</code>
                 </para>
               </entry>
-              <entry xml:id="a6540a8cf639">
+              <entry xml:id="a9b5c49549ef">
                 <para>
-                  <link linkend="a214508aba0d">Reference Count Register (ReferenceCountReg)</link>
+                  <link linkend="adcaae45b694">Reference Count Register (ReferenceCountReg1)</link>
                 </para>
               </entry>
             </row>
@@ -2634,7 +2634,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Count</para>
               </entry>
-              <entry xml:id="a71365707610">
+              <entry xml:id="acf6ab37e9a6">
                 <para>RW</para>
               </entry>
               <entry>
@@ -2653,7 +2653,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x0000.0000</code>
                           </para>
                         </entry>
-                        <entry xml:id="af5bdf047bd0">
+                        <entry xml:id="a114f88146d2">
                           <para>BusReset</para>
                         </entry>
                         <entry>
@@ -2672,8 +2672,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="id14">
-      <title>Reference Count Register (ReferenceCountReg)</title>
+    <section xml:id="reference-count-register-referencecountreg2">
+      <title>Reference Count Register (ReferenceCountReg2)</title>
       <table>
         <title>Bits of Reference Count Register</title>
         <tgroup cols="4">
@@ -2693,9 +2693,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x50</code>
                 </para>
               </entry>
-              <entry xml:id="a9b5c49549ef">
+              <entry xml:id="a414e8dad704">
                 <para>
-                  <link linkend="a214508aba0d">Reference Count Register (ReferenceCountReg)</link>
+                  <link linkend="ab72de44ab07">Reference Count Register (ReferenceCountReg2)</link>
                 </para>
               </entry>
             </row>
@@ -2722,7 +2722,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Count</para>
               </entry>
-              <entry xml:id="a12625b1db21">
+              <entry xml:id="a690bc778224">
                 <para>RW</para>
               </entry>
               <entry>
@@ -2741,7 +2741,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x0000.0000</code>
                           </para>
                         </entry>
-                        <entry xml:id="a7c419d92be5">
+                        <entry xml:id="a32d107e6d10">
                           <para>BusReset</para>
                         </entry>
                         <entry>
@@ -2760,8 +2760,8 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         </tgroup>
       </table>
     </section>
-    <section xml:id="id15">
-      <title>Reference Count Register (ReferenceCountReg)</title>
+    <section xml:id="reference-count-register-referencecountreg3">
+      <title>Reference Count Register (ReferenceCountReg3)</title>
       <table>
         <title>Bits of Reference Count Register</title>
         <tgroup cols="4">
@@ -2781,9 +2781,9 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                   <code>0x54</code>
                 </para>
               </entry>
-              <entry xml:id="a414e8dad704">
+              <entry xml:id="ae26892235f3">
                 <para>
-                  <link linkend="a214508aba0d">Reference Count Register (ReferenceCountReg)</link>
+                  <link linkend="a3406914e83c">Reference Count Register (ReferenceCountReg3)</link>
                 </para>
               </entry>
             </row>
@@ -2810,7 +2810,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <entry>
                 <para>Count</para>
               </entry>
-              <entry xml:id="ab192c9f87fc">
+              <entry xml:id="aba23c1d1bd0">
                 <para>RW</para>
               </entry>
               <entry>
@@ -2829,7 +2829,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                             <code>0x0000.0000</code>
                           </para>
                         </entry>
-                        <entry xml:id="adf7305c625e">
+                        <entry xml:id="af1e9880689b">
                           <para>BusReset</para>
                         </entry>
                         <entry>

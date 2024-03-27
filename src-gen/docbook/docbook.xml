@@ -4,7 +4,7 @@
 <book>
 <title>Eccelerators Library IP specification</title>
 <chapter id="Eccelerators-Library-IP-InterruptGeneratorIfc-composite">
-<title>EventCatcherIfc</title>
+<title>InterruptGeneratorIfc</title>
 <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"  href="Eccelerators.Library.IP.InterruptGeneratorIfc-composite.xml" />
 </chapter>
 </book>

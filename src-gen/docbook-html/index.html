@@ -1,8 +1,8 @@
 <html><head>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-   <title>Eccelerators Library IP specification</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><link rel="home" href="#d5e1" title="Eccelerators Library IP specification"><link rel="next" href="#Eccelerators-Library-IP-InterruptGeneratorIfc-composite" title="Chapter&nbsp;1.&nbsp;EventCatcherIfc"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book"><div class="titlepage"><div><div><h1 class="title"><a name="d5e1"></a>Eccelerators Library IP specification</h1></div></div><hr></div>
+   <title>Eccelerators Library IP specification</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><link rel="home" href="#d5e1" title="Eccelerators Library IP specification"><link rel="next" href="#Eccelerators-Library-IP-InterruptGeneratorIfc-composite" title="Chapter&nbsp;1.&nbsp;InterruptGeneratorIfc"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book"><div class="titlepage"><div><div><h1 class="title"><a name="d5e1"></a>Eccelerators Library IP specification</h1></div></div><hr></div>
 
-<div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="Eccelerators-Library-IP-InterruptGeneratorIfc-composite"></a>Chapter&nbsp;1.&nbsp;EventCatcherIfc</h1></div></div></div>
+<div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="Eccelerators-Library-IP-InterruptGeneratorIfc-composite"></a>Chapter&nbsp;1.&nbsp;InterruptGeneratorIfc</h1></div></div></div>
 
 <div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="Eccelerators.Library.IP.InterruptGeneratorIfc-composite"></a>Interrupt Generator Interface (InterruptGeneratorIfc)</h2></div></div></div><p>Interface containing a basic Interrupt Generator block as predictable source and execurion check for interrupt simulation.</p><div class="table"><a name="d5e8"></a><p class="title"><b>Table&nbsp;1.1.&nbsp;Blocks of Interrupt Generator Interface</b></p><div class="table-contents"><table summary="Blocks of Interrupt Generator Interface" border="1" width="100%"><colgroup><col width="59" class="col1"><col width="73" class="col2"><col width="567" class="col3"></colgroup><tbody><tr><td colspan="3">
             <p>Blocks of Interrupt Generator Interface</p>
@@ -29,7 +29,7 @@
           </td><td>
             <p>Reset Name</p>
           </td></tr></tbody></table></div></div><br class="table-break"><p></p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="interrupt-generator-block-interruptgeneratorblk"></a>Interrupt Generator Block (InterruptGeneratorBlk)</h3></div></div></div><p>This block defines a basic Interrupt Generator block as predictable source and execution check for
-interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p><p>Constraints:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Generate interrupts at a configurable rate for level triggered interrupt destinations.</p></li><li class="listitem"><p>Check if interrupts are executed in time.</p></li><li class="listitem"><p>Provide a failure output.</p></li></ol></div><p>Interrupt Generator details:</p><div class="figure"><a name="d5e62"></a><p class="title"><b>Figure&nbsp;1.1.&nbsp;Interrupt Generator details</b></p><div class="figure-contents"><div class="mediaobject"><img src="resources/InterruptGeneratorUserLogic.png" width="270" alt="Interrupt Generator details"></div></div></div><br class="figure-break"><div class="table"><a name="d5e67"></a><p class="title"><b>Table&nbsp;1.3.&nbsp;Registers or Delegates of Interrupt Generator Block</b></p><div class="table-contents"><table summary="Registers or Delegates of Interrupt Generator Block" border="1" width="100%"><colgroup><col width="59" class="col1"><col width="59" class="col2"><col width="581" class="col3"></colgroup><tbody><tr><td colspan="3">
+interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p><p>Constraints:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Generate interrupts at a configurable rate for level triggered interrupt destinations.</p></li><li class="listitem"><p>Check if interrupts are executed in time.</p></li><li class="listitem"><p>Provide a failure output.</p></li></ol></div><p>Interrupt Generator details:</p><div class="figure"><a name="d5e62"></a><p class="title"><b>Figure&nbsp;1.1.&nbsp;Interrupt Generator details</b></p><div class="figure-contents"><div class="mediaobject"><img src="resources/InterruptGeneratorUserLogic.png" width="270" alt="Interrupt Generator details"></div></div></div><br class="figure-break"><div class="table"><a name="d5e67"></a><p class="title"><b>Table&nbsp;1.3.&nbsp;Registers or Delegates of Interrupt Generator Block</b></p><div class="table-contents"><table summary="Registers or Delegates of Interrupt Generator Block" border="1" width="100%"><colgroup><col width="59" class="col1"><col width="63" class="col2"><col width="577" class="col3"></colgroup><tbody><tr><td colspan="3">
               <p>Registers or Delegates of Interrupt Generator Block</p>
             </td></tr><tr><td colspan="2">
               <p>
@@ -75,201 +75,201 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
               <p>
                 <code class="code">0x08</code>
               </p>
-            </td><td><a name="aa0dfca7eaf6"></a>
-              <p>ChargedCountReg</p>
+            </td><td><a name="a132cf324d37"></a>
+              <p>ChargedCountReg0</p>
             </td><td>
               <p>
-                <a class="link" href="#a0db3b6116e5">Charged Count Register</a>
+                <a class="link" href="#abc68b2c2fb4">Charged Count Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x0c</code>
               </p>
-            </td><td><a name="a132cf324d37"></a>
-              <p>ChargedCountReg</p>
+            </td><td><a name="ad59fd7e370e"></a>
+              <p>ChargedCountReg1</p>
             </td><td>
               <p>
-                <a class="link" href="#a0db3b6116e5">Charged Count Register</a>
+                <a class="link" href="#a948ab506dde">Charged Count Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x10</code>
               </p>
-            </td><td><a name="ad59fd7e370e"></a>
-              <p>ChargedCountReg</p>
+            </td><td><a name="a7bf43ea2187"></a>
+              <p>ChargedCountReg2</p>
             </td><td>
               <p>
-                <a class="link" href="#a0db3b6116e5">Charged Count Register</a>
+                <a class="link" href="#a3e9cdd4ec35">Charged Count Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x14</code>
               </p>
-            </td><td><a name="a7bf43ea2187"></a>
-              <p>ChargedCountReg</p>
+            </td><td><a name="a1e931755f70"></a>
+              <p>ChargedCountReg3</p>
             </td><td>
               <p>
-                <a class="link" href="#a0db3b6116e5">Charged Count Register</a>
+                <a class="link" href="#aa7fc83d3332">Charged Count Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x18</code>
               </p>
-            </td><td><a name="a236d228d2b6"></a>
-              <p>ActualCountReg</p>
+            </td><td><a name="a195551d267e"></a>
+              <p>ActualCountReg0</p>
             </td><td>
               <p>
-                <a class="link" href="#a2cb1678bc40">Actual Count Register</a>
+                <a class="link" href="#a10654a50f89">Actual Count Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x1c</code>
               </p>
-            </td><td><a name="a195551d267e"></a>
-              <p>ActualCountReg</p>
+            </td><td><a name="a608640262d1"></a>
+              <p>ActualCountReg1</p>
             </td><td>
               <p>
-                <a class="link" href="#a2cb1678bc40">Actual Count Register</a>
+                <a class="link" href="#a2fb71bf02a8">Actual Count Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x20</code>
               </p>
-            </td><td><a name="a608640262d1"></a>
-              <p>ActualCountReg</p>
+            </td><td><a name="a37643fa7ac3"></a>
+              <p>ActualCountReg2</p>
             </td><td>
               <p>
-                <a class="link" href="#a2cb1678bc40">Actual Count Register</a>
+                <a class="link" href="#acb3054124ed">Actual Count Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x24</code>
               </p>
-            </td><td><a name="a37643fa7ac3"></a>
-              <p>ActualCountReg</p>
+            </td><td><a name="a1a61b63ea6f"></a>
+              <p>ActualCountReg3</p>
             </td><td>
               <p>
-                <a class="link" href="#a2cb1678bc40">Actual Count Register</a>
+                <a class="link" href="#a21bf4195305">Actual Count Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x28</code>
               </p>
-            </td><td><a name="ad89f88e0dac"></a>
-              <p>FailureCountReg</p>
+            </td><td><a name="a74d21831782"></a>
+              <p>FailureCountReg0</p>
             </td><td>
               <p>
-                <a class="link" href="#aba236b9d33d">Failure Count Register</a>
+                <a class="link" href="#a9446ad6c9b3">Failure Count Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x2c</code>
               </p>
-            </td><td><a name="a74d21831782"></a>
-              <p>FailureCountReg</p>
+            </td><td><a name="ae1f98972b82"></a>
+              <p>FailureCountReg1</p>
             </td><td>
               <p>
-                <a class="link" href="#aba236b9d33d">Failure Count Register</a>
+                <a class="link" href="#a502a2bc5d6c">Failure Count Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x30</code>
               </p>
-            </td><td><a name="ae1f98972b82"></a>
-              <p>FailureCountReg</p>
+            </td><td><a name="a9de8ec5a7f4"></a>
+              <p>FailureCountReg2</p>
             </td><td>
               <p>
-                <a class="link" href="#aba236b9d33d">Failure Count Register</a>
+                <a class="link" href="#a7bba5b7e4b9">Failure Count Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x34</code>
               </p>
-            </td><td><a name="a9de8ec5a7f4"></a>
-              <p>FailureCountReg</p>
+            </td><td><a name="aca47e2421ee"></a>
+              <p>FailureCountReg3</p>
             </td><td>
               <p>
-                <a class="link" href="#aba236b9d33d">Failure Count Register</a>
+                <a class="link" href="#a87edd1bcf15">Failure Count Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x38</code>
               </p>
-            </td><td><a name="a0ea8a602d73"></a>
-              <p>IntervalReg</p>
+            </td><td><a name="ad10f4ae8b6f"></a>
+              <p>IntervalReg0</p>
             </td><td>
               <p>
-                <a class="link" href="#a2a37762ecc0">Interval Register</a>
+                <a class="link" href="#a89684d8915f">Interval Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x3c</code>
               </p>
-            </td><td><a name="ad10f4ae8b6f"></a>
-              <p>IntervalReg</p>
+            </td><td><a name="a82d3204a098"></a>
+              <p>IntervalReg1</p>
             </td><td>
               <p>
-                <a class="link" href="#a2a37762ecc0">Interval Register</a>
+                <a class="link" href="#ac72e4c655c6">Interval Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x40</code>
               </p>
-            </td><td><a name="a82d3204a098"></a>
-              <p>IntervalReg</p>
+            </td><td><a name="a1906c38fac1"></a>
+              <p>IntervalReg2</p>
             </td><td>
               <p>
-                <a class="link" href="#a2a37762ecc0">Interval Register</a>
+                <a class="link" href="#a776e7a831e1">Interval Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x44</code>
               </p>
-            </td><td><a name="a1906c38fac1"></a>
-              <p>IntervalReg</p>
+            </td><td><a name="ac574f6be917"></a>
+              <p>IntervalReg3</p>
             </td><td>
               <p>
-                <a class="link" href="#a2a37762ecc0">Interval Register</a>
+                <a class="link" href="#aac4f3f7042c">Interval Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x48</code>
               </p>
-            </td><td><a name="a214508aba0d"></a>
-              <p>ReferenceCountReg</p>
+            </td><td><a name="a37dcfb6b8bc"></a>
+              <p>ReferenceCountReg0</p>
             </td><td>
               <p>
-                <a class="link" href="#a9a7df46e1de">Reference Count Register</a>
+                <a class="link" href="#a6540a8cf639">Reference Count Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x4c</code>
               </p>
-            </td><td><a name="a37dcfb6b8bc"></a>
-              <p>ReferenceCountReg</p>
+            </td><td><a name="adcaae45b694"></a>
+              <p>ReferenceCountReg1</p>
             </td><td>
               <p>
-                <a class="link" href="#a9a7df46e1de">Reference Count Register</a>
+                <a class="link" href="#a9b5c49549ef">Reference Count Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x50</code>
               </p>
-            </td><td><a name="adcaae45b694"></a>
-              <p>ReferenceCountReg</p>
+            </td><td><a name="ab72de44ab07"></a>
+              <p>ReferenceCountReg2</p>
             </td><td>
               <p>
-                <a class="link" href="#a9a7df46e1de">Reference Count Register</a>
+                <a class="link" href="#a414e8dad704">Reference Count Register</a>
               </p>
             </td></tr><tr><td>
               <p>
                 <code class="code">0x54</code>
               </p>
-            </td><td><a name="ab72de44ab07"></a>
-              <p>ReferenceCountReg</p>
+            </td><td><a name="a3406914e83c"></a>
+              <p>ReferenceCountReg3</p>
             </td><td>
               <p>
-                <a class="link" href="#a9a7df46e1de">Reference Count Register</a>
+                <a class="link" href="#ae26892235f3">Reference Count Register</a>
               </p>
             </td></tr></tbody></table></div></div><br class="table-break"><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="control-register-controlreg"></a>Control Register (ControlReg)</h4></div></div></div><div class="table"><a name="d5e295"></a><p class="title"><b>Table&nbsp;1.4.&nbsp;Bits of Control Register</b></p><div class="table-contents"><table summary="Bits of Control Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Control Register</p>
@@ -695,15 +695,15 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                           <p>An Interrupt is not pending.</p>
                         </td></tr></tbody></table></div></div><br class="table-break">
                 <p></p>
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="charged-count-register-chargedcountreg"></a>Charged Count Register (ChargedCountReg)</h4></div></div></div><div class="table"><a name="d5e841"></a><p class="title"><b>Table&nbsp;1.18.&nbsp;Bits of Charged Count Register</b></p><div class="table-contents"><table summary="Bits of Charged Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="charged-count-register-chargedcountreg0"></a>Charged Count Register (ChargedCountReg0)</h4></div></div></div><div class="table"><a name="d5e841"></a><p class="title"><b>Table&nbsp;1.18.&nbsp;Bits of Charged Count Register</b></p><div class="table-contents"><table summary="Bits of Charged Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Charged Count Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x08</code>
                 </p>
-              </td><td><a name="a0db3b6116e5"></a>
+              </td><td><a name="abc68b2c2fb4"></a>
                 <p>
-                  <a class="link" href="#aa0dfca7eaf6">Charged Count Register (ChargedCountReg)</a>
+                  <a class="link" href="#a132cf324d37">Charged Count Register (ChargedCountReg0)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -719,7 +719,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Count</p>
-              </td><td><a name="a374df898eed"></a>
+              </td><td><a name="a9982a341834"></a>
                 <p>RW</p>
               </td><td>
                 <p>Number of interrupts to be generated and expected to be handled by SW.</p>
@@ -727,22 +727,22 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                           <p>
                             <code class="code">0x0000.0000</code>
                           </p>
-                        </td><td><a name="ab5b19eb534d"></a>
+                        </td><td><a name="a34f9974d88c"></a>
                           <p>BusReset</p>
                         </td><td>
                           <p>RW</p>
                         </td><td>
                           <p>Default Bus Reset</p>
                         </td></tr></tbody></table></div></div><br class="table-break">
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="id1"></a>Charged Count Register (ChargedCountReg)</h4></div></div></div><div class="table"><a name="d5e899"></a><p class="title"><b>Table&nbsp;1.20.&nbsp;Bits of Charged Count Register</b></p><div class="table-contents"><table summary="Bits of Charged Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="charged-count-register-chargedcountreg1"></a>Charged Count Register (ChargedCountReg1)</h4></div></div></div><div class="table"><a name="d5e899"></a><p class="title"><b>Table&nbsp;1.20.&nbsp;Bits of Charged Count Register</b></p><div class="table-contents"><table summary="Bits of Charged Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Charged Count Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x0c</code>
                 </p>
-              </td><td><a name="abc68b2c2fb4"></a>
+              </td><td><a name="a948ab506dde"></a>
                 <p>
-                  <a class="link" href="#aa0dfca7eaf6">Charged Count Register (ChargedCountReg)</a>
+                  <a class="link" href="#ad59fd7e370e">Charged Count Register (ChargedCountReg1)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -758,7 +758,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Count</p>
-              </td><td><a name="a8bb696eb6df"></a>
+              </td><td><a name="a40271dcf856"></a>
                 <p>RW</p>
               </td><td>
                 <p>Number of interrupts to be generated and expected to be handled by SW.</p>
@@ -766,22 +766,22 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                           <p>
                             <code class="code">0x0000.0000</code>
                           </p>
-                        </td><td><a name="a2004d63cfb7"></a>
+                        </td><td><a name="ab404bf03d6e"></a>
                           <p>BusReset</p>
                         </td><td>
                           <p>RW</p>
                         </td><td>
                           <p>Default Bus Reset</p>
                         </td></tr></tbody></table></div></div><br class="table-break">
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="id2"></a>Charged Count Register (ChargedCountReg)</h4></div></div></div><div class="table"><a name="d5e957"></a><p class="title"><b>Table&nbsp;1.22.&nbsp;Bits of Charged Count Register</b></p><div class="table-contents"><table summary="Bits of Charged Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="charged-count-register-chargedcountreg2"></a>Charged Count Register (ChargedCountReg2)</h4></div></div></div><div class="table"><a name="d5e957"></a><p class="title"><b>Table&nbsp;1.22.&nbsp;Bits of Charged Count Register</b></p><div class="table-contents"><table summary="Bits of Charged Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Charged Count Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x10</code>
                 </p>
-              </td><td><a name="a948ab506dde"></a>
+              </td><td><a name="a3e9cdd4ec35"></a>
                 <p>
-                  <a class="link" href="#aa0dfca7eaf6">Charged Count Register (ChargedCountReg)</a>
+                  <a class="link" href="#a7bf43ea2187">Charged Count Register (ChargedCountReg2)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -797,7 +797,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Count</p>
-              </td><td><a name="ab8f354f9472"></a>
+              </td><td><a name="ae08518a1484"></a>
                 <p>RW</p>
               </td><td>
                 <p>Number of interrupts to be generated and expected to be handled by SW.</p>
@@ -805,22 +805,22 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                           <p>
                             <code class="code">0x0000.0000</code>
                           </p>
-                        </td><td><a name="a2f408681c72"></a>
+                        </td><td><a name="a835ec86b646"></a>
                           <p>BusReset</p>
                         </td><td>
                           <p>RW</p>
                         </td><td>
                           <p>Default Bus Reset</p>
                         </td></tr></tbody></table></div></div><br class="table-break">
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="id3"></a>Charged Count Register (ChargedCountReg)</h4></div></div></div><div class="table"><a name="d5e1015"></a><p class="title"><b>Table&nbsp;1.24.&nbsp;Bits of Charged Count Register</b></p><div class="table-contents"><table summary="Bits of Charged Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="charged-count-register-chargedcountreg3"></a>Charged Count Register (ChargedCountReg3)</h4></div></div></div><div class="table"><a name="d5e1015"></a><p class="title"><b>Table&nbsp;1.24.&nbsp;Bits of Charged Count Register</b></p><div class="table-contents"><table summary="Bits of Charged Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Charged Count Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x14</code>
                 </p>
-              </td><td><a name="a3e9cdd4ec35"></a>
+              </td><td><a name="aa7fc83d3332"></a>
                 <p>
-                  <a class="link" href="#aa0dfca7eaf6">Charged Count Register (ChargedCountReg)</a>
+                  <a class="link" href="#a1e931755f70">Charged Count Register (ChargedCountReg3)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -836,7 +836,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Count</p>
-              </td><td><a name="a8cfa65c1014"></a>
+              </td><td><a name="a8124c01cda4"></a>
                 <p>RW</p>
               </td><td>
                 <p>Number of interrupts to be generated and expected to be handled by SW.</p>
@@ -844,22 +844,22 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                           <p>
                             <code class="code">0x0000.0000</code>
                           </p>
-                        </td><td><a name="a2fdfe1a9a56"></a>
+                        </td><td><a name="ad0bab20e844"></a>
                           <p>BusReset</p>
                         </td><td>
                           <p>RW</p>
                         </td><td>
                           <p>Default Bus Reset</p>
                         </td></tr></tbody></table></div></div><br class="table-break">
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="actual-count-register-actualcountreg"></a>Actual Count Register (ActualCountReg)</h4></div></div></div><div class="table"><a name="d5e1073"></a><p class="title"><b>Table&nbsp;1.26.&nbsp;Bits of Actual Count Register</b></p><div class="table-contents"><table summary="Bits of Actual Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="actual-count-register-actualcountreg0"></a>Actual Count Register (ActualCountReg0)</h4></div></div></div><div class="table"><a name="d5e1073"></a><p class="title"><b>Table&nbsp;1.26.&nbsp;Bits of Actual Count Register</b></p><div class="table-contents"><table summary="Bits of Actual Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Actual Count Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x18</code>
                 </p>
-              </td><td><a name="a2cb1678bc40"></a>
+              </td><td><a name="a10654a50f89"></a>
                 <p>
-                  <a class="link" href="#a236d228d2b6">Actual Count Register (ActualCountReg)</a>
+                  <a class="link" href="#a195551d267e">Actual Count Register (ActualCountReg0)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -875,19 +875,19 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Count</p>
-              </td><td><a name="a9dad31862d9"></a>
+              </td><td><a name="a463c6055668"></a>
                 <p>R</p>
               </td><td>
                 <p>Actual count of interrupts already generated.</p>
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="id4"></a>Actual Count Register (ActualCountReg)</h4></div></div></div><div class="table"><a name="d5e1113"></a><p class="title"><b>Table&nbsp;1.27.&nbsp;Bits of Actual Count Register</b></p><div class="table-contents"><table summary="Bits of Actual Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="actual-count-register-actualcountreg1"></a>Actual Count Register (ActualCountReg1)</h4></div></div></div><div class="table"><a name="d5e1113"></a><p class="title"><b>Table&nbsp;1.27.&nbsp;Bits of Actual Count Register</b></p><div class="table-contents"><table summary="Bits of Actual Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Actual Count Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x1c</code>
                 </p>
-              </td><td><a name="a10654a50f89"></a>
+              </td><td><a name="a2fb71bf02a8"></a>
                 <p>
-                  <a class="link" href="#a236d228d2b6">Actual Count Register (ActualCountReg)</a>
+                  <a class="link" href="#a608640262d1">Actual Count Register (ActualCountReg1)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -903,19 +903,19 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Count</p>
-              </td><td><a name="a2b888e669e0"></a>
+              </td><td><a name="a8b52d6814a3"></a>
                 <p>R</p>
               </td><td>
                 <p>Actual count of interrupts already generated.</p>
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="id5"></a>Actual Count Register (ActualCountReg)</h4></div></div></div><div class="table"><a name="d5e1153"></a><p class="title"><b>Table&nbsp;1.28.&nbsp;Bits of Actual Count Register</b></p><div class="table-contents"><table summary="Bits of Actual Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="actual-count-register-actualcountreg2"></a>Actual Count Register (ActualCountReg2)</h4></div></div></div><div class="table"><a name="d5e1153"></a><p class="title"><b>Table&nbsp;1.28.&nbsp;Bits of Actual Count Register</b></p><div class="table-contents"><table summary="Bits of Actual Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Actual Count Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x20</code>
                 </p>
-              </td><td><a name="a2fb71bf02a8"></a>
+              </td><td><a name="acb3054124ed"></a>
                 <p>
-                  <a class="link" href="#a236d228d2b6">Actual Count Register (ActualCountReg)</a>
+                  <a class="link" href="#a37643fa7ac3">Actual Count Register (ActualCountReg2)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -931,19 +931,19 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Count</p>
-              </td><td><a name="ae7470c3ca3c"></a>
+              </td><td><a name="a2305b6d75a9"></a>
                 <p>R</p>
               </td><td>
                 <p>Actual count of interrupts already generated.</p>
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="id6"></a>Actual Count Register (ActualCountReg)</h4></div></div></div><div class="table"><a name="d5e1193"></a><p class="title"><b>Table&nbsp;1.29.&nbsp;Bits of Actual Count Register</b></p><div class="table-contents"><table summary="Bits of Actual Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="actual-count-register-actualcountreg3"></a>Actual Count Register (ActualCountReg3)</h4></div></div></div><div class="table"><a name="d5e1193"></a><p class="title"><b>Table&nbsp;1.29.&nbsp;Bits of Actual Count Register</b></p><div class="table-contents"><table summary="Bits of Actual Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Actual Count Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x24</code>
                 </p>
-              </td><td><a name="acb3054124ed"></a>
+              </td><td><a name="a21bf4195305"></a>
                 <p>
-                  <a class="link" href="#a236d228d2b6">Actual Count Register (ActualCountReg)</a>
+                  <a class="link" href="#a1a61b63ea6f">Actual Count Register (ActualCountReg3)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -959,19 +959,19 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Count</p>
-              </td><td><a name="aace4be7f642"></a>
+              </td><td><a name="a7403bd6b162"></a>
                 <p>R</p>
               </td><td>
                 <p>Actual count of interrupts already generated.</p>
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="failure-count-register-failurecountreg"></a>Failure Count Register (FailureCountReg)</h4></div></div></div><div class="table"><a name="d5e1233"></a><p class="title"><b>Table&nbsp;1.30.&nbsp;Bits of Failure Count Register</b></p><div class="table-contents"><table summary="Bits of Failure Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="failure-count-register-failurecountreg0"></a>Failure Count Register (FailureCountReg0)</h4></div></div></div><div class="table"><a name="d5e1233"></a><p class="title"><b>Table&nbsp;1.30.&nbsp;Bits of Failure Count Register</b></p><div class="table-contents"><table summary="Bits of Failure Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Failure Count Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x28</code>
                 </p>
-              </td><td><a name="aba236b9d33d"></a>
+              </td><td><a name="a9446ad6c9b3"></a>
                 <p>
-                  <a class="link" href="#ad89f88e0dac">Failure Count Register (FailureCountReg)</a>
+                  <a class="link" href="#a74d21831782">Failure Count Register (FailureCountReg0)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -987,19 +987,19 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Count</p>
-              </td><td><a name="ae4de7b9148f"></a>
+              </td><td><a name="a6e5556e92fb"></a>
                 <p>R</p>
               </td><td>
                 <p>Failure count of missed interrupts.</p>
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="id7"></a>Failure Count Register (FailureCountReg)</h4></div></div></div><div class="table"><a name="d5e1273"></a><p class="title"><b>Table&nbsp;1.31.&nbsp;Bits of Failure Count Register</b></p><div class="table-contents"><table summary="Bits of Failure Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="failure-count-register-failurecountreg1"></a>Failure Count Register (FailureCountReg1)</h4></div></div></div><div class="table"><a name="d5e1273"></a><p class="title"><b>Table&nbsp;1.31.&nbsp;Bits of Failure Count Register</b></p><div class="table-contents"><table summary="Bits of Failure Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Failure Count Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x2c</code>
                 </p>
-              </td><td><a name="a9446ad6c9b3"></a>
+              </td><td><a name="a502a2bc5d6c"></a>
                 <p>
-                  <a class="link" href="#ad89f88e0dac">Failure Count Register (FailureCountReg)</a>
+                  <a class="link" href="#ae1f98972b82">Failure Count Register (FailureCountReg1)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -1015,19 +1015,19 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Count</p>
-              </td><td><a name="a0959a79a9a4"></a>
+              </td><td><a name="a644f94975e7"></a>
                 <p>R</p>
               </td><td>
                 <p>Failure count of missed interrupts.</p>
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="id8"></a>Failure Count Register (FailureCountReg)</h4></div></div></div><div class="table"><a name="d5e1313"></a><p class="title"><b>Table&nbsp;1.32.&nbsp;Bits of Failure Count Register</b></p><div class="table-contents"><table summary="Bits of Failure Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="failure-count-register-failurecountreg2"></a>Failure Count Register (FailureCountReg2)</h4></div></div></div><div class="table"><a name="d5e1313"></a><p class="title"><b>Table&nbsp;1.32.&nbsp;Bits of Failure Count Register</b></p><div class="table-contents"><table summary="Bits of Failure Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Failure Count Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x30</code>
                 </p>
-              </td><td><a name="a502a2bc5d6c"></a>
+              </td><td><a name="a7bba5b7e4b9"></a>
                 <p>
-                  <a class="link" href="#ad89f88e0dac">Failure Count Register (FailureCountReg)</a>
+                  <a class="link" href="#a9de8ec5a7f4">Failure Count Register (FailureCountReg2)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -1043,19 +1043,19 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Count</p>
-              </td><td><a name="a65fe16b80cb"></a>
+              </td><td><a name="a64d4912d8aa"></a>
                 <p>R</p>
               </td><td>
                 <p>Failure count of missed interrupts.</p>
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="id9"></a>Failure Count Register (FailureCountReg)</h4></div></div></div><div class="table"><a name="d5e1353"></a><p class="title"><b>Table&nbsp;1.33.&nbsp;Bits of Failure Count Register</b></p><div class="table-contents"><table summary="Bits of Failure Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="failure-count-register-failurecountreg3"></a>Failure Count Register (FailureCountReg3)</h4></div></div></div><div class="table"><a name="d5e1353"></a><p class="title"><b>Table&nbsp;1.33.&nbsp;Bits of Failure Count Register</b></p><div class="table-contents"><table summary="Bits of Failure Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Failure Count Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x34</code>
                 </p>
-              </td><td><a name="a7bba5b7e4b9"></a>
+              </td><td><a name="a87edd1bcf15"></a>
                 <p>
-                  <a class="link" href="#ad89f88e0dac">Failure Count Register (FailureCountReg)</a>
+                  <a class="link" href="#aca47e2421ee">Failure Count Register (FailureCountReg3)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -1071,19 +1071,19 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Count</p>
-              </td><td><a name="a40bf6542f5f"></a>
+              </td><td><a name="ab4079680b30"></a>
                 <p>R</p>
               </td><td>
                 <p>Failure count of missed interrupts.</p>
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="interval-register-intervalreg"></a>Interval Register (IntervalReg)</h4></div></div></div><div class="table"><a name="d5e1393"></a><p class="title"><b>Table&nbsp;1.34.&nbsp;Bits of Interval Register</b></p><div class="table-contents"><table summary="Bits of Interval Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="interval-register-intervalreg0"></a>Interval Register (IntervalReg0)</h4></div></div></div><div class="table"><a name="d5e1393"></a><p class="title"><b>Table&nbsp;1.34.&nbsp;Bits of Interval Register</b></p><div class="table-contents"><table summary="Bits of Interval Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Interval Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x38</code>
                 </p>
-              </td><td><a name="a2a37762ecc0"></a>
+              </td><td><a name="a89684d8915f"></a>
                 <p>
-                  <a class="link" href="#a0ea8a602d73">Interval Register (IntervalReg)</a>
+                  <a class="link" href="#ad10f4ae8b6f">Interval Register (IntervalReg0)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -1099,7 +1099,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Interval</p>
-              </td><td><a name="a20e5368705d"></a>
+              </td><td><a name="ac727d1975db"></a>
                 <p>RW</p>
               </td><td>
                 <p>Interval of generated interrupt in nanaoseconds.</p>
@@ -1107,22 +1107,22 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                           <p>
                             <code class="code">0x0000.0000</code>
                           </p>
-                        </td><td><a name="a5ad52eac1fa"></a>
+                        </td><td><a name="acdef7161e76"></a>
                           <p>BusReset</p>
                         </td><td>
                           <p>RW</p>
                         </td><td>
                           <p>Default Bus Reset</p>
                         </td></tr></tbody></table></div></div><br class="table-break">
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="id10"></a>Interval Register (IntervalReg)</h4></div></div></div><div class="table"><a name="d5e1451"></a><p class="title"><b>Table&nbsp;1.36.&nbsp;Bits of Interval Register</b></p><div class="table-contents"><table summary="Bits of Interval Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="interval-register-intervalreg1"></a>Interval Register (IntervalReg1)</h4></div></div></div><div class="table"><a name="d5e1451"></a><p class="title"><b>Table&nbsp;1.36.&nbsp;Bits of Interval Register</b></p><div class="table-contents"><table summary="Bits of Interval Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Interval Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x3c</code>
                 </p>
-              </td><td><a name="a89684d8915f"></a>
+              </td><td><a name="ac72e4c655c6"></a>
                 <p>
-                  <a class="link" href="#a0ea8a602d73">Interval Register (IntervalReg)</a>
+                  <a class="link" href="#a82d3204a098">Interval Register (IntervalReg1)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -1138,7 +1138,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Interval</p>
-              </td><td><a name="a8ca678477b7"></a>
+              </td><td><a name="a50334c3b6a2"></a>
                 <p>RW</p>
               </td><td>
                 <p>Interval of generated interrupt in nanaoseconds.</p>
@@ -1146,22 +1146,22 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                           <p>
                             <code class="code">0x0000.0000</code>
                           </p>
-                        </td><td><a name="a04c5c7579e5"></a>
+                        </td><td><a name="abb6e2f1ea79"></a>
                           <p>BusReset</p>
                         </td><td>
                           <p>RW</p>
                         </td><td>
                           <p>Default Bus Reset</p>
                         </td></tr></tbody></table></div></div><br class="table-break">
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="id11"></a>Interval Register (IntervalReg)</h4></div></div></div><div class="table"><a name="d5e1509"></a><p class="title"><b>Table&nbsp;1.38.&nbsp;Bits of Interval Register</b></p><div class="table-contents"><table summary="Bits of Interval Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="interval-register-intervalreg2"></a>Interval Register (IntervalReg2)</h4></div></div></div><div class="table"><a name="d5e1509"></a><p class="title"><b>Table&nbsp;1.38.&nbsp;Bits of Interval Register</b></p><div class="table-contents"><table summary="Bits of Interval Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Interval Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x40</code>
                 </p>
-              </td><td><a name="ac72e4c655c6"></a>
+              </td><td><a name="a776e7a831e1"></a>
                 <p>
-                  <a class="link" href="#a0ea8a602d73">Interval Register (IntervalReg)</a>
+                  <a class="link" href="#a1906c38fac1">Interval Register (IntervalReg2)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -1177,7 +1177,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Interval</p>
-              </td><td><a name="a4d80d77ed0e"></a>
+              </td><td><a name="a506e3a9913a"></a>
                 <p>RW</p>
               </td><td>
                 <p>Interval of generated interrupt in nanaoseconds.</p>
@@ -1185,22 +1185,22 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                           <p>
                             <code class="code">0x0000.0000</code>
                           </p>
-                        </td><td><a name="a75204c88bd3"></a>
+                        </td><td><a name="ad069c11c701"></a>
                           <p>BusReset</p>
                         </td><td>
                           <p>RW</p>
                         </td><td>
                           <p>Default Bus Reset</p>
                         </td></tr></tbody></table></div></div><br class="table-break">
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="id12"></a>Interval Register (IntervalReg)</h4></div></div></div><div class="table"><a name="d5e1567"></a><p class="title"><b>Table&nbsp;1.40.&nbsp;Bits of Interval Register</b></p><div class="table-contents"><table summary="Bits of Interval Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="interval-register-intervalreg3"></a>Interval Register (IntervalReg3)</h4></div></div></div><div class="table"><a name="d5e1567"></a><p class="title"><b>Table&nbsp;1.40.&nbsp;Bits of Interval Register</b></p><div class="table-contents"><table summary="Bits of Interval Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Interval Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x44</code>
                 </p>
-              </td><td><a name="a776e7a831e1"></a>
+              </td><td><a name="aac4f3f7042c"></a>
                 <p>
-                  <a class="link" href="#a0ea8a602d73">Interval Register (IntervalReg)</a>
+                  <a class="link" href="#ac574f6be917">Interval Register (IntervalReg3)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -1216,7 +1216,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Interval</p>
-              </td><td><a name="ad16ee11aea8"></a>
+              </td><td><a name="a4d9bafa93c7"></a>
                 <p>RW</p>
               </td><td>
                 <p>Interval of generated interrupt in nanaoseconds.</p>
@@ -1224,22 +1224,22 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                           <p>
                             <code class="code">0x0000.0000</code>
                           </p>
-                        </td><td><a name="a4a4bd46de7f"></a>
+                        </td><td><a name="a7818ca7152f"></a>
                           <p>BusReset</p>
                         </td><td>
                           <p>RW</p>
                         </td><td>
                           <p>Default Bus Reset</p>
                         </td></tr></tbody></table></div></div><br class="table-break">
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="reference-count-register-referencecountreg"></a>Reference Count Register (ReferenceCountReg)</h4></div></div></div><div class="table"><a name="d5e1625"></a><p class="title"><b>Table&nbsp;1.42.&nbsp;Bits of Reference Count Register</b></p><div class="table-contents"><table summary="Bits of Reference Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="reference-count-register-referencecountreg0"></a>Reference Count Register (ReferenceCountReg0)</h4></div></div></div><div class="table"><a name="d5e1625"></a><p class="title"><b>Table&nbsp;1.42.&nbsp;Bits of Reference Count Register</b></p><div class="table-contents"><table summary="Bits of Reference Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Reference Count Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x48</code>
                 </p>
-              </td><td><a name="a9a7df46e1de"></a>
+              </td><td><a name="a6540a8cf639"></a>
                 <p>
-                  <a class="link" href="#a214508aba0d">Reference Count Register (ReferenceCountReg)</a>
+                  <a class="link" href="#a37dcfb6b8bc">Reference Count Register (ReferenceCountReg0)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -1255,7 +1255,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Count</p>
-              </td><td><a name="a0e24d83f255"></a>
+              </td><td><a name="a93d1ac13de1"></a>
                 <p>RW</p>
               </td><td>
                 <p>Reference count written by SW to acknowledge a processed interrupt.</p>
@@ -1263,22 +1263,22 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                           <p>
                             <code class="code">0x0000.0000</code>
                           </p>
-                        </td><td><a name="ac26c27f8534"></a>
+                        </td><td><a name="a87297087024"></a>
                           <p>BusReset</p>
                         </td><td>
                           <p>RW</p>
                         </td><td>
                           <p>Default Bus Reset</p>
                         </td></tr></tbody></table></div></div><br class="table-break">
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="id13"></a>Reference Count Register (ReferenceCountReg)</h4></div></div></div><div class="table"><a name="d5e1683"></a><p class="title"><b>Table&nbsp;1.44.&nbsp;Bits of Reference Count Register</b></p><div class="table-contents"><table summary="Bits of Reference Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="reference-count-register-referencecountreg1"></a>Reference Count Register (ReferenceCountReg1)</h4></div></div></div><div class="table"><a name="d5e1683"></a><p class="title"><b>Table&nbsp;1.44.&nbsp;Bits of Reference Count Register</b></p><div class="table-contents"><table summary="Bits of Reference Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Reference Count Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x4c</code>
                 </p>
-              </td><td><a name="a6540a8cf639"></a>
+              </td><td><a name="a9b5c49549ef"></a>
                 <p>
-                  <a class="link" href="#a214508aba0d">Reference Count Register (ReferenceCountReg)</a>
+                  <a class="link" href="#adcaae45b694">Reference Count Register (ReferenceCountReg1)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -1294,7 +1294,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Count</p>
-              </td><td><a name="a71365707610"></a>
+              </td><td><a name="acf6ab37e9a6"></a>
                 <p>RW</p>
               </td><td>
                 <p>Reference count written by SW to acknowledge a processed interrupt.</p>
@@ -1302,22 +1302,22 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                           <p>
                             <code class="code">0x0000.0000</code>
                           </p>
-                        </td><td><a name="af5bdf047bd0"></a>
+                        </td><td><a name="a114f88146d2"></a>
                           <p>BusReset</p>
                         </td><td>
                           <p>RW</p>
                         </td><td>
                           <p>Default Bus Reset</p>
                         </td></tr></tbody></table></div></div><br class="table-break">
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="id14"></a>Reference Count Register (ReferenceCountReg)</h4></div></div></div><div class="table"><a name="d5e1741"></a><p class="title"><b>Table&nbsp;1.46.&nbsp;Bits of Reference Count Register</b></p><div class="table-contents"><table summary="Bits of Reference Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="reference-count-register-referencecountreg2"></a>Reference Count Register (ReferenceCountReg2)</h4></div></div></div><div class="table"><a name="d5e1741"></a><p class="title"><b>Table&nbsp;1.46.&nbsp;Bits of Reference Count Register</b></p><div class="table-contents"><table summary="Bits of Reference Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Reference Count Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x50</code>
                 </p>
-              </td><td><a name="a9b5c49549ef"></a>
+              </td><td><a name="a414e8dad704"></a>
                 <p>
-                  <a class="link" href="#a214508aba0d">Reference Count Register (ReferenceCountReg)</a>
+                  <a class="link" href="#ab72de44ab07">Reference Count Register (ReferenceCountReg2)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -1333,7 +1333,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Count</p>
-              </td><td><a name="a12625b1db21"></a>
+              </td><td><a name="a690bc778224"></a>
                 <p>RW</p>
               </td><td>
                 <p>Reference count written by SW to acknowledge a processed interrupt.</p>
@@ -1341,22 +1341,22 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                           <p>
                             <code class="code">0x0000.0000</code>
                           </p>
-                        </td><td><a name="a7c419d92be5"></a>
+                        </td><td><a name="a32d107e6d10"></a>
                           <p>BusReset</p>
                         </td><td>
                           <p>RW</p>
                         </td><td>
                           <p>Default Bus Reset</p>
                         </td></tr></tbody></table></div></div><br class="table-break">
-              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="id15"></a>Reference Count Register (ReferenceCountReg)</h4></div></div></div><div class="table"><a name="d5e1799"></a><p class="title"><b>Table&nbsp;1.48.&nbsp;Bits of Reference Count Register</b></p><div class="table-contents"><table summary="Bits of Reference Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
+              </td></tr></tbody></table></div></div><br class="table-break"></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="reference-count-register-referencecountreg3"></a>Reference Count Register (ReferenceCountReg3)</h4></div></div></div><div class="table"><a name="d5e1799"></a><p class="title"><b>Table&nbsp;1.48.&nbsp;Bits of Reference Count Register</b></p><div class="table-contents"><table summary="Bits of Reference Count Register" border="1" width="100%"><colgroup><col width="21" class="col1"><col width="59" class="col2"><col width="28" class="col3"><col width="591" class="col4"></colgroup><tbody><tr><td colspan="4">
                 <p>Bits of Reference Count Register</p>
               </td></tr><tr><td colspan="3">
                 <p>
                   <code class="code">0x54</code>
                 </p>
-              </td><td><a name="a414e8dad704"></a>
+              </td><td><a name="ae26892235f3"></a>
                 <p>
-                  <a class="link" href="#a214508aba0d">Reference Count Register (ReferenceCountReg)</a>
+                  <a class="link" href="#a3406914e83c">Reference Count Register (ReferenceCountReg3)</a>
                 </p>
               </td></tr><tr><td>
                 <p>Bits</p>
@@ -1372,7 +1372,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                 <p>00</p>
               </td><td>
                 <p>Count</p>
-              </td><td><a name="ab192c9f87fc"></a>
+              </td><td><a name="aba23c1d1bd0"></a>
                 <p>RW</p>
               </td><td>
                 <p>Reference count written by SW to acknowledge a processed interrupt.</p>
@@ -1380,7 +1380,7 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
                           <p>
                             <code class="code">0x0000.0000</code>
                           </p>
-                        </td><td><a name="adf7305c625e"></a>
+                        </td><td><a name="af1e9880689b"></a>
                           <p>BusReset</p>
                         </td><td>
                           <p>RW</p>

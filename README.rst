@@ -1,5 +1,7 @@
-# InterruptGenerator
-Interrupt generator  as counterpart for simulation test benches and test builds of target devices
+InterruptGenerator
+==================
+An Interrupt generator as counterpart for simulation test benches and test builds of target devices
 
-![InterruptGeneratorUserLogic](https://github.com/eccelerators/interrupt-generator/assets/124497409/790192f2-f167-4c5e-8b0c-b5243f17c485)
+The documentation of its HW/SW interface is `InterruptGeneratorIfc.pdf <https://github.com/eccelerators/interrupt-generator/blob/main/src-gen/docbook-pdf/eccelerators.library.ip.InterruptGeneratorIfc.pdf>`_.
+
 

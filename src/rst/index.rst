@@ -7,7 +7,6 @@ Welcome to InterruptCollector's documentation!
 
    Eccelerators.Library.IP.InterruptGeneratorIfc-composite
 
-
 Indices and tables
 ==================
 

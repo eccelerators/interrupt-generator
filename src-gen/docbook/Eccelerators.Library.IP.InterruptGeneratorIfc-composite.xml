@@ -2,6 +2,39 @@
 <section xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mathml="http://www.w3.org/1998/Math/MathML" xmlns="http://docbook.org/ns/docbook" xml:id="Eccelerators.Library.IP.InterruptGeneratorIfc-composite" version="5.0">
   <title>Interrupt Generator Interface (InterruptGeneratorIfc)</title>
   <para>Interface containing a basic Interrupt Generator block as predictable source and execurion check for interrupt simulation.</para>
+  <para>Interrupt Generator details:</para>
+  <figure>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="resources/Eccelerators.Library.IP.InterruptGeneratorIfc-Slice0.png" scale="50"/>
+      </imageobject>
+    </mediaobject>
+    <title>Interrupt Generator details slice 0</title>
+  </figure>
+  <figure>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="resources/Eccelerators.Library.IP.InterruptGeneratorIfc-Slice1.png" scale="50"/>
+      </imageobject>
+    </mediaobject>
+    <title>Interrupt Generator details slice 1</title>
+  </figure>
+  <figure>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="resources/Eccelerators.Library.IP.InterruptGeneratorIfc-Slice2.png" scale="50"/>
+      </imageobject>
+    </mediaobject>
+    <title>Interrupt Generator details slice 2</title>
+  </figure>
+  <figure>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="resources/Eccelerators.Library.IP.InterruptGeneratorIfc-Slice3.png" scale="50"/>
+      </imageobject>
+    </mediaobject>
+    <title>Interrupt Generator details slice 3</title>
+  </figure>
   <table>
     <title>Blocks of Interrupt Generator Interface</title>
     <tgroup cols="3">
@@ -83,15 +116,6 @@ interrupt simulation. It provides 4 channels to generate 4 interrupt sources.</p
         <para>Provide a failure output.</para>
       </listitem>
     </orderedlist>
-    <para>Interrupt Generator details:</para>
-    <figure>
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="resources/InterruptGeneratorUserLogic.png" scale="50"/>
-        </imageobject>
-      </mediaobject>
-      <title>Interrupt Generator details</title>
-    </figure>
     <table>
       <title>Registers or Delegates of Interrupt Generator Block</title>
       <tgroup cols="3">

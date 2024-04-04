@@ -41,11 +41,34 @@
  Author:HxS Compiler
 
 ..
- Date:27 Mar 2024 15:51:45
+ Date:04 Apr 2024 15:23:42
 
 Interrupt Generator Interface (InterruptGeneratorIfc)
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 Interface containing a basic Interrupt Generator block as predictable source and execurion check for interrupt simulation.
+ 
+Interrupt Generator details:
+ 
+.. figure:: resources/Eccelerators.Library.IP.InterruptGeneratorIfc-Slice0.png
+   :scale: 50
+   
+   Interrupt Generator details slice 0
+   
+.. figure:: resources/Eccelerators.Library.IP.InterruptGeneratorIfc-Slice1.png
+   :scale: 50
+   
+   Interrupt Generator details slice 1
+   
+.. figure:: resources/Eccelerators.Library.IP.InterruptGeneratorIfc-Slice2.png
+   :scale: 50
+   
+   Interrupt Generator details slice 2
+   
+.. figure:: resources/Eccelerators.Library.IP.InterruptGeneratorIfc-Slice3.png
+   :scale: 50
+   
+   Interrupt Generator details slice 3
+   
  
 
 
@@ -91,13 +114,6 @@ Constraints:
 2. Check if interrupts are executed in time.
 3. Provide a failure output. 
  
-Interrupt Generator details:
- 
-.. figure:: resources/InterruptGeneratorUserLogic.png
-   :scale: 50
-   
-   Interrupt Generator details
-                                                                 
  
 
 .. table:: Registers or Delegates of Interrupt Generator Block

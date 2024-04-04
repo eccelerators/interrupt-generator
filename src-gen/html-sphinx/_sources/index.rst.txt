@@ -6,7 +6,10 @@ Welcome to InterruptCollector's documentation!
    :caption: Contents:
 
    Eccelerators.Library.IP.InterruptGeneratorIfc-composite
+<<<<<<< HEAD
 
+=======
+>>>>>>> ddf1929 (improve)
 
 Indices and tables
 ==================

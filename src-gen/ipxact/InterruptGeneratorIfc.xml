@@ -19,13 +19,6 @@
 			2. Check if interrupts are executed in time.
 			3. Provide a failure output. 
 			
-            Interrupt Generator details:
-			 
-			.. figure:: resources/InterruptGeneratorUserLogic.png
-			   :scale: 50
-			   
-			   Interrupt Generator details
-			   												 			 
 			</ipxact:description>
             <ipxact:addressBlock>
                 <ipxact:name>ControlReg</ipxact:name>
